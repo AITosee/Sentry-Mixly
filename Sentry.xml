@@ -1,0 +1,49 @@
+<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry" media="media/Sentry" libraries="libraries/Sentry-Arduino"
+-->
+<script type="text/javascript" src="libraries/ThirdParty/Sentry-Mixly-Arduino/block/Sentry.js"></script>
+<script type="text/javascript" src="libraries/ThirdParty/Sentry-Mixly-Arduino/generator/Sentry.js"></script>
+
+
+<category id="mixly_Sentry" name="Sentry" colour="#EF5411">
+  <category id="morpxSentry_Setup" name="设置模块" colour="#EF5411">
+    <!-- 初始化 Sentry -->
+    <block type="SentryBegin"></block>
+    <!-- 设置 恢复默认设置-->
+    <block type="SentrySetDefault"></block>
+    <!-- 设置 坐标系设置-->
+    <block type="SentrySetCoordinateType"></block>
+    <!-- 启用算法-->
+    <block type="SentryVisionSetStatus"></block>
+    <!-- 设置 算法参数个数-->
+    <block type="SentryVisionSetParamNum"></block>
+    <!-- 设置 算法参数-->
+    <block type="SentryVisionSetParam"></block>
+    <!-- 设置 LED-->
+    <block type="SentryLedSetColor"></block>
+    <!-- 设置 变焦等级-->
+    <block type="SentrySetZoom"></block>
+    <!-- 设置 白平衡-->
+    <block type="SentrySetAWB"></block>
+  </category>
+
+  <category id="morpxSentry_Run" name="运行模块" colour="#EAA20A">
+    <block type="SentryVisionDetectedCount"></block>
+    <block type="SentryGetValue">
+      <value name="index">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="SentryGetQrValue"></block>
+    <block type="SentryRows"></block>
+    <block type="SentryCols"></block>
+    <block type="SentryVisionDetected">
+      <value name="index">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+</category>
