@@ -15,12 +15,6 @@ var sentry_objs = [
   ["Sentry4", "3"]
 ];
 
-var mode_objs = [
-  ["I2C", "Wire"],
-  ["Serial1", "Serial1"],
-  ["Serial2", "Serial2"]
-];
-
 var Coordinate_objs = [
   [Blockly.Msg.SENTRY_ABSOLUTECOORDINATE, "kAbsoluteCoordinate"],
   [Blockly.Msg.SENTRY_PERCENTAGECOORDINATE, "kPercentageCoordinate"]
@@ -74,7 +68,7 @@ var white_balance_objs = [
 ];
 
 var vision_res_objs = [
-  [Blockly.Msg.SENTRY_STATE_VALUE_X, "XValue"],
+  [Blockly.Msg.SENTRY_STATE_VALUE_X, "kXValue"],
   [Blockly.Msg.SENTRY_STATE_VALUE_Y, "kYValue"],
   [Blockly.Msg.SENTRY_STATE_VALUE_WIDTH, "kWidthValue"],
   [Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT, "kHeightValue"],
@@ -180,85 +174,6 @@ var vision_card_objs = [
   [Blockly.Msg.SENTRY_CARD_Z, "Sentry2::kCardZ"]
 ];
 
-/*
-var vision_traffic_card_objs = [
-  [Blockly.Msg.SENTRY_CARD_FORWARD, "Sentry2::kCardForward"],
-  [Blockly.Msg.SENTRY_CARD_LEFT, "Sentry2::kCardLeft"],
-  [Blockly.Msg.SENTRY_CARD_RIGHT, "Sentry2::kCardRight"],
-  [Blockly.Msg.SENTRY_CARD_TURN_AROUND, "Sentry2::kCardTurnAround"],
-  [Blockly.Msg.SENTRY_CARD_PARK, "Sentry2::kCardPark"],
-  [Blockly.Msg.SENTRY_CARD_GREEN_LIGHT, "Sentry2::kCardGreenLight"],
-  [Blockly.Msg.SENTRY_CARD_RED_LIGHT, "Sentry2::kCardRedLight"],
-  [Blockly.Msg.SENTRY_CARD_SPEED_40, "Sentry2::kCardSpeed40"],
-  [Blockly.Msg.SENTRY_CARD_SPEED_60, "Sentry2::kCardSpeed60"],
-  [Blockly.Msg.SENTRY_CARD_SPEED_80, "Sentry2::kCardSpeed80"]
-];
-var vision_symbol_card_objs = [
-  [Blockly.Msg.SENTRY_CARD_CHECK, "Sentry2::kCardCheck"],
-  [Blockly.Msg.SENTRY_CARD_CROSS, "Sentry2::kCardCross"],
-  [Blockly.Msg.SENTRY_CARD_CIRCLE, "Sentry2::kCardCircle"],
-  [Blockly.Msg.SENTRY_CARD_SQUARE, "Sentry2::kCardSquare"],
-  [Blockly.Msg.SENTRY_CARD_TRIANGLE, "Sentry2::kCardTriangle"],
-  [Blockly.Msg.SENTRY_CARD_PLUS, "Sentry2::kCardPlus"],
-  [Blockly.Msg.SENTRY_CARD_MINUS, "Sentry2::kCardMinus"],
-  [Blockly.Msg.SENTRY_CARD_DIVIDE, "Sentry2::kCardDivide"],
-  [Blockly.Msg.SENTRY_CARD_EQUAL, "Sentry2::kCardEqual"],
-];
-var vision_number_card_objs = [
-  [Blockly.Msg.SENTRY_CARD_1, "Sentry2::kCardOne"],
-  [Blockly.Msg.SENTRY_CARD_2, "Sentry2::kCardTwo"],
-  [Blockly.Msg.SENTRY_CARD_3, "Sentry2::kCardThree"],
-  [Blockly.Msg.SENTRY_CARD_4, "Sentry2::kCardFour"],
-  [Blockly.Msg.SENTRY_CARD_5, "Sentry2::kCardFive"],
-  [Blockly.Msg.SENTRY_CARD_6, "Sentry2::kCardSix"],
-  [Blockly.Msg.SENTRY_CARD_7, "Sentry2::kCardSeven"],
-  [Blockly.Msg.SENTRY_CARD_8, "Sentry2::kCardEight"],
-  [Blockly.Msg.SENTRY_CARD_9, "Sentry2::kCardNine"],
-  [Blockly.Msg.SENTRY_CARD_0, "Sentry2::kCardZero"],
-];
-var vision_char_card_objs = [
-  [Blockly.Msg.SENTRY_CARD_A, "Sentry2::kCardA"],
-  [Blockly.Msg.SENTRY_CARD_B, "Sentry2::kCardB"],
-  [Blockly.Msg.SENTRY_CARD_C, "Sentry2::kCardC"],
-  [Blockly.Msg.SENTRY_CARD_D, "Sentry2::kCardD"],
-  [Blockly.Msg.SENTRY_CARD_E, "Sentry2::kCardE"],
-  [Blockly.Msg.SENTRY_CARD_F, "Sentry2::kCardF"],
-  [Blockly.Msg.SENTRY_CARD_G, "Sentry2::kCardG"],
-  [Blockly.Msg.SENTRY_CARD_H, "Sentry2::kCardH"],
-  [Blockly.Msg.SENTRY_CARD_I, "Sentry2::kCardI"],
-  [Blockly.Msg.SENTRY_CARD_J, "Sentry2::kCardJ"],
-  [Blockly.Msg.SENTRY_CARD_K, "Sentry2::kCardK"],
-  [Blockly.Msg.SENTRY_CARD_L, "Sentry2::kCardL"],
-  [Blockly.Msg.SENTRY_CARD_M, "Sentry2::kCardM"],
-  [Blockly.Msg.SENTRY_CARD_N, "Sentry2::kCardN"],
-  [Blockly.Msg.SENTRY_CARD_O, "Sentry2::kCardO"],
-  [Blockly.Msg.SENTRY_CARD_P, "Sentry2::kCardP"],
-  [Blockly.Msg.SENTRY_CARD_Q, "Sentry2::kCardQ"],
-  [Blockly.Msg.SENTRY_CARD_R, "Sentry2::kCardR"],
-  [Blockly.Msg.SENTRY_CARD_S, "Sentry2::kCardS"],
-  [Blockly.Msg.SENTRY_CARD_T, "Sentry2::kCardT"],
-  [Blockly.Msg.SENTRY_CARD_U, "Sentry2::kCardU"],
-  [Blockly.Msg.SENTRY_CARD_V, "Sentry2::kCardV"],
-  [Blockly.Msg.SENTRY_CARD_W, "Sentry2::kCardW"],
-  [Blockly.Msg.SENTRY_CARD_X, "Sentry2::kCardX"],
-  [Blockly.Msg.SENTRY_CARD_Y, "Sentry2::kCardY"],
-  [Blockly.Msg.SENTRY_CARD_Z, "Sentry2::kCardZ"]
-];
-var vision_card_objs = [
-  [Blockly.Msg.SENTRY_CARD_TRAFFIC, 'traffic'],
-  [Blockly.Msg.SENTRY_CARD_SYMBOL, 'symbol'],
-  [Blockly.Msg.SENTRY_CARD_NUMBER, 'number'],
-  [Blockly.Msg.SENTRY_CARD_CHAR, 'char']
-];
-
-var vision_card_dict = {
-  'traffic': vision_traffic_card_objs,
-  'symbol': vision_symbol_card_objs,
-  'number': vision_number_card_objs,
-  'char': vision_char_card_objs,
-};
-*/
-
 var vision_obj_card_dict = {
   "Sentry2::kVisionBlob": vision_blod_objs,
   "Sentry2::kVisionCard": vision_card_objs,
@@ -268,6 +183,7 @@ var vision_obj_card_dict = {
 
 Blockly.Blocks['SentryBegin'] = {
   init: function () {
+    var mode_objs = [["I2C","Wire"]].concat(profile.default.serial_select);
     this.appendDummyInput()
       .appendField(Blockly.Msg.SENTRY_BEGIN)
       .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
