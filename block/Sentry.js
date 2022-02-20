@@ -189,6 +189,14 @@ Blockly.Blocks['SentryBegin'] = {
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
     this.setTooltip(Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP);
     this.setHelpUrl();
+  },
+
+  onchange: function (e) {
+    if (this.getFieldValue("mode_obj") == "Serial") {
+      this.setWarningText(Blockly.SENTRY_WARNING_ON_INIT);
+    } else {
+      this.setWarningText();
+    }
   }
 };
 
@@ -338,7 +346,7 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
 
 Blockly.Blocks["SentryLedSetColor"] = {
   init: function () {
-    var led_color = ['#fff','#000','#f00','#0f0','#ff0','#00f','#f0f','#0ff'];
+    var led_color = ['#fff', '#000', '#f00', '#0f0', '#ff0', '#00f', '#f0f', '#0ff'];
     var color_detected = new Blockly.FieldColour('#0000ff');
     color_detected.setColours(led_color).setColumns(4);
     var color_undetected = new Blockly.FieldColour('#ff0000');
@@ -351,8 +359,10 @@ Blockly.Blocks["SentryLedSetColor"] = {
       .appendField(color_detected, "led_color_obj1")
       .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR_NOT)
       .appendField(color_undetected, "led_color_obj2")
-      .appendField(Blockly.Msg.SENTRY_LED_SET_LEVEL)
-      .appendField(new Blockly.FieldNumber(1, 0, 15, 1), "level");
+      .appendField(Blockly.Msg.SENTRY_LED_SET_LEVEL);
+    this.appendValueInput("level")
+      .setCheck([Number]);
+    this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);

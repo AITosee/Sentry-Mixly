@@ -21,39 +21,44 @@
     <block type="SentryVisionBlobSetParam"></block>
     <!-- block type="SentryVisionFaceSetParam"></block-->
     <!-- 设置 LED-->
-    <block type="SentryLedSetColor"></block>
-    <!-- 设置 变焦等级-->
-    <block type="SentrySetZoom"></block>
-    <!-- 设置 白平衡-->
-    <block type="SentrySetAWB"></block>
-
-  </category>
-
-  <category id="morpxSentry_Run" name="运行模块" colour="#EAA20A">
-    <block type="SentryVisionGetStatus"></block>
-    <block type="SentryVisionDetectedCount"></block>
-    <block type="SentryGetValue">
-      <value name="sentry_value_obj">
-        <block type="SentryVisionObj"></block>
-      </value>
-      <value name="index">
+    <block type="SentryLedSetColor">
+      <value name="level">
         <shadow type="math_number">
-          <field name="NUM">0</field>
+          <field name="NUM">1</field>
         </shadow>
-      </value>
-    </block>
-    <block type="SentryGetQrValue"></block>
-    <block type="SentryVisionDetected">
-      <value name="sentry_detected_obj">
-        <block type="SentryVisionCard"></block>
-      </value>
-      <value name="index">
-        <shadow type="math_number">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-    </block>
-    <block type="SentryRows"></block>
-    <block type="SentryCols"></block>
+      </block>
+      <!-- 设置 变焦等级-->
+      <block type="SentrySetZoom"></block>
+      <!-- 设置 白平衡-->
+      <block type="SentrySetAWB"></block>
+
+    </category>
+
+    <category id="morpxSentry_Run" name="运行模块" colour="#EAA20A">
+      <block type="SentryVisionGetStatus"></block>
+      <block type="SentryVisionDetectedCount"></block>
+      <block type="SentryGetValue">
+        <value name="sentry_value_obj">
+          <block type="SentryVisionObj"></block>
+        </value>
+        <value name="index">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="SentryGetQrValue"></block>
+      <block type="SentryVisionDetected">
+        <value name="sentry_detected_obj">
+          <block type="SentryVisionCard"></block>
+        </value>
+        <value name="index">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="SentryRows"></block>
+      <block type="SentryCols"></block>
+    </category>
   </category>
-</category>

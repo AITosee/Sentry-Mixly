@@ -127,7 +127,7 @@ Blockly.Arduino['SentryLedSetColor'] = function () {
     var dropdown_led_color_obj1 = color_dic[this.getFieldValue('led_color_obj1')];
     var dropdown_led_color_obj2 = color_dic[this.getFieldValue('led_color_obj2')];
 
-    var input_level = this.getFieldValue('level');
+    var input_level = Blockly.Arduino.valueToCode(this, "level", Blockly.Arduino.ORDER_ATOMIC) || '1';
 
     return `sentry${dropdown_sentry_obj}.LedSetColor(${dropdown_led_color_obj1},${dropdown_led_color_obj2},${input_level});\n`;
 };
