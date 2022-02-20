@@ -19,6 +19,7 @@ Blockly.Msg.SENTRY_BEGIN = '初始化';
 Blockly.Msg.SENTRY_PORT = '端口';
 Blockly.Msg.SENTRY_SET_DEFAULT = ' 恢复默认参数';
 Blockly.Msg.SENTRY_VISION = '算法';
+Blockly.Msg.SENTRY_STATUS = '状态';
 Blockly.Msg.SENTRY_SET = '设置';
 Blockly.Msg.SENTRY_SET_COORDINATE = '坐标输出';
 Blockly.Msg.SENTRY_SET_PARAMNUM = '参数个数';
@@ -65,7 +66,7 @@ Blockly.Msg.SENTRY_VISION_VISIONCARD = '卡片识别';
 Blockly.Msg.SENTRY_VISION_VISIONFACE = '人脸识别';
 Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分类识别';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二维码识别';
-Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = '物体训练与追踪';
+Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = '深度学习';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '运动物体检测';
 
 // Sentry Enable Disable
