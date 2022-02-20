@@ -39,17 +39,6 @@ var vision_prama_support_objs = [
   [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"]
 ];
 
-var led_color_objs = [
-  [Blockly.Msg.SENTRY_LED_CLOSE, "kLedClose"],
-  [Blockly.Msg.SENTRY_LED_RED, "kLedRed"],
-  [Blockly.Msg.SENTRY_LED_GREEN, "kLedGreen"],
-  [Blockly.Msg.SENTRY_LED_YELLOW, "kLedYellow"],
-  [Blockly.Msg.SENTRY_LED_BLUE, "kLedBlue"],
-  [Blockly.Msg.SENTRY_LED_PURPLE, "kLedPurple"],
-  [Blockly.Msg.SENTRY_LED_CYAN, "kLedCyan"],
-  [Blockly.Msg.SENTRY_LED_WHITE, "kLedWhite"]
-];
-
 var zoom_level_objs = [
   [Blockly.Msg.SENTRY_ZOOM_DEFAULT, "kZoomDefault"],
   [Blockly.Msg.SENTRY_ZOOM_LEVEL1, "kZoom1"],
@@ -252,7 +241,6 @@ Blockly.Blocks["SentryVisionSetStatus"] = {
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
     this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE);
-    this.setHelpUrl("");
   }
 };
 
@@ -269,7 +257,6 @@ Blockly.Blocks["SentryVisionSetParamNum"] = {
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
     this.setTooltip("");
-    this.setHelpUrl("");
   }
 };
 
@@ -316,7 +303,7 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
       .appendField(Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT)
       .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "h")
       .appendField(Blockly.Msg.SENTRY_STATE_VALUE_LABEL)
-      .appendField(new Blockly.FieldDropdown(vision_blod_objs, "lable"))
+      .appendField(new Blockly.FieldDropdown(vision_blod_objs), "lable")
       .appendField(Blockly.Msg.SENTRY_INDEX)
       .appendField(new Blockly.FieldNumber(0, 0, 24, 1), "index");
     this.setPreviousStatement(true, null);
@@ -327,43 +314,49 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
   }
 };
 
-Blockly.Blocks['SentryVisionFaceSetParam'] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
-      .appendField(Blockly.Msg.SENTRY_SET)
-      .appendField(Blockly.Msg.SENTRY_VISION)
-      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"]]), "vision_obj")
-      .appendField(Blockly.Msg.SENTRY_SET_PARAM)
-    this.appendDummyInput("VisionParam")
-      .appendField(Blockly.Msg.SENTRY_LABLE)
-      .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "lable")
-      .appendField(Blockly.Msg.SENTRY_INDEX)
-      .appendField(new Blockly.FieldNumber(0, 0, 24, 1), "index");
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
-  }
-};
+// Blockly.Blocks['SentryVisionFaceSetParam'] = {
+//   init: function () {
+//     this.appendDummyInput()
+//       .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+//       .appendField(Blockly.Msg.SENTRY_SET)
+//       .appendField(Blockly.Msg.SENTRY_VISION)
+//       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"]]), "vision_obj")
+//       .appendField(Blockly.Msg.SENTRY_SET_PARAM)
+//     this.appendDummyInput("VisionParam")
+//       .appendField(Blockly.Msg.SENTRY_LABLE)
+//       .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "lable")
+//       .appendField(Blockly.Msg.SENTRY_INDEX)
+//       .appendField(new Blockly.FieldNumber(0, 0, 24, 1), "index");
+//     this.setInputsInline(true);
+//     this.setPreviousStatement(true, null);
+//     this.setNextStatement(true, null);
+//     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+//     this.setTooltip("");
+//     this.setHelpUrl("");
+//   }
+// };
 
 Blockly.Blocks["SentryLedSetColor"] = {
   init: function () {
+    var led_color = ['#fff','#000','#f00','#0f0','#ff0','#00f','#f0f','#0ff'];
+    var color_detected = new Blockly.FieldColour('#0000ff');
+    color_detected.setColours(led_color).setColumns(4);
+    var color_undetected = new Blockly.FieldColour('#ff0000');
+    color_undetected.setColours(led_color).setColumns(4);
+
     this.appendDummyInput()
       .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR)
-      .appendField(new Blockly.FieldDropdown(led_color_objs), "led_color_obj1")
+      .appendField(color_detected, "led_color_obj1")
       .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR_NOT)
-      .appendField(new Blockly.FieldDropdown(led_color_objs), "led_color_obj2")
+      .appendField(color_undetected, "led_color_obj2")
       .appendField(Blockly.Msg.SENTRY_LED_SET_LEVEL)
       .appendField(new Blockly.FieldNumber(1, 0, 15, 1), "level");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip("");
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_LED);
   }
 };
 
@@ -377,7 +370,7 @@ Blockly.Blocks['SentrySetZoom'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip("");
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_ZOOM);
   }
 };
 
