@@ -226,8 +226,7 @@ Blockly.Blocks["SentrySetCoordinateType"] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE);
-    this.setHelpUrl("");
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE); 
   }
 };
 
@@ -263,8 +262,7 @@ Blockly.Blocks["SentryVisionSetParamNum"] = {
 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip("");
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color); 
   }
 };
 
@@ -291,8 +289,6 @@ Blockly.Blocks['SentryVisionColorSetParam'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
   }
 };
 
@@ -317,8 +313,6 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
   }
 };
 
@@ -339,8 +333,6 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
 //     this.setPreviousStatement(true, null);
 //     this.setNextStatement(true, null);
 //     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-//     this.setTooltip("");
-//     this.setHelpUrl("");
 //   }
 // };
 
@@ -394,7 +386,6 @@ Blockly.Blocks['SentrySetAWB'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip("");
   }
 };
 
@@ -407,8 +398,6 @@ Blockly.Blocks["SentryVisionGetStatus"] = {
       .appendField(Blockly.Msg.SENTRY_STATUS)
     this.setOutput(true, Number);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
   }
 };
 
@@ -422,8 +411,6 @@ Blockly.Blocks["SentryVisionDetectedCount"] = {
     this.setInputsInline(true);
     this.setOutput(true, null);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
   }
 };
 
@@ -485,8 +472,7 @@ Blockly.Blocks["SentryGetValue"] = {
     this.setInputsInline(true);
     this.setOutput(true, Number);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_GET_VISION_VALUE);
   }
 };
 
@@ -498,8 +484,6 @@ Blockly.Blocks["SentryGetQrValue"] = {
     this.setInputsInline(true);
     this.setOutput(true, String);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
   }
 }
 
@@ -561,8 +545,7 @@ Blockly.Blocks["SentryVisionDetected"] = {
     this.setInputsInline(true);
     this.setOutput(true, Boolean);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_DETECTED_VISION_VALUE);
   }
 };
 
@@ -573,8 +556,6 @@ Blockly.Blocks["SentryRows"] = {
       .appendField(Blockly.Msg.SENTRY_ROWS)
     this.setOutput(true, Number);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
   }
 };
 
@@ -585,7 +566,5 @@ Blockly.Blocks["SentryCols"] = {
       .appendField(Blockly.Msg.SENTRY_COLS)
     this.setOutput(true, Number);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setTooltip("");
-    this.setHelpUrl("");
   }
 };
