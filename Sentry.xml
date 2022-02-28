@@ -1,7 +1,11 @@
-<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry" media="media/Sentry" libraries="libraries/Sentry-Arduino"
+<!-- type="company" 
+block="block/Sentry.js" 
+generator="generator/Sentry.js" 
+language="language/Sentry"  
+lib="Sentry-Arduino/"
 -->
-<script type="text/javascript" src="libraries/ThirdParty/Sentry-Mixly-Arduino/block/Sentry.js"></script>
-<script type="text/javascript" src="libraries/ThirdParty/Sentry-Mixly-Arduino/generator/Sentry.js"></script>
+<script type="text/javascript" src="../../blocks/company/Sentry.js"></script>
+<script type="text/javascript" src="../../generators/arduino/company/Sentry.js"></script>
 
 
 <category id="mixly_Sentry" name="Sentry" colour="#EF5411">

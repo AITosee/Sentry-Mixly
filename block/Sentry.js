@@ -6,8 +6,6 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks.Sentry.SetupMode_Color = "#EF5411";
 Blockly.Blocks.Sentry.RunMode_Color = "#EAA20A";
 
-var boardType = JSFuncs.getPlatform();
-
 var sentry_objs = [
   ["Sentry1", "0"],
   ["Sentry2", "1"],
@@ -426,7 +424,13 @@ Blockly.Blocks['SentryVisionObj'] = {
     this.setDeletable(false);
   },
   mutationToDom: function () {
-    var container = Blockly.utils.xml.createElement('mutation');
+    var container = null;
+    if (Blockly.utils
+      && Blockly.utils.xml
+      && Blockly.utils.xml.createElement)
+      Blockly.utils.xml.createElement('mutation');
+    else
+      container = document.createElement('mutation');
     let vision_obj = this.getFieldValue('vision_obj');
     container.setAttribute('vision_obj_value', vision_obj);
     return container;
@@ -499,7 +503,13 @@ Blockly.Blocks['SentryVisionCard'] = {
     this.setDeletable(false);
   },
   mutationToDom: function () {
-    var container = Blockly.utils.xml.createElement('mutation');
+    var container = null;
+    if (Blockly.utils
+      && Blockly.utils.xml
+      && Blockly.utils.xml.createElement)
+      Blockly.utils.xml.createElement('mutation');
+    else
+      container = document.createElement('mutation');
     let vision_obj = this.getFieldValue('vision_obj');
     container.setAttribute('vision_card_obj', vision_obj);
     return container;

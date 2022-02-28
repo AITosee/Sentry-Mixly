@@ -1,5 +1,6 @@
-
 'use strict';
+
+goog.provide('Blockly.Blocks.Sentry');
 
 goog.require('Blockly.Arduino');
 
@@ -15,7 +16,9 @@ Blockly.Arduino['SentryBegin'] = function () {
         Blockly.Arduino.setups_['setup_Wire'] = 'Wire.begin();\n';
     }
 
-    return `while (SENTRY_OK != sentry${dropdown_sentry_obj}.begin(&${dropdown_mode_obj})) {yield();}\n`;
+    var code = `while (SENTRY_OK != sentry${dropdown_sentry_obj}.begin(&${dropdown_mode_obj})) {yield();}\n`;
+    
+    return code;
 };
 
 Blockly.Arduino['SentrySetDefault'] = function () {
@@ -119,9 +122,11 @@ Blockly.Arduino['SentryVisionBlobSetParam'] = function () {
 // };
 
 Blockly.Arduino['SentryLedSetColor'] = function () {
-    var color_dic = {'#000000':'kLedClose', '#ff0000':'kLedRed', '#00ff00':'kLedGreen',
-    '#ffff00':'kLedYellow', '#0000ff':'kLedBlue', '#ff00ff':'kLedPurple',
-    '#00ffff':'kLedCyan', '#ffffff':'kLedWhite'};
+    var color_dic = {
+        '#000000': 'kLedClose', '#ff0000': 'kLedRed', '#00ff00': 'kLedGreen',
+        '#ffff00': 'kLedYellow', '#0000ff': 'kLedBlue', '#ff00ff': 'kLedPurple',
+        '#00ffff': 'kLedCyan', '#ffffff': 'kLedWhite'
+    };
 
     var dropdown_sentry_obj = this.getFieldValue('sentry_obj');
     var dropdown_led_color_obj1 = color_dic[this.getFieldValue('led_color_obj1')];
@@ -194,7 +199,7 @@ Blockly.Arduino['SentryVisionDetected'] = function () {
     var dropdown_sentry_obj = this.getFieldValue('sentry_obj');
     var sentry_detected_obj = Blockly.Arduino.valueToCode(this, "sentry_detected_obj", Blockly.Arduino.ORDER_ATOMIC).split(',');
     var input_index = Blockly.Arduino.valueToCode(this, "index", Blockly.Arduino.ORDER_ATOMIC) || '0';
-    
+
     var code = `(sentry${dropdown_sentry_obj}.GetValue(${sentry_detected_obj[0]},kLabel,${input_index})==${sentry_detected_obj[1]})`;
     return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
