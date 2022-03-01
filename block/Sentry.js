@@ -428,7 +428,7 @@ Blockly.Blocks['SentryVisionObj'] = {
     if (Blockly.utils
       && Blockly.utils.xml
       && Blockly.utils.xml.createElement)
-      Blockly.utils.xml.createElement('mutation');
+      container = Blockly.utils.xml.createElement('mutation');
     else
       container = document.createElement('mutation');
     let vision_obj = this.getFieldValue('vision_obj');
@@ -440,6 +440,7 @@ Blockly.Blocks['SentryVisionObj'] = {
     this.updateShape(vision_obj);
   },
   updateShape: function (add) {
+    
     this.removeInput('VisionValue');
     let dummyObj = this.appendDummyInput('VisionValue');
     dummyObj.appendField(new Blockly.FieldDropdown(vision_objs,
@@ -507,7 +508,7 @@ Blockly.Blocks['SentryVisionCard'] = {
     if (Blockly.utils
       && Blockly.utils.xml
       && Blockly.utils.xml.createElement)
-      Blockly.utils.xml.createElement('mutation');
+      container = Blockly.utils.xml.createElement('mutation');
     else
       container = document.createElement('mutation');
     let vision_obj = this.getFieldValue('vision_obj');
