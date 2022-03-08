@@ -1,8 +1,13 @@
-<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry" lib="Sentry-Arduino/"
+<!-- type="company" 
+  block="block/Sentry.js" 
+  generator="generator/Sentry.js" 
+  language="language/Sentry/" 
+  lib="Sentry-Arduino/"
+  libraries="libraries/Sentry-Arduino/"
 -->
+
 <script type="text/javascript" src="../../blocks/company/Sentry.js"></script>
 <script type="text/javascript" src="../../generators/arduino/company/Sentry.js"></script>
-
 
 <category id="mixly_Sentry" name="Sentry" colour="#EF5411">
   <category id="morpxSentry_Setup" name="设置模块" colour="#EF5411">
