@@ -6,13 +6,6 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks.Sentry.SetupMode_Color = "#EF5411";
 Blockly.Blocks.Sentry.RunMode_Color = "#EAA20A";
 
-var sentry_objs = [
-  ["Sentry1", "0"],
-  ["Sentry2", "1"],
-  ["Sentry3", "2"],
-  ["Sentry4", "3"]
-];
-
 var Coordinate_objs = [
   [Blockly.Msg.SENTRY_ABSOLUTECOORDINATE, "kAbsoluteCoordinate"],
   [Blockly.Msg.SENTRY_PERCENTAGECOORDINATE, "kPercentageCoordinate"]
@@ -197,9 +190,14 @@ Blockly.Blocks['SentryBegin'] = {
     var mode_objs = [["I2C", "Wire"]].concat(profile.default.serial_select);
     this.appendDummyInput()
       .appendField(Blockly.Msg.SENTRY_BEGIN)
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_PORT)
-      .appendField(new Blockly.FieldDropdown(mode_objs), "mode_obj");
+      .appendField(new Blockly.FieldDropdown(mode_objs), "mode_obj")
+      .appendField(Blockly.Msg.SENTRY_ADDR)
+      .appendField(new Blockly.FieldDropdown([['0x60', '0x60'],
+                                              ['0x61', '0x61'],
+                                              ['0x62', '0x62'],
+                                              ['0x63', '0x63']]), "addr_obj");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -222,7 +220,7 @@ Blockly.Blocks['SentryBegin'] = {
 Blockly.Blocks["SentrySetDefault"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET_DEFAULT)
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -245,7 +243,7 @@ Blockly.Blocks["SentrySetDefault"] = {
 Blockly.Blocks["SentrySetCoordinateType"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(Blockly.Msg.SENTRY_SET_COORDINATE)
       .appendField(new Blockly.FieldDropdown(Coordinate_objs), "coord_obj")
@@ -270,7 +268,7 @@ Blockly.Blocks["SentrySetCoordinateType"] = {
 Blockly.Blocks["SentryVisionSetStatus"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(new Blockly.FieldDropdown(
         [
@@ -290,7 +288,7 @@ Blockly.Blocks["SentryVisionSetStatus"] = {
 Blockly.Blocks["SentryVisionSetParamNum"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(new Blockly.FieldDropdown(vision_prama_support_objs), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_SET_PARAMNUM)
@@ -314,7 +312,7 @@ Blockly.Blocks["SentryVisionSetParamNum"] = {
 Blockly.Blocks['SentryVisionColorSetParam'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"]]), "vision_obj")
@@ -349,7 +347,7 @@ Blockly.Blocks['SentryVisionColorSetParam'] = {
 Blockly.Blocks['SentryVisionBlobSetParam'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"]]), "vision_obj")
@@ -388,7 +386,7 @@ Blockly.Blocks["SentryLedSetColor"] = {
     color_undetected.setColours(led_color).setColumns(4);
 
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR)
       .appendField(color_detected, "led_color_obj1")
@@ -408,7 +406,7 @@ Blockly.Blocks["SentryLedSetColor"] = {
 Blockly.Blocks['SentrySetZoom'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(Blockly.Msg.SENTRY_CAMERA_SET_ZOOM)
       .appendField(new Blockly.FieldDropdown(zoom_level_objs), "zoom_obj")
@@ -422,7 +420,7 @@ Blockly.Blocks['SentrySetZoom'] = {
 Blockly.Blocks['SentrySetAWB'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET)
       .appendField(Blockly.Msg.SENTRY_CAMERA_SET_AWB)
       .appendField(new Blockly.FieldDropdown(white_balance_objs), "awb_obj")
@@ -435,7 +433,7 @@ Blockly.Blocks['SentrySetAWB'] = {
 Blockly.Blocks["SentryVisionGetStatus"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown(vision_objs), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_STATUS)
@@ -447,7 +445,7 @@ Blockly.Blocks["SentryVisionGetStatus"] = {
 Blockly.Blocks["SentryVisionDetectedCount"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown(vision_objs), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_VISION_DETECTED + Blockly.Msg.SENTRY_VISION_RESULT + Blockly.Msg.SENTRY_DETECTED_NUMBER)
@@ -563,7 +561,7 @@ Blockly.Blocks['SentryVisionObj'] = {
 Blockly.Blocks["SentryGetValue"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
     this.appendValueInput("sentry_value_obj")
       .setCheck([Array]);
@@ -580,7 +578,7 @@ Blockly.Blocks["SentryGetValue"] = {
 Blockly.Blocks["SentryGetQrValue"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_GET_QRCODEVALUE)
     this.setInputsInline(true);
     this.setOutput(true, String);
@@ -642,7 +640,7 @@ Blockly.Blocks['SentryVisionCard20Classes'] = {
 Blockly.Blocks["SentryVisionDetected"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
     this.appendValueInput("sentry_detected_obj")
       .setCheck([Array])
       .appendField(Blockly.Msg.SENTRY_VISION);
@@ -660,7 +658,7 @@ Blockly.Blocks["SentryVisionDetected"] = {
 Blockly.Blocks["SentryRows"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_ROWS)
     this.setOutput(true, Number);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
@@ -670,7 +668,7 @@ Blockly.Blocks["SentryRows"] = {
 Blockly.Blocks["SentryCols"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(new Blockly.FieldDropdown(sentry_objs), "sentry_obj")
+      .appendField(Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_COLS)
     this.setOutput(true, Number);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
