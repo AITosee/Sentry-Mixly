@@ -21,7 +21,6 @@ var vision_objs = [
   [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
   [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
   [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "Sentry2::kVisionQrCode"],
-  [Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK, "Sentry2::kVisionObjTrack"],
   [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
 ];
 
@@ -195,9 +194,9 @@ Blockly.Blocks['SentryBegin'] = {
       .appendField(new Blockly.FieldDropdown(mode_objs), "mode_obj")
       .appendField(Blockly.Msg.SENTRY_ADDR)
       .appendField(new Blockly.FieldDropdown([['0x60', '0x60'],
-                                              ['0x61', '0x61'],
-                                              ['0x62', '0x62'],
-                                              ['0x63', '0x63']]), "addr_obj");
+      ['0x61', '0x61'],
+      ['0x62', '0x62'],
+      ['0x63', '0x63']]), "addr_obj");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -243,8 +242,7 @@ Blockly.Blocks["SentrySetDefault"] = {
 Blockly.Blocks["SentrySetCoordinateType"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_SET_COORDINATE)
       .appendField(new Blockly.FieldDropdown(Coordinate_objs), "coord_obj")
     this.setInputsInline(true);
@@ -268,8 +266,7 @@ Blockly.Blocks["SentrySetCoordinateType"] = {
 Blockly.Blocks["SentryVisionSetStatus"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(new Blockly.FieldDropdown(
         [
           [Blockly.Msg.SENTRY_ENABLE, "Begin"],
@@ -288,8 +285,7 @@ Blockly.Blocks["SentryVisionSetStatus"] = {
 Blockly.Blocks["SentryVisionSetParamNum"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(new Blockly.FieldDropdown(vision_prama_support_objs), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_SET_PARAMNUM)
       .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "num");
@@ -312,8 +308,7 @@ Blockly.Blocks["SentryVisionSetParamNum"] = {
 Blockly.Blocks['SentryVisionColorSetParam'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"]]), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_SET_PARAM);
@@ -347,8 +342,7 @@ Blockly.Blocks['SentryVisionColorSetParam'] = {
 Blockly.Blocks['SentryVisionBlobSetParam'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"]]), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_SET_PARAM)
@@ -386,8 +380,7 @@ Blockly.Blocks["SentryLedSetColor"] = {
     color_undetected.setColours(led_color).setColumns(4);
 
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR)
       .appendField(color_detected, "led_color_obj1")
       .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR_NOT)
@@ -406,8 +399,7 @@ Blockly.Blocks["SentryLedSetColor"] = {
 Blockly.Blocks['SentrySetZoom'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_CAMERA_SET_ZOOM)
       .appendField(new Blockly.FieldDropdown(zoom_level_objs), "zoom_obj")
     this.setPreviousStatement(true, null);
@@ -420,8 +412,7 @@ Blockly.Blocks['SentrySetZoom'] = {
 Blockly.Blocks['SentrySetAWB'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
       .appendField(Blockly.Msg.SENTRY_CAMERA_SET_AWB)
       .appendField(new Blockly.FieldDropdown(white_balance_objs), "awb_obj")
     this.setPreviousStatement(true, null);
@@ -467,7 +458,7 @@ Blockly.Blocks['SentryVisionObj'] = {
       [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
       [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
       [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "Sentry2::kVisionQrCode"],
-      [Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK, "Sentry2::kVisionObjTrack"],
+
       [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
     ];
 
@@ -542,7 +533,7 @@ Blockly.Blocks['SentryVisionObj'] = {
       [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry2::kVisionCard"],
       [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
       [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
-      [Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK, "Sentry2::kVisionObjTrack"],
+
       [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
     ];
 
