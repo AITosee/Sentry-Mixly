@@ -18,10 +18,13 @@ Blockly.Msg.SENTRY_HELP_DETECTED_VISION_VALUE = '是否检测到算法目标值�
 Blockly.Msg.SENTRY_WARNING_SETUP_BASE = '该模块只能置于初始化模块中！';
 Blockly.Msg.SENTRY_WARNING_SETUP_ONLY = '该模块只能置于设置模块中！';
 Blockly.Msg.SENTRY_WARNING_ON_INIT = '请勿同时使用Serial连接Sentry与电脑打印字符，此操作会导致电脑端打印字符错乱或通信异常'
+
 // 设置模块文本
+Blockly.Msg.SENTRY_NAME  = 'Sentry2'
 Blockly.Msg.SENTRY_SET_UP = 'Sentry设置';
 Blockly.Msg.SENTRY_BEGIN = '初始化';
 Blockly.Msg.SENTRY_PORT = '端口';
+Blockly.Msg.SENTRY_ADDR = '地址';
 Blockly.Msg.SENTRY_SET_DEFAULT = ' 恢复默认参数';
 Blockly.Msg.SENTRY_VISION = '算法';
 Blockly.Msg.SENTRY_STATUS = '状态';
@@ -66,12 +69,11 @@ Blockly.Msg.SENTRY_VISION_VISIONCOLOR = '颜色识别';
 Blockly.Msg.SENTRY_VISION_VISIONBLOB = '色块检测';
 Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG = 'AprilTag';
 Blockly.Msg.SENTRY_VISION_VISIONLINE = '线段检测';
-Blockly.Msg.SENTRY_VISION_VISIONLEARNING = '机器学习';
+Blockly.Msg.SENTRY_VISION_VISIONLEARNING = '深度学习';
 Blockly.Msg.SENTRY_VISION_VISIONCARD = '卡片识别';
 Blockly.Msg.SENTRY_VISION_VISIONFACE = '人脸识别';
 Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分类识别';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二维码识别';
-Blockly.Msg.SENTRY_VISION_VISIONOBJTRACK = '深度学习';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '运动物体检测';
 
 // Sentry Enable Disable

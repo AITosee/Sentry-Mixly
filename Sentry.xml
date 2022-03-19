@@ -1,9 +1,4 @@
-<!-- type="company" 
-  block="block/Sentry.js" 
-  generator="generator/Sentry.js" 
-  language="language/Sentry/" 
-  lib="Sentry-Arduino/"
-  libraries="libraries/Sentry-Arduino/"
+<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry/" lib="Sentry-Arduino/" libraries="libraries/Sentry-Arduino/"
 -->
 
 <script type="text/javascript" src="../../blocks/company/Sentry.js"></script>
@@ -661,9 +656,9 @@
                             <block type="SentryGetValue">
                               <field name="sentry_obj">0</field>
                               <value name="sentry_value_obj">
-                                <block type="SentryVisionObj">
-                                  <field name="vision_obj">Sentry2::kVisionBlob</field>
-                                  <field name="vision_res_obj">kXValue</field>
+                                <block type="SentryVisionObjColor">
+                                  <field name="vision_obj">Sentry2::kVisionColor</field>
+                                  <field name="vision_res_obj">kRValue</field>
                                 </block>
                               </value>
                               <value name="index">
@@ -696,9 +691,9 @@
                                 <block type="SentryGetValue">
                                   <field name="sentry_obj">0</field>
                                   <value name="sentry_value_obj">
-                                    <block type="SentryVisionObj">
-                                      <field name="vision_obj">Sentry2::kVisionBlob</field>
-                                      <field name="vision_res_obj">kXValue</field>
+                                    <block type="SentryVisionObjColor">
+                                      <field name="vision_obj">Sentry2::kVisionColor</field>
+                                      <field name="vision_res_obj">kGValue</field>
                                     </block>
                                   </value>
                                   <value name="index">
@@ -731,9 +726,9 @@
                                     <block type="SentryGetValue">
                                       <field name="sentry_obj">0</field>
                                       <value name="sentry_value_obj">
-                                        <block type="SentryVisionObj">
-                                          <field name="vision_obj">Sentry2::kVisionBlob</field>
-                                          <field name="vision_res_obj">kXValue</field>
+                                        <block type="SentryVisionObjColor">
+                                          <field name="vision_obj">Sentry2::kVisionColor</field>
+                                          <field name="vision_res_obj">kBValue</field>
                                         </block>
                                       </value>
                                       <value name="index">
@@ -766,8 +761,8 @@
                                         <block type="SentryGetValue">
                                           <field name="sentry_obj">0</field>
                                           <value name="sentry_value_obj">
-                                            <block type="SentryVisionObj">
-                                              <field name="vision_obj">Sentry2::kVisionBlob</field>
+                                            <block type="SentryVisionObjColor">
+                                              <field name="vision_obj">Sentry2::kVisionColor</field>
                                               <field name="vision_res_obj">kLabel</field>
                                             </block>
                                           </value>
