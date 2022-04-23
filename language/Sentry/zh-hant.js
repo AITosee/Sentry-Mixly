@@ -1,8 +1,8 @@
 'use strict';
 goog. provide('Blockly.Msg.zh.hans');
 goog. require('Blockly.Msg');
-Blockly.Msg.CATEGORY_MORPX_SENTRY_SETUP = '設定模塊';
-Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = '運行模塊';
+Blockly.Msg.CATEGORY_SENTRY_SETUP = '設定模塊';
+Blockly.Msg.CATEGORY_SENTRY_RUN = '運行模塊';
 // Help文字
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化視覺感測器，並選擇相關的地址';
 Blockly.Msg.SENTRY_HELP_SET_DEFAULT = '感測器算灋狀態恢復默認';

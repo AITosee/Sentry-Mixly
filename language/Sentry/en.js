@@ -2,8 +2,8 @@
 goog. provide('Blockly.Msg.zh.hans');
 goog. require('Blockly.Msg');
 
-Blockly.Msg.CATEGORY_MORPX_SENTRY_Setup = 'setting module';
-Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = 'running module';
+Blockly.Msg.CATEGORY_SENTRY_Setup = 'setting module';
+Blockly.Msg.CATEGORY_SENTRY_RUN = 'running module';
 
 //Help text
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = 'initialize the vision sensor and select the relevant address';
