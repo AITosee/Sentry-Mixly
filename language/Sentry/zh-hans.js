@@ -2,8 +2,8 @@
 goog.provide('Blockly.Msg.zh.hans');
 goog.require('Blockly.Msg');
 
-Blockly.Msg.CATEGORY_MORPX_SENTRY_SETUP = '设置模块';
-Blockly.Msg.CATEGORY_MORPX_SENTRY_RUN = '运行模块';
+Blockly.Msg.CATEGORY_SENTRY_SETUP = '设置模块';
+Blockly.Msg.CATEGORY_SENTRY_RUN = '运行模块';
 
 // Help文本
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化视觉传感器，并选择相关的地址';
@@ -28,7 +28,7 @@ Blockly.Msg.SENTRY_ADDR = '地址';
 Blockly.Msg.SENTRY_SET_DEFAULT = ' 恢复默认参数';
 Blockly.Msg.SENTRY_VISION = '算法';
 Blockly.Msg.SENTRY_STATUS = '状态';
-Blockly.Msg.SENTRY_SET = '设置';
+Blockly.Msg.SENTRY_SET = '设置 ';
 Blockly.Msg.SENTRY_SET_COORDINATE = '坐标输出';
 Blockly.Msg.SENTRY_SET_PARAMNUM = '参数个数';
 Blockly.Msg.SENTRY_SET_PARAM = '参数';
@@ -39,7 +39,7 @@ Blockly.Msg.SENTRY_Y = '纵坐标';
 Blockly.Msg.SENTRY_LEAST = '最小检测';
 Blockly.Msg.SENTRY_WEIGHT = '宽度';
 Blockly.Msg.SENTRY_HIGH = '高度'
-Blockly.Msg.SENTRY_LABLE = '标签';  
+Blockly.Msg.SENTRY_LABLE = '标签';
 Blockly.Msg.SENTRY_LED_SET_COLOR = 'LED检测到结果颜色为';
 Blockly.Msg.SENTRY_LED_SET_COLOR_NOT = '否则'
 Blockly.Msg.SENTRY_LED_SET_LEVEL = '亮度(0~15)';

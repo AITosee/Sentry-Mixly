@@ -164,25 +164,25 @@ var vision_obj_card_dict = {
   "Sentry2::kVision20Classes": vision_20class_objs
 }
 
-Blockly.Blocks['SentrySetup'] = {
-  init: function () {
-    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET_UP)
-    this.appendStatementInput('SENTRY_SETUP_BLOCK');
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-  },
+// Blockly.Blocks['SentrySetup'] = {
+//   init: function () {
+//     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+//     this.appendDummyInput()
+//       .appendField(Blockly.Msg.SENTRY_SET_UP)
+//     this.appendStatementInput('SENTRY_SETUP_BLOCK');
+//     this.setPreviousStatement(true, null);
+//     this.setNextStatement(true, null);
+//   },
 
-  onchange: function (e) {
-    var surround_parent = this.getSurroundParent();
-    if (surround_parent && surround_parent.type == 'base_setup') {
-      this.setWarningText(null);
-    } else {
-      this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_BASE);
-    }
-  }
-};
+//   onchange: function (e) {
+//     var surround_parent = this.getSurroundParent();
+//     if (surround_parent && surround_parent.type == 'base_setup') {
+//       this.setWarningText(null);
+//     } else {
+//       this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_BASE);
+//     }
+//   }
+// };
 
 Blockly.Blocks['SentryBegin'] = {
   init: function () {
@@ -205,14 +205,14 @@ Blockly.Blocks['SentryBegin'] = {
     this.setHelpUrl();
   },
 
-  onchange: function (e) {
-    var surround_parent = this.getSurroundParent();
-    if (surround_parent && surround_parent.type == 'SentrySetup') {
-      this.setWarningText(null);
-    } else {
-      this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-    }
-  }
+  // onchange: function (e) {
+  //   var surround_parent = this.getSurroundParent();
+  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
+  //     this.setWarningText(null);
+  //   } else {
+  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
+  //   }
+  // }
 };
 
 // 恢复默认设置
@@ -228,14 +228,14 @@ Blockly.Blocks["SentrySetDefault"] = {
     this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_DEFAULT);
   },
 
-  onchange: function (e) {
-    var surround_parent = this.getSurroundParent();
-    if (surround_parent && surround_parent.type == 'SentrySetup') {
-      this.setWarningText(null);
-    } else {
-      this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-    }
-  }
+  // onchange: function (e) {
+  //   var surround_parent = this.getSurroundParent();
+  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
+  //     this.setWarningText(null);
+  //   } else {
+  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
+  //   }
+  // }
 };
 
 // 坐标系设置
@@ -252,14 +252,14 @@ Blockly.Blocks["SentrySetCoordinateType"] = {
     this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE);
   },
 
-  onchange: function (e) {
-    var surround_parent = this.getSurroundParent();
-    if (surround_parent && surround_parent.type == 'SentrySetup') {
-      this.setWarningText(null);
-    } else {
-      this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-    }
-  }
+  // onchange: function (e) {
+  //   var surround_parent = this.getSurroundParent();
+  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
+  //     this.setWarningText(null);
+  //   } else {
+  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
+  //   }
+  // }
 };
 
 // 启用算法
@@ -295,14 +295,14 @@ Blockly.Blocks["SentryVisionSetParamNum"] = {
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
   },
 
-  onchange: function (e) {
-    var surround_parent = this.getSurroundParent();
-    if (surround_parent && surround_parent.type == 'SentrySetup') {
-      this.setWarningText(null);
-    } else {
-      this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-    }
-  }
+  // onchange: function (e) {
+  //   var surround_parent = this.getSurroundParent();
+  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
+  //     this.setWarningText(null);
+  //   } else {
+  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
+  //   }
+  // }
 };
 
 Blockly.Blocks['SentryVisionColorSetParam'] = {
@@ -329,14 +329,14 @@ Blockly.Blocks['SentryVisionColorSetParam'] = {
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
   },
 
-  onchange: function (e) {
-    var surround_parent = this.getSurroundParent();
-    if (surround_parent && surround_parent.type == 'SentrySetup') {
-      this.setWarningText(null);
-    } else {
-      this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-    }
-  }
+  // onchange: function (e) {
+  //   var surround_parent = this.getSurroundParent();
+  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
+  //     this.setWarningText(null);
+  //   } else {
+  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
+  //   }
+  // }
 };
 
 Blockly.Blocks['SentryVisionBlobSetParam'] = {
@@ -361,14 +361,14 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
   },
 
-  onchange: function (e) {
-    var surround_parent = this.getSurroundParent();
-    if (surround_parent && surround_parent.type == 'SentrySetup') {
-      this.setWarningText(null);
-    } else {
-      this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-    }
-  }
+  // onchange: function (e) {
+  //   var surround_parent = this.getSurroundParent();
+  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
+  //     this.setWarningText(null);
+  //   } else {
+  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
+  //   }
+  // }
 };
 
 Blockly.Blocks["SentryLedSetColor"] = {
