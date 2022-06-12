@@ -2,13 +2,13 @@
 #include <Sentry.h>
 #include <Wire.h>
 
+typedef Sentry2 Sentry;
+
 // #define SENTRY_I2C
 #define SENTRY_UART
 #define VISION_MASK Sentry::kVisionQrCode
-
-typedef Sentry2 Sentry;
-
 Sentry sentry;
+
 unsigned long ts = millis();
 unsigned long tn = ts;
 
@@ -18,17 +18,21 @@ int serial_putc(char c, struct __file*) {
 }
 
 void setup() {
+  sentry_err_t err = SENTRY_OK;
+
   Serial.begin(9600);
   fdevopen(&serial_putc, 0);
+
+  printf("Waiting for sentry initialize...\n");
 #ifdef SENTRY_I2C
   Wire.begin();
-  sentry_err_t err = sentry.begin(&Wire);
+  while (SENTRY_OK != sentry.begin(&Wire)) { yield(); }
 #endif  // SENTRY_I2C
 #ifdef SENTRY_UART
   Serial3.begin(9600);
-  sentry_err_t err = sentry.begin(&Serial3);
+  while (SENTRY_OK != sentry.begin(&Serial3)) { yield(); }
 #endif  // SENTRY_UART
-  printf("sentry.begin: %s[0x%x]\n", err ? "Error" : "Success", err);
+  printf("Sentry begin Success.\n");
   printf("Sentry image_shape = %hux%hu\n", sentry.cols(), sentry.rows());
   err = sentry.VisionBegin(VISION_MASK);
   printf("sentry.VisionBegin(kVisionQrCode): %s[0x%x]\n", err ? "Error" : "Success", err);

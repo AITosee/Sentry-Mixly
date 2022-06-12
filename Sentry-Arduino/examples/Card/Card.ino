@@ -7,6 +7,7 @@ typedef Sentry2 Sentry;
 // #define SENTRY_I2C
 #define SENTRY_UART
 #define VISION_MASK Sentry::kVisionCard
+Sentry sentry;
 
 const char* card_classes[] = {
   "unknown",
@@ -22,7 +23,6 @@ const char* card_classes[] = {
   "Oo", "Pp", "Qq", "Rr", "Ss", "Tt", "Uu", "Vv", "Ww", "Xx", "Yy", "Zz"
 };
 
-Sentry sentry;
 unsigned long ts = millis();
 unsigned long tn = ts;
 
@@ -32,17 +32,21 @@ int serial_putc(char c, struct __file*) {
 }
 
 void setup() {
+  sentry_err_t err = SENTRY_OK;
+
   Serial.begin(9600);
   fdevopen(&serial_putc, 0);
+
+  printf("Waiting for sentry initialize...\n");
 #ifdef SENTRY_I2C
   Wire.begin();
-  sentry_err_t err = sentry.begin(&Wire);
+  while (SENTRY_OK != sentry.begin(&Wire)) { yield(); }
 #endif  // SENTRY_I2C
 #ifdef SENTRY_UART
   Serial3.begin(9600);
-  sentry_err_t err = sentry.begin(&Serial3);
+  while (SENTRY_OK != sentry.begin(&Serial3)) { yield(); }
 #endif  // SENTRY_UART
-  printf("sentry.begin: %s[0x%x]\n", err ? "Error" : "Success", err);
+  printf("Sentry begin Success.\n");
   printf("Sentry image_shape = %dx%d\n", sentry.cols(), sentry.rows());
   err = sentry.VisionBegin(VISION_MASK);
   printf("sentry.VisionBegin(kVisionCard): %s[0x%x]\n", err ? "Error" : "Success", err);
@@ -54,7 +58,7 @@ void loop() {
   tn = millis();
   if (obj_num) {
     printf("Totally %d objects in %lums:\n", obj_num, tn - ts);
-    for (int i = 0; i < obj_num; ++i) {
+    for (int i = 1; i <= obj_num; ++i) {
       int x = sentry.GetValue(VISION_MASK, kXValue, i);
       int y = sentry.GetValue(VISION_MASK, kYValue, i);
       int w = sentry.GetValue(VISION_MASK, kWidthValue, i);

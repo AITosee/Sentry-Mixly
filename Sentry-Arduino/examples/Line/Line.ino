@@ -6,8 +6,11 @@ typedef Sentry2 Sentry;
 
 // #define SENTRY_I2C
 #define SENTRY_UART
-#define VISION_MASK Sentry::kVisionLearning
+#define VISION_MASK Sentry::kVisionLine
 Sentry sentry;
+
+unsigned long ts = millis();
+unsigned long tn = ts;
 
 int serial_putc(char c, struct __file*) {
   Serial.write(c);
@@ -30,20 +33,25 @@ void setup() {
   while (SENTRY_OK != sentry.begin(&Serial3)) { yield(); }
 #endif  // SENTRY_UART
   printf("Sentry begin Success.\n");
-  printf("Sentry image_shape = %hux%hu\n", sentry.cols(), sentry.rows());
+  printf("Sentry image_shape = %dx%d\n", sentry.cols(), sentry.rows());
   err = sentry.VisionBegin(VISION_MASK);
-  printf("sentry.VisionBegin(kVisionLearning): %s[0x%x]\n", err ? "Error" : "Success", err);
+  printf("sentry.VisionBegin(kVisionLine): %s[0x%x]\n", err ? "Error" : "Success", err);
 }
 
 void loop() {
-  unsigned long ts = millis();
+  ts = tn;
   int obj_num = sentry.GetValue(VISION_MASK, kStatus);
-  unsigned long te = millis();
+  tn = millis();
   if (obj_num) {
-    printf("Totally %d objects in %lums:\n", obj_num, te - ts);
+    printf("Totally %d objects in %lums:\n", obj_num, tn - ts);
     for (int i = 1; i <= obj_num; ++i) {
-      int l = sentry.GetValue(VISION_MASK, kLabel, i);
-      printf("  obj[%d]: label=%d\n", i, l);
+      int x1 = sentry.GetValue(VISION_MASK, kXValue, i);
+      int y1 = sentry.GetValue(VISION_MASK, kYValue, i);
+      int x2 = sentry.GetValue(VISION_MASK, kWidthValue, i);
+      int y2 = sentry.GetValue(VISION_MASK, kHeightValue, i);
+      int degree = sentry.GetValue(VISION_MASK, kLabel, i);
+      printf("  obj[%d]: x1=%d,y1=%d,x2=%d,y2=%d,degree=%d\n", i, x1, y1, x2,
+             y2, degree);
     }
   }
 }

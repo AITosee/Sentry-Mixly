@@ -2,13 +2,13 @@
 #include <Sentry.h>
 #include <Wire.h>
 
+typedef Sentry2 Sentry;
+
 // #define SENTRY_I2C
 #define SENTRY_UART
 #define VISION_MASK Sentry::kVisionColor
-
-typedef Sentry2 Sentry;
-
 Sentry sentry;
+
 unsigned long ts = millis();
 unsigned long tn = ts;
 
@@ -18,20 +18,24 @@ int serial_putc(char c, struct __file*) {
 }
 
 void setup() {
+  sentry_err_t err = SENTRY_OK;
+
   Serial.begin(9600);
   fdevopen(&serial_putc, 0);
-  sentry_err_t err;
+
+  printf("Waiting for sentry initialize...\n");
 #ifdef SENTRY_I2C
   Wire.begin();
-  err = sentry.begin(&Wire);
+  while (SENTRY_OK != sentry.begin(&Wire)) { yield(); }
 #endif  // SENTRY_I2C
 #ifdef SENTRY_UART
   Serial3.begin(9600);
-  err = sentry.begin(&Serial3);
+  while (SENTRY_OK != sentry.begin(&Serial3)) { yield(); }
 #endif  // SENTRY_UART
-  printf("sentry.begin: %s[0x%x]\n", err ? "Error" : "Success", err);
+  printf("Sentry begin Success.\n");
   printf("Sentry image_shape = %hux%hu\n", sentry.cols(), sentry.rows());
   printf("SENTRY_MAX_RESULT = %d\n", SENTRY_MAX_RESULT);
+  sentry.SeneorSetCoordinateType(kAbsoluteCoordinate);
   int param_num = 4;       // 1~SENTRY_MAX_RESULT
   sentry.SetParamNum(VISION_MASK, param_num);
   sentry_object_t param;
@@ -60,7 +64,7 @@ void loop() {
   tn = millis();
   if (obj_num) {
     printf("Totally %d objects in %lums:\n", obj_num, tn - ts);
-    for (int i = 0; i < obj_num; ++i) {
+    for (int i = 1; i <= obj_num; ++i) {
       int l = sentry.GetValue(VISION_MASK, kLabel, i);
       printf("|%02d", l);
     }

@@ -17,6 +17,8 @@
 
 #include <SentryFactory.h>
 
+namespace tosee_sentry {
+
 #define SENTRY2_DEVICE_ID 0x04
 
 class Sentry2 : public SentryFactory {
@@ -38,7 +40,6 @@ class Sentry2 : public SentryFactory {
     kVisionFace = 7,
     kVision20Classes = 8,
     kVisionQrCode = 9,
-    kVisionObjTrack = 10,
     kVisionMotionDetect = 11,
     kVisionMaxType,
   };
@@ -186,7 +187,7 @@ class Sentry2 : public SentryFactory {
    * @retval information value
    */
   int GetValue(sentry_vision_e vision_type, sentry_obj_info_e obj_info,
-               int obj_id = 0) {
+               int obj_id = 1) {
     return SentryFactory::GetValue((int)vision_type, obj_info, obj_id);
   }
 
@@ -205,5 +206,7 @@ class Sentry2 : public SentryFactory {
  private:
   sentry_vision_state_t* product_vision_state_[kVisionMaxType - 1] = {nullptr};
 };
+
+}  // namespace tosee_sentry
 
 #endif /* SENTRY2_H_ */

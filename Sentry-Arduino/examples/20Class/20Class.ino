@@ -6,12 +6,30 @@ typedef Sentry2 Sentry;
 
 // #define SENTRY_I2C
 #define SENTRY_UART
-#define VISION_MASK Sentry::kVisionBlob
+#define VISION_MASK Sentry::kVision20Classes
 Sentry sentry;
 
-const char* blob_classes[] = {
-  "UNKNOWN", "BLACK", "WHITE", "RED", "GREEN", "BLUE", "YELLOW"
-};
+const char* classes20[] = {"unknown",
+                           "Airplane",
+                           "Bicycle",
+                           "Bird",
+                           "Boat",
+                           "Bottle",
+                           "Bus",
+                           "Car",
+                           "Cat",
+                           "Chair",
+                           "Cow",
+                           "Dining Table",
+                           "Dog",
+                           "Horse",
+                           "Motorbike",
+                           "Person",
+                           "Potted Plant",
+                           "Sheep",
+                           "Sofa",
+                           "Train",
+                           "TV Monitor"};
 
 unsigned long ts = millis();
 unsigned long tn = ts;
@@ -38,20 +56,8 @@ void setup() {
 #endif  // SENTRY_UART
   printf("Sentry begin Success.\n");
   printf("Sentry image_shape = %dx%d\n", sentry.cols(), sentry.rows());
-  /* Must lock white balance */
-  err = sentry.CameraSetAwb(kLockWhiteBalance);
-  printf("sentry.CameraLockAwb: %s[0x%x]\n", err ? "Error" : "Success", err);
-  sentry.SetParamNum(VISION_MASK, 1);
-  sentry_object_t param = {0};
-  /* Set minimum blob size(pixel) */
-  param.width = 5;
-  param.height = 5;
-  /* Set blob color */
-  param.label = Sentry::kColorRed;
-  err = sentry.SetParam(VISION_MASK, &param);
-  printf("sentry.SetParam(%s): %s[0x%x]\n", blob_classes[param.label], err ? "Error" : "Success", err);
   err = sentry.VisionBegin(VISION_MASK);
-  printf("sentry.VisionBegin(kVisionBlob): %s[0x%x]\n", err ? "Error" : "Success", err);
+  printf("sentry.VisionBegin(kVisionCard): %s[0x%x]\n", err ? "Error" : "Success", err);
 }
 
 void loop() {
@@ -66,7 +72,7 @@ void loop() {
       int w = sentry.GetValue(VISION_MASK, kWidthValue, i);
       int h = sentry.GetValue(VISION_MASK, kHeightValue, i);
       int l = sentry.GetValue(VISION_MASK, kLabel, i);
-      printf("  obj[%d]: x=%d,y=%d,w=%d,h=%d, label=%s\n", i, x, y, w, h, blob_classes[l]);
+      printf("  obj[%d]: x=%d,y=%d,w=%d,h=%d, label=%s\n", i, x, y, w, h, classes20[l]);
     }
   }
 }

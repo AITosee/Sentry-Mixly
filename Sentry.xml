@@ -1,44 +1,14 @@
-<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry/" lib="Sentry-Arduino/" libraries="libraries/Sentry-Arduino/"
+<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry/" lib="Sentry-Arduino/"
 -->
 <script type="text/javascript" src="../../blocks/company/Sentry.js"></script>
 <script type="text/javascript" src="../../generators/arduino/company/Sentry.js"></script>
 <category id="mixly_Sentry" name="Sentry" colour="#EF5411">
   <category id="Sentry_Setup" name="设置模块" colour="#EF5411">
-    <!-- <block type="SentrySetup">
-      <statement name="SENTRY_SETUP_BLOCK">
-        <block type="SentryBegin">
-          <field name="sentry_obj">0</field>
-          <field name="mode_obj">Wire</field>
-          <next>
-            <block type="SentrySetDefault">
-              <field name="sentry_obj">0</field>
-              <next>
-                <block type="SentrySetCoordinateType">
-                  <field name="sentry_obj">0</field>
-                  <field name="coord_obj">kAbsoluteCoordinate</field>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </statement>
-    </block>    初始化 Sentry -->
-    <block type="SentryBegin"></block>    <!-- 设置 恢复默认设置-->
-    <block type="SentrySetDefault"></block>    <!-- 设置 坐标系设置-->
-    <block type="SentrySetCoordinateType"></block>    <!-- 启用算法-->
-    <block type="SentryVisionSetStatus"></block>    <!-- 设置 算法参数个数-->
+    <block type="SentryBegin"></block>    <!-- 设置 SENTRY-->
+    <block type="SentryVisionSetStatus"></block>    <!-- 设置 启用算法-->
     <block type="SentryVisionSetParamNum"></block>    <!-- 设置 算法参数-->
     <block type="SentryVisionColorSetParam"></block>
-    <block type="SentryVisionBlobSetParam"></block>    <!-- block type="SentryVisionFaceSetParam"></block-->    <!-- 设置 LED-->
-    <block type="SentryLedSetColor">
-      <value name="level">
-        <shadow type="math_number">
-          <field name="NUM">1</field>
-        </shadow>
-      </value>
-    </block>    <!-- 设置 变焦等级-->
-    <block type="SentrySetZoom"></block>    <!-- 设置 白平衡-->
-    <block type="SentrySetAWB"></block>
+    <block type="SentryVisionBlobSetParam"></block>
   </category>
   <category id="Sentry_Run" name="运行模块" colour="#EAA20A">
     <block type="SentryVisionGetStatus"></block>
@@ -118,11 +88,6 @@
               <block type="SentryVisionSetStatus" id="Ul:{s8J9I8OsPTm,vUKu">
                 <field name="VisionStatus">Begin</field>
                 <field name="vision_obj">Sentry2::kVisionBlob</field>
-                <next>
-                  <block type="SentrySetAWB" id="SI9X@Zeca!WyrnE$kc_s">
-                    <field name="awb_obj">kWhiteLight</field>
-                  </block>
-                </next>
               </block>
             </next>
           </block>
@@ -151,28 +116,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -457,11 +409,6 @@
               <block type="SentryVisionSetStatus" id="Ul:{s8J9I8OsPTm,vUKu">
                 <field name="VisionStatus">Begin</field>
                 <field name="vision_obj">Sentry2::kVisionColor</field>
-                <next>
-                  <block type="SentrySetAWB" id="SI9X@Zeca!WyrnE$kc_s">
-                    <field name="awb_obj">kWhiteLight</field>
-                  </block>
-                </next>
               </block>
             </next>
           </block>
@@ -490,28 +437,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -710,28 +644,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -962,28 +883,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -1214,28 +1122,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -1430,28 +1325,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -1756,28 +1638,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -2008,28 +1877,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
@@ -2521,28 +2377,15 @@
                 <field name="VAR">i</field>
                 <value name="FROM">
                   <shadow type="math_number">
-                    <field name="NUM">0</field>
+                    <field name="NUM">1</field>
                   </shadow>
                 </value>
                 <value name="TO">
                   <shadow type="math_number">
                     <field name="NUM">10</field>
                   </shadow>
-                  <block type="math_arithmetic">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                      <block type="variables_get">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <shadow type="math_number">
-                        <field name="NUM">1</field>
-                      </shadow>
-                    </value>
+                  <block type="variables_get">
+                    <field name="VAR">count</field>
                   </block>
                 </value>
                 <value name="STEP">
