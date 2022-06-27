@@ -164,26 +164,6 @@ var vision_obj_card_dict = {
   "Sentry2::kVision20Classes": vision_20class_objs
 }
 
-// Blockly.Blocks['SentrySetup'] = {
-//   init: function () {
-//     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-//     this.appendDummyInput()
-//       .appendField(Blockly.Msg.SENTRY_SET_UP)
-//     this.appendStatementInput('SENTRY_SETUP_BLOCK');
-//     this.setPreviousStatement(true, null);
-//     this.setNextStatement(true, null);
-//   },
-
-//   onchange: function (e) {
-//     var surround_parent = this.getSurroundParent();
-//     if (surround_parent && surround_parent.type == 'base_setup') {
-//       this.setWarningText(null);
-//     } else {
-//       this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_BASE);
-//     }
-//   }
-// };
-
 Blockly.Blocks['SentryBegin'] = {
   init: function () {
     var mode_objs = [["I2C", "Wire"]].concat(profile.default.serial_select);
@@ -203,16 +183,7 @@ Blockly.Blocks['SentryBegin'] = {
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
     this.setTooltip(Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP);
     this.setHelpUrl();
-  },
-
-  // onchange: function (e) {
-  //   var surround_parent = this.getSurroundParent();
-  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
-  //     this.setWarningText(null);
-  //   } else {
-  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-  //   }
-  // }
+  }
 };
 
 // 恢复默认设置
@@ -226,40 +197,7 @@ Blockly.Blocks["SentrySetDefault"] = {
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
     this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_DEFAULT);
-  },
-
-  // onchange: function (e) {
-  //   var surround_parent = this.getSurroundParent();
-  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
-  //     this.setWarningText(null);
-  //   } else {
-  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-  //   }
-  // }
-};
-
-// 坐标系设置
-Blockly.Blocks["SentrySetCoordinateType"] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_SET_COORDINATE)
-      .appendField(new Blockly.FieldDropdown(Coordinate_objs), "coord_obj")
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE);
-  },
-
-  // onchange: function (e) {
-  //   var surround_parent = this.getSurroundParent();
-  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
-  //     this.setWarningText(null);
-  //   } else {
-  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-  //   }
-  // }
+  }
 };
 
 // 启用算法
@@ -293,16 +231,7 @@ Blockly.Blocks["SentryVisionSetParamNum"] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-  },
-
-  // onchange: function (e) {
-  //   var surround_parent = this.getSurroundParent();
-  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
-  //     this.setWarningText(null);
-  //   } else {
-  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-  //   }
-  // }
+  }
 };
 
 Blockly.Blocks['SentryVisionColorSetParam'] = {
@@ -323,20 +252,11 @@ Blockly.Blocks['SentryVisionColorSetParam'] = {
       .appendField(Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT)
       .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "h")
       .appendField(Blockly.Msg.SENTRY_INDEX)
-      .appendField(new Blockly.FieldNumber(0, 0, 24, 1), "index");
+      .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "index");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-  },
-
-  // onchange: function (e) {
-  //   var surround_parent = this.getSurroundParent();
-  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
-  //     this.setWarningText(null);
-  //   } else {
-  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-  //   }
-  // }
+  }
 };
 
 Blockly.Blocks['SentryVisionBlobSetParam'] = {
@@ -355,71 +275,13 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
       .appendField(Blockly.Msg.SENTRY_STATE_VALUE_LABEL)
       .appendField(new Blockly.FieldDropdown(vision_blod_objs), "lable")
       .appendField(Blockly.Msg.SENTRY_INDEX)
-      .appendField(new Blockly.FieldNumber(0, 0, 24, 1), "index");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-  },
-
-  // onchange: function (e) {
-  //   var surround_parent = this.getSurroundParent();
-  //   if (surround_parent && surround_parent.type == 'SentrySetup') {
-  //     this.setWarningText(null);
-  //   } else {
-  //     this.setWarningText(Blockly.Msg.SENTRY_WARNING_SETUP_ONLY);
-  //   }
-  // }
-};
-
-Blockly.Blocks["SentryLedSetColor"] = {
-  init: function () {
-    var led_color = ['#fff', '#000', '#f00', '#0f0', '#ff0', '#00f', '#f0f', '#0ff'];
-    var color_detected = new Blockly.FieldColour('#0000ff');
-    color_detected.setColours(led_color).setColumns(4);
-    var color_undetected = new Blockly.FieldColour('#ff0000');
-    color_undetected.setColours(led_color).setColumns(4);
-
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR)
-      .appendField(color_detected, "led_color_obj1")
-      .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR_NOT)
-      .appendField(color_undetected, "led_color_obj2")
-      .appendField(Blockly.Msg.SENTRY_LED_SET_LEVEL);
-    this.appendValueInput("level")
-      .setCheck([Number]);
-    this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip(Blockly.Msg.SENTRY_HELP_LED);
-  }
-};
-
-Blockly.Blocks['SentrySetZoom'] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_CAMERA_SET_ZOOM)
-      .appendField(new Blockly.FieldDropdown(zoom_level_objs), "zoom_obj")
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip(Blockly.Msg.SENTRY_HELP_ZOOM);
-  }
-};
-
-Blockly.Blocks['SentrySetAWB'] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_CAMERA_SET_AWB)
-      .appendField(new Blockly.FieldDropdown(white_balance_objs), "awb_obj")
+      .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "index");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
   }
 };
+
 
 Blockly.Blocks["SentryVisionGetStatus"] = {
   init: function () {
