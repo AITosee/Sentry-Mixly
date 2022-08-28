@@ -11,24 +11,6 @@ var Coordinate_objs = [
   [Blockly.Msg.SENTRY_PERCENTAGECOORDINATE, "kPercentageCoordinate"]
 ];
 
-var vision_objs = [
-  [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"],
-  [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"],
-  [Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG, "Sentry2::kVisionAprilTag"],
-  [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry2::kVisionLine"],
-  [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, "Sentry2::kVisionLearning"],
-  [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry2::kVisionCard"],
-  [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
-  [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
-  [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "Sentry2::kVisionQrCode"],
-  [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
-];
-
-var vision_prama_support_objs = [
-  [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"],
-  [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"]
-];
-
 var zoom_level_objs = [
   [Blockly.Msg.SENTRY_ZOOM_DEFAULT, "kZoomDefault"],
   [Blockly.Msg.SENTRY_ZOOM_LEVEL1, "kZoom1"],
@@ -67,7 +49,54 @@ var vision_color_objs = [
   [Blockly.Msg.SENTRY_STATE_VALUE_LABEL, "kLabel"]
 ];
 
-var vision_blod_objs = [
+var vision_line_objs = [
+[Blockly.Msg.SENTRY_STATE_LINE_EX, "kXValue"],
+[Blockly.Msg.SENTRY_STATE_LINE_EY, "kYValue"],
+[Blockly.Msg.SENTRY_STATE_LINE_SX, "kWidthValue"],
+[Blockly.Msg.SENTRY_STATE_LINE_SY, "kHeightValue"],
+[Blockly.Msg.SENTRY_STATE_LINE_A, "kLabel"],
+]
+
+var sentry1_vision_blod_objs = [
+  [Blockly.Msg.SENTRY_COLOR_BLACK, "Sentry1::kColorBlack"],
+  [Blockly.Msg.SENTRY_COLOR_WHITE, "Sentry1::kColorWhite"],
+  [Blockly.Msg.SENTRY_COLOR_RED, "Sentry1::kColorRed"],
+  [Blockly.Msg.SENTRY_COLOR_GREEN, "Sentry1::kColorGreen"],
+  [Blockly.Msg.SENTRY_COLOR_BLUE, "Sentry1::kColorBlue"],
+  [Blockly.Msg.SENTRY_COLOR_YELLOW, "Sentry1::kColorYellow"]
+];
+
+var sentry1_vision_objs = [
+  [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry1::kVisionBlob"],
+  [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry1::kVisionColor"],
+  [Blockly.Msg.SENTRY_VISION_VISIONBALL, "Sentry1::kVisionBall"],
+  [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry1::kVisionLine"],
+  [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry1::kVisionCard"],
+  [Blockly.Msg.SENTRY_VISION_VISIONBODY, "Sentry1::kVisionBody"]
+];
+
+
+var sentry1_vision_prama_support_objs = [
+  [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry1::kVisionColor"],
+  [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry1::kVisionBlob"]
+];
+
+var sentry1_vision_card_objs = [
+  [Blockly.Msg.SENTRY_CARD_FORWARD, "Sentry1::kCardForward"],
+  [Blockly.Msg.SENTRY_CARD_LEFT, "Sentry1::kCardLeft"],
+  [Blockly.Msg.SENTRY_CARD_RIGHT, "Sentry1::kCardRight"],
+  [Blockly.Msg.SENTRY_CARD_TURN_AROUND, "Sentry1::kCardTurnAround"],
+  [Blockly.Msg.SENTRY_CARD_PARK, "Sentry1::kCardPark"],
+
+  [Blockly.Msg.SENTRY_CARD_CHECK, "Sentry1::kCardCheck"],
+  [Blockly.Msg.SENTRY_CARD_CROSS, "Sentry1::kCardCross"],
+  [Blockly.Msg.SENTRY_CARD_CIRCLE, "Sentry1::kCardCircle"],
+  [Blockly.Msg.SENTRY_CARD_SQUARE, "Sentry1::kCardSquare"],
+  [Blockly.Msg.SENTRY_CARD_TRIANGLE, "Sentry1::kCardTriangle"],
+];
+
+
+var sentry2_vision_blod_objs = [
   [Blockly.Msg.SENTRY_COLOR_BLACK, "Sentry2::kColorBlack"],
   [Blockly.Msg.SENTRY_COLOR_WHITE, "Sentry2::kColorWhite"],
   [Blockly.Msg.SENTRY_COLOR_RED, "Sentry2::kColorRed"],
@@ -76,7 +105,25 @@ var vision_blod_objs = [
   [Blockly.Msg.SENTRY_COLOR_YELLOW, "Sentry2::kColorYellow"]
 ];
 
-var vision_20class_objs = [
+var sentry2_vision_objs = [
+  [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"],
+  [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"],
+  [Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG, "Sentry2::kVisionAprilTag"],
+  [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry2::kVisionLine"],
+  [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, "Sentry2::kVisionLearning"],
+  [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry2::kVisionCard"],
+  [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
+  [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
+  [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "Sentry2::kVisionQrCode"],
+  [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
+];
+
+var sentry2_vision_prama_support_objs = [
+  [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"],
+  [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"]
+];
+
+var sentry2_vision_20class_objs = [
   [Blockly.Msg.SENTRY_CLASS20_AIRPLANE, "Sentry2::kAirplane"],
   [Blockly.Msg.SENTRY_CLASS20_BICYCLE, "Sentry2::kBicycle"],
   [Blockly.Msg.SENTRY_CLASS20_BIRD, "Sentry2::kBird"],
@@ -100,7 +147,7 @@ var vision_20class_objs = [
 ];
 
 
-var vision_card_objs = [
+var sentry2_vision_card_objs = [
   [Blockly.Msg.SENTRY_CARD_FORWARD, "Sentry2::kCardForward"],
   [Blockly.Msg.SENTRY_CARD_LEFT, "Sentry2::kCardLeft"],
   [Blockly.Msg.SENTRY_CARD_RIGHT, "Sentry2::kCardRight"],
@@ -159,17 +206,334 @@ var vision_card_objs = [
 ];
 
 var vision_obj_card_dict = {
-  "Sentry2::kVisionBlob": vision_blod_objs,
-  "Sentry2::kVisionCard": vision_card_objs,
-  "Sentry2::kVision20Classes": vision_20class_objs
+  "Sentry2::kVisionBlob": sentry2_vision_blod_objs,
+  "Sentry2::kVisionCard": sentry2_vision_card_objs,
+  "Sentry2::kVision20Classes": sentry2_vision_20class_objs,
+  "Sentry1::kVisionBlob": sentry1_vision_blod_objs,
+  "Sentry1::kVisionCard": sentry1_vision_card_objs,
 }
 
+Blockly.Blocks['Sentry1Begin'] = {
+  init: function () {
+    var mode_objs = [["I2C", "Wire"]].concat(profile.default.serial_select);
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY_BEGIN)
+      .appendField(Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_PORT)
+      .appendField(new Blockly.FieldDropdown(mode_objs), "mode_obj")
+      .appendField(Blockly.Msg.SENTRY_ADDR)
+      .appendField(new Blockly.FieldDropdown([['0x60', '0x60'],
+      ['0x61', '0x61'],
+      ['0x62', '0x62'],
+      ['0x63', '0x63']]), "addr_obj");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP);
+    this.setHelpUrl();
+  }
+};
+
+// 恢复默认设置
+Blockly.Blocks["Sentry1SetDefault"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_SET_DEFAULT)
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_DEFAULT);
+  }
+};
+
+Blockly.Blocks["Sentry1LedSetColor"] = {
+  init: function () {
+    var led_color = ['#fff', '#000', '#f00', '#0f0', '#ff0', '#00f', '#f0f', '#0ff'];
+    var color_detected = new Blockly.FieldColour('#0000ff');
+    color_detected.setColours(led_color).setColumns(4);
+    var color_undetected = new Blockly.FieldColour('#ff0000');
+    color_undetected.setColours(led_color).setColumns(4);
+
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR)
+      .appendField(color_detected, "led_color_obj1")
+      .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR_NOT)
+      .appendField(color_undetected, "led_color_obj2")
+      .appendField(Blockly.Msg.SENTRY_LED_SET_LEVEL);
+    this.appendValueInput("level")
+      .setCheck([Number]);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_LED);
+  }
+};
+
+
+// 启用算法
+Blockly.Blocks["Sentry1VisionSetStatus"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY1_NAME)
+      .appendField(new Blockly.FieldDropdown(
+        [
+          [Blockly.Msg.SENTRY_ENABLE, "Begin"],
+          [Blockly.Msg.SENTRY_DISABLE, "End"],
+        ]
+      ), "VisionStatus")
+      .appendField(new Blockly.FieldDropdown(sentry1_vision_objs), "vision_obj");
+
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE);
+  }
+};
+
+Blockly.Blocks["Sentry1VisionSetParamNum"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY1_NAME)
+      .appendField(new Blockly.FieldDropdown(sentry1_vision_prama_support_objs), "vision_obj")
+      .appendField(Blockly.Msg.SENTRY_SET_PARAMNUM)
+      .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "num");
+
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionColorSetParam'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_VISION)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry1::kVisionColor"]]), "vision_obj")
+      .appendField(Blockly.Msg.SENTRY_SET_PARAM);
+    this.appendDummyInput("VisionParam")
+      .appendField(Blockly.Msg.SENTRY_CENTER)
+      .appendField(Blockly.Msg.SENTRY_STATE_VALUE_X)
+      .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "x")
+      .appendField(Blockly.Msg.SENTRY_STATE_VALUE_Y)
+      .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "y")
+      .appendField(Blockly.Msg.SENTRY_STATE_VALUE_WIDTH)
+      .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "w")
+      .appendField(Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT)
+      .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "h")
+      .appendField(Blockly.Msg.SENTRY_INDEX)
+      .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "index");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionBlobSetParam'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_VISION)
+      .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry1::kVisionBlob"]]), "vision_obj")
+      .appendField(Blockly.Msg.SENTRY_SET_PARAM)
+    this.appendDummyInput("VisionParam")
+      .appendField(Blockly.Msg.SENTRY_LEAST)
+      .appendField(Blockly.Msg.SENTRY_STATE_VALUE_WIDTH)
+      .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "w")
+      .appendField(Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT)
+      .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "h")
+      .appendField(Blockly.Msg.SENTRY_STATE_VALUE_LABEL)
+      .appendField(new Blockly.FieldDropdown(sentry1_vision_blod_objs), "lable")
+      .appendField(Blockly.Msg.SENTRY_INDEX)
+      .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "index");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
+  }
+};
+
+
+Blockly.Blocks["Sentry1VisionGetStatus"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_VISION)
+      .appendField(new Blockly.FieldDropdown(sentry1_vision_objs), "vision_obj")
+      .appendField(Blockly.Msg.SENTRY_STATUS)
+    this.setOutput(true, Number);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+  }
+};
+
+Blockly.Blocks["Sentry1VisionDetectedCount"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_VISION)
+      .appendField(new Blockly.FieldDropdown(sentry1_vision_objs), "vision_obj")
+      .appendField(Blockly.Msg.SENTRY_VISION_DETECTED + Blockly.Msg.SENTRY_VISION_RESULT + Blockly.Msg.SENTRY_DETECTED_NUMBER)
+    this.setInputsInline(true);
+    this.setOutput(true, null);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionObj'] = {
+  init: function () {
+    var _vision_objs = [
+      [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry1::kVisionBlob"],
+      [Blockly.Msg.SENTRY_VISION_VISIONBALL, "Sentry1::kVisionBall"],
+      [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry1::kVisionCard"],
+      [Blockly.Msg.SENTRY_VISION_VISIONBODY, "Sentry1::kVisionBody"]
+    ];
+
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
+      .appendField(new Blockly.FieldDropdown(vision_res_objs), "vision_res_obj");
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionObjColor'] = {
+  init: function () {
+    var _vision_objs = [
+      [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry1::kVisionColor"]
+    ];
+
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
+      .appendField(new Blockly.FieldDropdown(vision_color_objs), "vision_res_obj");
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionObjLine'] = {
+  init: function () {
+    var _vision_objs = [
+      [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry1::kVisionLine"]
+    ];
+
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
+      .appendField(new Blockly.FieldDropdown(vision_line_objs), "vision_res_obj");
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+
+Blockly.Blocks["Sentry1GetValue"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY1_NAME)
+      .appendField(Blockly.Msg.SENTRY_VISION)
+    this.appendValueInput("sentry_value_obj")
+      .setCheck([Array]);
+    this.appendValueInput("index")
+      .setCheck([Number])
+      .appendField(Blockly.Msg.SENTRY_INDEX);
+    this.setInputsInline(true);
+    this.setOutput(true, Number);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_GET_VISION_VALUE);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionColor'] = {
+  init: function () {
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown([
+        [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry1::kVisionColor"]
+      ]), 'vision_obj')
+      .appendField(Blockly.Msg.SENTRY_VISION_DETECTED)
+      .appendField(new Blockly.FieldDropdown(vision_obj_card_dict["Sentry1::kVisionBlob"]), 'vision_card_obj')
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionCardBlob'] = {
+  init: function () {
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown([
+        [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry1::kVisionBlob"]
+      ]), 'vision_obj')
+      .appendField(Blockly.Msg.SENTRY_VISION_DETECTED)
+      .appendField(new Blockly.FieldDropdown(vision_obj_card_dict["Sentry1::kVisionBlob"]), 'vision_card_obj')
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionCard'] = {
+  init: function () {
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown([
+        [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry1::kVisionCard"]
+      ]), 'vision_obj')
+      .appendField(Blockly.Msg.SENTRY_VISION_DETECTED)
+      .appendField(new Blockly.FieldDropdown(vision_obj_card_dict["Sentry1::kVisionCard"]), 'vision_card_obj')
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+Blockly.Blocks["Sentry1VisionDetected"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField(Blockly.Msg.SENTRY1_NAME)
+    this.appendValueInput("sentry_detected_obj")
+      .setCheck([Array])
+      .appendField(Blockly.Msg.SENTRY_VISION);
+    this.appendValueInput("index")
+      .setCheck([Number])
+      .appendField(Blockly.Msg.SENTRY_INDEX);
+    this.appendDummyInput("VisionDetected")
+    this.setInputsInline(true);
+    this.setOutput(true, Boolean);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setTooltip(Blockly.Msg.SENTRY_HELP_DETECTED_VISION_VALUE);
+  }
+};
+
+// Sentry2
 Blockly.Blocks['SentryBegin'] = {
   init: function () {
     var mode_objs = [["I2C", "Wire"]].concat(profile.default.serial_select);
     this.appendDummyInput()
       .appendField(Blockly.Msg.SENTRY_BEGIN)
-      .appendField(Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_PORT)
       .appendField(new Blockly.FieldDropdown(mode_objs), "mode_obj")
       .appendField(Blockly.Msg.SENTRY_ADDR)
@@ -190,7 +554,7 @@ Blockly.Blocks['SentryBegin'] = {
 Blockly.Blocks["SentrySetDefault"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_SET_DEFAULT)
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -204,14 +568,14 @@ Blockly.Blocks["SentrySetDefault"] = {
 Blockly.Blocks["SentryVisionSetStatus"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY2_NAME)
       .appendField(new Blockly.FieldDropdown(
         [
           [Blockly.Msg.SENTRY_ENABLE, "Begin"],
           [Blockly.Msg.SENTRY_DISABLE, "End"],
         ]
       ), "VisionStatus")
-      .appendField(new Blockly.FieldDropdown(vision_objs), "vision_obj");
+      .appendField(new Blockly.FieldDropdown(sentry2_vision_objs), "vision_obj");
 
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
@@ -223,8 +587,8 @@ Blockly.Blocks["SentryVisionSetStatus"] = {
 Blockly.Blocks["SentryVisionSetParamNum"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
-      .appendField(new Blockly.FieldDropdown(vision_prama_support_objs), "vision_obj")
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY2_NAME)
+      .appendField(new Blockly.FieldDropdown(sentry2_vision_prama_support_objs), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_SET_PARAMNUM)
       .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "num");
 
@@ -237,7 +601,7 @@ Blockly.Blocks["SentryVisionSetParamNum"] = {
 Blockly.Blocks['SentryVisionColorSetParam'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"]]), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_SET_PARAM);
@@ -262,7 +626,7 @@ Blockly.Blocks['SentryVisionColorSetParam'] = {
 Blockly.Blocks['SentryVisionBlobSetParam'] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
       .appendField(new Blockly.FieldDropdown([[Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"]]), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_SET_PARAM)
@@ -273,7 +637,7 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
       .appendField(Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT)
       .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "h")
       .appendField(Blockly.Msg.SENTRY_STATE_VALUE_LABEL)
-      .appendField(new Blockly.FieldDropdown(vision_blod_objs), "lable")
+      .appendField(new Blockly.FieldDropdown(sentry2_vision_blod_objs), "lable")
       .appendField(Blockly.Msg.SENTRY_INDEX)
       .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "index");
     this.setPreviousStatement(true, null);
@@ -286,9 +650,9 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
 Blockly.Blocks["SentryVisionGetStatus"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
-      .appendField(new Blockly.FieldDropdown(vision_objs), "vision_obj")
+      .appendField(new Blockly.FieldDropdown(sentry2_vision_objs), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_STATUS)
     this.setOutput(true, Number);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
@@ -298,9 +662,9 @@ Blockly.Blocks["SentryVisionGetStatus"] = {
 Blockly.Blocks["SentryVisionDetectedCount"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
-      .appendField(new Blockly.FieldDropdown(vision_objs), "vision_obj")
+      .appendField(new Blockly.FieldDropdown(sentry2_vision_objs), "vision_obj")
       .appendField(Blockly.Msg.SENTRY_VISION_DETECTED + Blockly.Msg.SENTRY_VISION_RESULT + Blockly.Msg.SENTRY_DETECTED_NUMBER)
     this.setInputsInline(true);
     this.setOutput(true, null);
@@ -308,46 +672,6 @@ Blockly.Blocks["SentryVisionDetectedCount"] = {
   }
 };
 
-Blockly.Blocks['SentryVisionObj'] = {
-  init: function () {
-    var _vision_objs = [
-      [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"],
-      [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"],
-      [Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG, "Sentry2::kVisionAprilTag"],
-      [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry2::kVisionLine"],
-      [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, "Sentry2::kVisionLearning"],
-      [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry2::kVisionCard"],
-      [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
-      [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
-      [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "Sentry2::kVisionQrCode"],
-
-      [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
-    ];
-
-    this.setColour(Blockly.Blocks.base.HUE);
-    this.appendDummyInput("VisionValue")
-      .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
-      .appendField(new Blockly.FieldDropdown(vision_color_objs), "vision_res_obj");
-    this.setOutput(true, [Array]);
-    this.setInputsInline(true);
-    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-    this.setMovable(false);
-    this.setDeletable(false);
-  },
-  updateShape: function (add) {
-    this.removeInput('VisionValue');
-    let dummyObj = this.appendDummyInput('VisionValue');
-    dummyObj.appendField(new Blockly.FieldDropdown(vision_objs), 'vision_obj');
-
-    if (add == 'Sentry2::kVisionColor') {
-      dummyObj.appendField(new Blockly.FieldDropdown(vision_color_objs), "vision_res_obj");
-    } else if (add == 'Sentry2::kVisionQrCode') {
-      dummyObj.appendField(new Blockly.FieldDropdown(vision_qr_objs), "vision_res_obj");
-    } else {
-      dummyObj.appendField(new Blockly.FieldDropdown(vision_res_objs), "vision_res_obj");
-    }
-  }
-};
 
 Blockly.Blocks['SentryVisionObjColor'] = {
   init: function () {
@@ -359,6 +683,24 @@ Blockly.Blocks['SentryVisionObjColor'] = {
     this.appendDummyInput("VisionValue")
       .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
       .appendField(new Blockly.FieldDropdown(vision_color_objs), "vision_res_obj");
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+Blockly.Blocks['SentryVisionObjLine'] = {
+  init: function () {
+    var _vision_objs = [
+      [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry2::kVisionLine"]
+    ];
+
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
+      .appendField(new Blockly.FieldDropdown(vision_line_objs), "vision_res_obj");
     this.setOutput(true, [Array]);
     this.setInputsInline(true);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
@@ -390,12 +732,10 @@ Blockly.Blocks['SentryVisionObj'] = {
     var _vision_objs = [
       [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"],
       [Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG, "Sentry2::kVisionAprilTag"],
-      [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry2::kVisionLine"],
       [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, "Sentry2::kVisionLearning"],
       [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry2::kVisionCard"],
       [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
       [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
-
       [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
     ];
 
@@ -414,7 +754,7 @@ Blockly.Blocks['SentryVisionObj'] = {
 Blockly.Blocks["SentryGetValue"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_VISION)
     this.appendValueInput("sentry_value_obj")
       .setCheck([Array]);
@@ -431,13 +771,31 @@ Blockly.Blocks["SentryGetValue"] = {
 Blockly.Blocks["SentryGetQrValue"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY2_NAME)
       .appendField(Blockly.Msg.SENTRY_GET_QRCODEVALUE)
     this.setInputsInline(true);
     this.setOutput(true, String);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
   }
 }
+
+Blockly.Blocks['SentryVisionColor'] = {
+  init: function () {
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown([
+        [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"]
+      ]), 'vision_obj')
+      .appendField(Blockly.Msg.SENTRY_VISION_DETECTED)
+      .appendField(new Blockly.FieldDropdown(vision_obj_card_dict["Sentry2::kVisionBlob"]), 'vision_card_obj')
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
 
 Blockly.Blocks['SentryVisionCardBlob'] = {
   init: function () {
@@ -493,7 +851,7 @@ Blockly.Blocks['SentryVisionCard20Classes'] = {
 Blockly.Blocks["SentryVisionDetected"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
+      .appendField(Blockly.Msg.SENTRY2_NAME)
     this.appendValueInput("sentry_detected_obj")
       .setCheck([Array])
       .appendField(Blockly.Msg.SENTRY_VISION);
@@ -505,25 +863,5 @@ Blockly.Blocks["SentryVisionDetected"] = {
     this.setOutput(true, Boolean);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
     this.setTooltip(Blockly.Msg.SENTRY_HELP_DETECTED_VISION_VALUE);
-  }
-};
-
-Blockly.Blocks["SentryRows"] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_ROWS)
-    this.setOutput(true, Number);
-    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
-  }
-};
-
-Blockly.Blocks["SentryCols"] = {
-  init: function () {
-    this.appendDummyInput()
-      .appendField(Blockly.Msg.SENTRY_NAME)
-      .appendField(Blockly.Msg.SENTRY_COLS)
-    this.setOutput(true, Number);
-    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
   }
 };

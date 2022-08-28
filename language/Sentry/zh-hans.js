@@ -20,8 +20,8 @@ Blockly.Msg.SENTRY_WARNING_SETUP_ONLY = '该模块只能置于设置模块中！
 Blockly.Msg.SENTRY_WARNING_ON_INIT = '请勿同时使用Serial连接Sentry与电脑打印字符，此操作会导致电脑端打印字符错乱或通信异常'
 
 // 设置模块文本
-Blockly.Msg.SENTRY_NAME  = 'Sentry2'
-Blockly.Msg.SENTRY_SET_UP = 'Sentry设置';
+Blockly.Msg.SENTRY2_NAME  = 'Sentry2'
+Blockly.Msg.SENTRY1_NAME  = 'Sentry1'
 Blockly.Msg.SENTRY_BEGIN = '初始化';
 Blockly.Msg.SENTRY_PORT = '端口';
 Blockly.Msg.SENTRY_ADDR = '地址';
@@ -67,11 +67,13 @@ Blockly.Msg.SENTRY_PERCENTAGECOORDINATE = '相对坐标';
 // Sentry Vision type
 Blockly.Msg.SENTRY_VISION_VISIONCOLOR = '颜色识别';
 Blockly.Msg.SENTRY_VISION_VISIONBLOB = '色块检测';
+Blockly.Msg.SENTRY_VISION_VISIONBALL = '球体检测';
 Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG = 'AprilTag';
 Blockly.Msg.SENTRY_VISION_VISIONLINE = '线段检测';
 Blockly.Msg.SENTRY_VISION_VISIONLEARNING = '深度学习';
 Blockly.Msg.SENTRY_VISION_VISIONCARD = '卡片识别';
 Blockly.Msg.SENTRY_VISION_VISIONFACE = '人脸识别';
+Blockly.Msg.SENTRY_VISION_VISIONBODY = '人体检测';
 Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分类识别';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二维码识别';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '运动物体检测';
@@ -123,6 +125,13 @@ Blockly.Msg.SENTRY_STATE_VALUE_Y = '纵向坐标';
 Blockly.Msg.SENTRY_STATE_VALUE_WIDTH = '宽度';
 Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT = '高度';
 Blockly.Msg.SENTRY_STATE_VALUE_LABEL = '标签';
+
+Blockly.Msg.SENTRY_STATE_LINE_EX = '线段终点X坐标';
+Blockly.Msg.SENTRY_STATE_LINE_EY = '线段终点Y坐标';
+Blockly.Msg.SENTRY_STATE_LINE_SX = '线段起点X坐标';
+Blockly.Msg.SENTRY_STATE_LINE_SY = '线段起点Y坐标';
+Blockly.Msg.SENTRY_STATE_LINE_A  = '线段的倾斜角度';
+
 
 Blockly.Msg.SENTRY_STATE_VALUE_R = '红色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_G = '绿色通道';

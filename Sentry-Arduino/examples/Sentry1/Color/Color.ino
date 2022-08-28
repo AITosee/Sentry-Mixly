@@ -2,7 +2,7 @@
 #include <Sentry.h>
 #include <Wire.h>
 
-typedef Sentry2 Sentry;
+typedef Sentry1 Sentry;
 
 // #define SENTRY_I2C
 #define SENTRY_UART
@@ -34,26 +34,17 @@ void setup() {
 #endif  // SENTRY_UART
   printf("Sentry begin Success.\n");
   printf("Sentry image_shape = %hux%hu\n", sentry.cols(), sentry.rows());
-  printf("SENTRY_MAX_RESULT = %d\n", SENTRY_MAX_RESULT);
-  sentry.SeneorSetCoordinateType(kAbsoluteCoordinate);
-  int param_num = 6;       // 1~SENTRY_MAX_RESULT
-  sentry.SetParamNum(VISION_MASK, param_num);
   sentry_object_t param;
-  for (size_t i = 1; i <= param_num; i++)
-  {
-    /* Set x/y/w/h */
-    param.x_value = sentry.cols() * i / (param_num + 1);
-    param.y_value = 120;
-    param.width = i * 2 + 1;
-    param.height = i * 2 + 1;
-    printf("\nSetParam[%u]: %hu,%hu,%hu,%hu\n", i, param.x_value, param.y_value,
-           param.width, param.height);
-    err = sentry.SetParam(VISION_MASK, &param, i);
-    if (err) {
-      printf("sentry.SetParam: %s[0x%x]\n", err ? "Error" : "Success", err);
-      for (;;);
-    }
+  param.x_value = sentry.cols() / 2;
+  param.y_value = sentry.rows() / 2;
+  param.width = 5;
+  param.height = 5;
+  err = sentry.SetParam(VISION_MASK, &param);
+  if (err) {
+    printf("sentry.SetParam: %s[0x%x]\n", err ? "Error" : "Success", err);
+    for (;;);
   }
+  sentry.CameraSetAwb(kLockWhiteBalance);
   err = sentry.VisionBegin(VISION_MASK);
   printf("sentry.VisionBegin(kVisionColor): %s[0x%x]\n", err ? "Error" : "Success", err);
 }

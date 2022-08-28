@@ -16,8 +16,8 @@ Blockly.Msg.SENTRY_WARNING_SETUP_BASE = '該模塊只能置於初始化模塊中
 Blockly.Msg.SENTRY_WARNING_SETUP_ONLY = '該模塊只能置於設定模塊中！';
 Blockly.Msg.SENTRY_WARNING_ON_INIT = '請勿同時使用Serial連接Sentry與電腦列印字元，此操作會導致電腦端列印字元錯亂或通信异常'
 //設定模塊文字
-Blockly.Msg.SENTRY_NAME = 'Sentry2'
-Blockly.Msg.SENTRY_SET_UP = 'Sentry設定';
+Blockly.Msg.SENTRY2_NAME  = 'Sentry2'
+Blockly.Msg.SENTRY1_NAME  = 'Sentry1'
 Blockly.Msg.SENTRY_BEGIN = '初始化';
 Blockly.Msg.SENTRY_PORT = '埠';
 Blockly.Msg.SENTRY_ADDR = '地址';
