@@ -59,23 +59,29 @@ Blockly.Msg.SENTRY_GET_QRCODEVALUE = 'QR code recognition result string';
 Blockly.Msg.SENTRY_DETECTED = 'algorithm detected';
 Blockly.Msg.SENTRY_ROWS = 'image width';
 Blockly.Msg.SENTRY_COLS = 'image height';
+
 // Sentry Coordinate
 Blockly.Msg.SENTRY_ABSOLUTECOORDINATE = 'absolute coordinates';
 Blockly.Msg.SENTRY_PERCENTAGECOORDINATE = 'relative coordinates';
+
 // Sentry Vision type
 Blockly.Msg.SENTRY_VISION_VISIONCOLOR = 'color recognition';
 Blockly.Msg.SENTRY_VISION_VISIONBLOB = 'color block detection';
+Blockly.Msg.SENTRY_VISION_VISIONBALL = 'ball detection';
 Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG = 'AprilTag';
 Blockly.Msg.SENTRY_VISION_VISIONLINE = 'line segment detection';
 Blockly.Msg.SENTRY_VISION_VISIONLEARNING = 'deep learning';
 Blockly.Msg.SENTRY_VISION_VISIONCARD = 'card identification';
 Blockly.Msg.SENTRY_VISION_VISIONFACE = 'face recognition';
+Blockly.Msg.SENTRY_VISION_VISIONBODY = 'body detection';
 Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20 classification and identification';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = 'QR code identification';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = 'moving object detection';
+
 // Sentry Enable Disable
 Blockly.Msg.SENTRY_ENABLE = 'enable';
-Blockly.Msg.SENTRY_DISABLE = 'off';
+Blockly.Msg.SENTRY_DISABLE = 'disable';
+
 // LED color type
 Blockly.Msg.SENTRY_LED_CLOSE = 'close';
 Blockly.Msg.SENTRY_LED_RED = 'Red';
@@ -85,6 +91,7 @@ Blockly.Msg.SENTRY_LED_BLUE = 'Blue';
 Blockly.Msg.SENTRY_LED_PURPLE = 'Purple';
 Blockly.Msg.SENTRY_LED_CYAN = 'cyan';
 Blockly.Msg.SENTRY_LED_WHITE = 'white';
+
 // Sentry Config Level
 Blockly.Msg.SENTRY_LEVEL_DEFAULT = 'automatic';
 Blockly.Msg.SENTRY_LEVEL1 = 'level 1';
@@ -97,6 +104,7 @@ Blockly.Msg.SENTRY_LEVEL7 = 'level 7';
 Blockly.Msg.SENTRY_LEVEL8 = 'level 8';
 Blockly.Msg.SENTRY_LEVEL9 = 'level 9';
 Blockly.Msg.SENTRY_LEVEL10 = 'level 10';
+
 // Sentry Zoom Type
 Blockly.Msg.SENTRY_ZOOM_DEFAULT = 'default';
 Blockly.Msg.SENTRY_ZOOM_LEVEL1 = 'level 1';
@@ -104,20 +112,30 @@ Blockly.Msg.SENTRY_ZOOM_LEVEL2 = 'level 2';
 Blockly.Msg.SENTRY_ZOOM_LEVEL3 = 'Level 3';
 Blockly.Msg.SENTRY_ZOOM_LEVEL4 = 'level 4';
 Blockly.Msg.SENTRY_ZOOM_LEVEL5 = 'level 5';
+
 // Sentry White Balance Type
 Blockly.Msg.SENTRY_AUTO = 'auto';
 Blockly.Msg.SENTRY_LOCK_AWB = 'lock white balance';
 Blockly.Msg.SENTRY_WHITE_LIGHT = 'white light mode';
 Blockly.Msg.SENTRY_YELLOW_LIGHT = 'yellow light mode';
+
 // Sentry State Value Type
 Blockly.Msg.SENTRY_STATE_VALUE_X = 'horizontal coordinate';
 Blockly.Msg.SENTRY_STATE_VALUE_Y = 'longitudinal coordinate';
 Blockly.Msg.SENTRY_STATE_VALUE_WIDTH = 'width';
 Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT = 'height';
 Blockly.Msg.SENTRY_STATE_VALUE_LABEL = 'label';
+
+Blockly.Msg.SENTRY_STATE_LINE_EX = 'X coordinate of end point';
+Blockly.Msg.SENTRY_STATE_LINE_EY = 'Y coordinate of end point';
+Blockly.Msg.SENTRY_STATE_LINE_SX = 'X coordinate of starting point';
+Blockly.Msg.SENTRY_STATE_LINE_SY = 'Y coordinate of starting point';
+Blockly.Msg.SENTRY_STATE_LINE_A = 'inclination angle';
+
 Blockly.Msg.SENTRY_STATE_VALUE_R = 'red channel';
 Blockly.Msg.SENTRY_STATE_VALUE_G = 'green channel';
 Blockly.Msg.SENTRY_STATE_VALUE_B = 'blue channel';
+
 // Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = 'Black';
 Blockly.Msg.SENTRY_COLOR_WHITE = 'white';
@@ -125,7 +143,6 @@ Blockly.Msg.SENTRY_COLOR_RED = 'Red';
 Blockly.Msg.SENTRY_COLOR_GREEN = 'green';
 Blockly.Msg.SENTRY_COLOR_BLUE = 'Blue';
 Blockly.Msg.SENTRY_COLOR_YELLOW = 'yellow';
-// Sentry 20 Class Type
 
 // Sentry 20 Class Type
 Blockly.Msg.SENTRY_CLASS20_AIRPLANE = ' ✈️  Aircraft ';
@@ -148,6 +165,7 @@ Blockly.Msg.SENTRY_CLASS20_SHEEP = ' 🐏  Sheep ';
 Blockly.Msg.SENTRY_CLASS20_SOFA = ' 🛋  Sofa ';
 Blockly.Msg.SENTRY_CLASS20_TRAIN = ' 🚆  Train ';
 Blockly.Msg.SENTRY_CLASS20_MONITOR = ' 🖥️  Display ';
+
 // Sentry Card Type
 Blockly.Msg.SENTRY_CARD_TRAFFIC = "traffic card"
 Blockly.Msg.SENTRY_CARD_FORWARD = 'forward';

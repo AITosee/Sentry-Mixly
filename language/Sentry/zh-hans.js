@@ -132,7 +132,6 @@ Blockly.Msg.SENTRY_STATE_LINE_SX = '线段起点X坐标';
 Blockly.Msg.SENTRY_STATE_LINE_SY = '线段起点Y坐标';
 Blockly.Msg.SENTRY_STATE_LINE_A  = '线段的倾斜角度';
 
-
 Blockly.Msg.SENTRY_STATE_VALUE_R = '红色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_G = '绿色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_B = '蓝色通道';
