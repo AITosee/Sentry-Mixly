@@ -136,6 +136,9 @@ Blockly.Msg.SENTRY_STATE_VALUE_R = '紅色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_G = '綠色通道';
 Blockly.Msg.SENTRY_STATE_VALUE_B = '藍色通道';
 
+Blockly.Msg.SENTRY_BALLTABLETENNIS = '乒乓球';
+Blockly.Msg.SENTRY_BALLTENNIS = '網球';
+
 // Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = '黑色';
 Blockly.Msg.SENTRY_COLOR_WHITE = '白色';

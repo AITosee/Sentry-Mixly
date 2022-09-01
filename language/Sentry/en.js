@@ -136,6 +136,9 @@ Blockly.Msg.SENTRY_STATE_VALUE_R = 'red channel';
 Blockly.Msg.SENTRY_STATE_VALUE_G = 'green channel';
 Blockly.Msg.SENTRY_STATE_VALUE_B = 'blue channel';
 
+Blockly.Msg.SENTRY_BALLTABLETENNIS = 'Table tennis';
+Blockly.Msg.SENTRY_BALLTENNIS = 'Tennis';
+
 // Sentry Color Type
 Blockly.Msg.SENTRY_COLOR_BLACK = 'Black';
 Blockly.Msg.SENTRY_COLOR_WHITE = 'white';

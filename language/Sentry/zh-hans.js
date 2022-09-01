@@ -144,6 +144,9 @@ Blockly.Msg.SENTRY_COLOR_GREEN = '绿色';
 Blockly.Msg.SENTRY_COLOR_BLUE = '蓝色';
 Blockly.Msg.SENTRY_COLOR_YELLOW = '黄色';
 
+Blockly.Msg.SENTRY_BALLTABLETENNIS = '乒乓球';
+Blockly.Msg.SENTRY_BALLTENNIS = '网球';
+
 // Sentry 20 Class Type
 Blockly.Msg.SENTRY_CLASS20_AIRPLANE = '✈️ 飞机';
 Blockly.Msg.SENTRY_CLASS20_BICYCLE = '🚲 自行车';

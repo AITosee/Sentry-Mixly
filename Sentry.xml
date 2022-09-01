@@ -1,5 +1,4 @@
-<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry/" lib="Sentry-Arduino/"
--->
+<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry/" lib="Sentry-Arduino/"-->
 <script type="text/javascript" src="../../blocks/company/Sentry.js"></script>
 <script type="text/javascript" src="../../generators/arduino/company/Sentry.js"></script>
 <category id="mixly_Sentry" name="Sentry" colour="#EF5411">
@@ -64,6 +63,16 @@
       <block type="Sentry1VisionDetected">
         <value name="sentry_detected_obj">
           <block type="Sentry1VisionCardBlob"></block>
+        </value>
+        <value name="index">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="Sentry1VisionDetected">
+        <value name="sentry_detected_obj">
+          <block type="Sentry1VisionBall"></block>
         </value>
         <value name="index">
           <shadow type="math_number">

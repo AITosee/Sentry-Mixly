@@ -96,6 +96,11 @@ var sentry1_vision_card_objs = [
 ];
 
 
+var sentry1_vision_ball_objs = [
+  [Blockly.Msg.SENTRY_BALLTABLETENNIS, "Sentry1::kBallTableTennis"],
+  [Blockly.Msg.SENTRY_BALLTENNIS, "Sentry1::kBallTennis"],
+];
+
 var sentry2_vision_blod_objs = [
   [Blockly.Msg.SENTRY_COLOR_BLACK, "Sentry2::kColorBlack"],
   [Blockly.Msg.SENTRY_COLOR_WHITE, "Sentry2::kColorWhite"],
@@ -211,6 +216,7 @@ var vision_obj_card_dict = {
   "Sentry2::kVision20Classes": sentry2_vision_20class_objs,
   "Sentry1::kVisionBlob": sentry1_vision_blod_objs,
   "Sentry1::kVisionCard": sentry1_vision_card_objs,
+  "Sentry1::kVisionBall": sentry1_vision_ball_objs,
 }
 
 Blockly.Blocks['Sentry1Begin'] = {
@@ -501,6 +507,23 @@ Blockly.Blocks['Sentry1VisionCard'] = {
       ]), 'vision_obj')
       .appendField(Blockly.Msg.SENTRY_VISION_DETECTED)
       .appendField(new Blockly.FieldDropdown(vision_obj_card_dict["Sentry1::kVisionCard"]), 'vision_card_obj')
+    this.setOutput(true, [Array]);
+    this.setInputsInline(true);
+    this.setColour(Blockly.Blocks.Sentry.RunMode_Color);
+    this.setMovable(false);
+    this.setDeletable(false);
+  }
+};
+
+Blockly.Blocks['Sentry1VisionBall'] = {
+  init: function () {
+    this.setColour(Blockly.Blocks.base.HUE);
+    this.appendDummyInput("VisionValue")
+      .appendField(new Blockly.FieldDropdown([
+        [Blockly.Msg.SENTRY_VISION_VISIONBALL, "Sentry1::kVisionBall"]
+      ]), 'vision_obj')
+      .appendField(Blockly.Msg.SENTRY_VISION_DETECTED)
+      .appendField(new Blockly.FieldDropdown(vision_obj_card_dict["Sentry1::kVisionBall"]), 'vision_card_obj')
     this.setOutput(true, [Array]);
     this.setInputsInline(true);
     this.setColour(Blockly.Blocks.Sentry.RunMode_Color);

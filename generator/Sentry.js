@@ -27,6 +27,7 @@ Blockly.Arduino['SentryVisionObjQr'] = function () {
 Blockly.Arduino['Sentry1VisionCardColor'] = 
 Blockly.Arduino['Sentry1VisionCardBlob'] = 
 Blockly.Arduino['Sentry1VisionCard'] = 
+Blockly.Arduino['Sentry1VisionBall'] = 
 Blockly.Arduino['SentryVisionCardColor'] = 
 Blockly.Arduino['SentryVisionCardBlob'] = 
 Blockly.Arduino['SentryVisionCard'] = 
