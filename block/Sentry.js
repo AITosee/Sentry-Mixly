@@ -86,13 +86,7 @@ var sentry1_vision_card_objs = [
   [Blockly.Msg.SENTRY_CARD_LEFT, "Sentry1::kCardLeft"],
   [Blockly.Msg.SENTRY_CARD_RIGHT, "Sentry1::kCardRight"],
   [Blockly.Msg.SENTRY_CARD_TURN_AROUND, "Sentry1::kCardTurnAround"],
-  [Blockly.Msg.SENTRY_CARD_PARK, "Sentry1::kCardPark"],
-
-  [Blockly.Msg.SENTRY_CARD_CHECK, "Sentry1::kCardCheck"],
-  [Blockly.Msg.SENTRY_CARD_CROSS, "Sentry1::kCardCross"],
-  [Blockly.Msg.SENTRY_CARD_CIRCLE, "Sentry1::kCardCircle"],
-  [Blockly.Msg.SENTRY_CARD_SQUARE, "Sentry1::kCardSquare"],
-  [Blockly.Msg.SENTRY_CARD_TRIANGLE, "Sentry1::kCardTriangle"],
+  [Blockly.Msg.SENTRY_CARD_PARK, "Sentry1::kCardPark"]
 ];
 
 
