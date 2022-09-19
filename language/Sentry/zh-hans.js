@@ -77,6 +77,7 @@ Blockly.Msg.SENTRY_VISION_VISIONBODY = '人体检测';
 Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20分类识别';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = '二维码识别';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = '运动物体检测';
+Blockly.Msg.SENTRY_VISION_VISIONCUSTOM = "自定义"
 
 // Sentry Enable Disable
 Blockly.Msg.SENTRY_ENABLE = '启用';

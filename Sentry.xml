@@ -1,8 +1,8 @@
-<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry/" lib="Sentry-Arduino/" libraries="libraries/Sentry-Arduino/"-->
+<!-- type="company" block="block/Sentry.js" generator="generator/Sentry.js" language="language/Sentry/" lib="Sentry-Arduino/"-->
 <script type="text/javascript" src="../../blocks/company/Sentry.js"></script>
 <script type="text/javascript" src="../../generators/arduino/company/Sentry.js"></script>
 <category id="mixly_Sentry" name="Sentry" colour="#EF5411">
-   <category id="mixly_Sentry1" name="Sentry1" colour="#EF5411">
+  <category id="mixly_Sentry1" name="Sentry1" colour="#EF5411">
     <category id="Sentry1_Setup" name="设置模块" colour="#EF5411">
       <block type="Sentry1Begin"></block>      <!-- 设置 SENTRY-->
       <block type="Sentry1LedSetColor">
@@ -12,6 +12,7 @@
           </shadow>
         </value>
       </block>
+      <block type="Sentry1SetAWB"></block>      <!-- 设置 白平衡-->
       <block type="Sentry1VisionSetStatus"></block>      <!-- 设置 启用算法-->
       <block type="Sentry1VisionSetParamNum"></block>      <!-- 设置 算法参数-->
       <block type="Sentry1VisionColorSetParam"></block>
@@ -99,29 +100,34 @@
               <field name="mode_obj">Wire</field>
               <field name="addr_obj">0x60</field>
               <next>
-                <block type="Sentry1VisionSetStatus">
-                  <field name="VisionStatus">Begin</field>
-                  <field name="vision_obj">Sentry1::kVisionBlob</field>
+                <block type="Sentry1SetAWB">
+                  <field name="awb_obj">kWhiteLight</field>
                   <next>
-                    <block type="Sentry1LedSetColor">
-                      <field name="led_color_obj1">#000000</field>
-                      <field name="led_color_obj2">#000000</field>
-                      <value name="level">
-                        <shadow type="math_number">
-                          <field name="NUM">1</field>
-                        </shadow>
-                      </value>
+                    <block type="Sentry1VisionSetStatus">
+                      <field name="VisionStatus">Begin</field>
+                      <field name="vision_obj">Sentry1::kVisionBlob</field>
                       <next>
-                        <block type="Sentry1VisionSetParamNum">
-                          <field name="vision_obj">Sentry1::kVisionBlob</field>
-                          <field name="num">1</field>
+                        <block type="Sentry1LedSetColor">
+                          <field name="led_color_obj1">#000000</field>
+                          <field name="led_color_obj2">#000000</field>
+                          <value name="level">
+                            <shadow type="math_number">
+                              <field name="NUM">1</field>
+                            </shadow>
+                          </value>
                           <next>
-                            <block type="Sentry1VisionBlobSetParam">
+                            <block type="Sentry1VisionSetParamNum">
                               <field name="vision_obj">Sentry1::kVisionBlob</field>
-                              <field name="w">20</field>
-                              <field name="h">20</field>
-                              <field name="lable">Sentry1::kColorGreen</field>
-                              <field name="index">1</field>
+                              <field name="num">1</field>
+                              <next>
+                                <block type="Sentry1VisionBlobSetParam">
+                                  <field name="vision_obj">Sentry1::kVisionBlob</field>
+                                  <field name="w">20</field>
+                                  <field name="h">20</field>
+                                  <field name="lable">Sentry1::kColorGreen</field>
+                                  <field name="index">1</field>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -1573,10 +1579,12 @@
   <category id="mixly_Sentry2" name="Sentry2" colour="#EF5411">
     <category id="Sentry2_Setup" name="设置模块" colour="#EF5411">
       <block type="SentryBegin"></block>      <!-- 设置 SENTRY-->
+      <block type="SentrySetAWB"></block>      <!-- 设置 白平衡-->
       <block type="SentryVisionSetStatus"></block>      <!-- 设置 启用算法-->
       <block type="SentryVisionSetParamNum"></block>      <!-- 设置 算法参数-->
       <block type="SentryVisionColorSetParam"></block>
       <block type="SentryVisionBlobSetParam"></block>
+      <block type="SentryVisionSetParam"></block>
     </category>
     <category id="Sentry2_Run" name="运行模块" colour="#EAA20A">
       <block type="SentryVisionGetStatus"></block>
@@ -1622,6 +1630,16 @@
         </value>
       </block>
       <block type="SentryGetQrValue"></block>
+      <block type="SentryGetValue">
+        <value name="sentry_value_obj">
+          <block type="SentryVisionCustom"></block>
+        </value>
+        <value name="index">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
       <block type="SentryVisionDetected">
         <value name="sentry_detected_obj">
           <block type="SentryVisionCardBlob"></block>
@@ -1673,10 +1691,15 @@
               <field name="mode_obj">Wire</field>
               <field name="addr_obj">0x60</field>
               <next>
+                <block type="SentrySetAWB">
+                  <field name="awb_obj">kWhiteLight</field>
+                  <next>
                 <block type="SentryVisionSetStatus" id="Ul:{s8J9I8OsPTm,vUKu">
                   <field name="VisionStatus">Begin</field>
                   <field name="vision_obj">Sentry2::kVisionBlob</field>
                 </block>
+              </next>
+            </block>
               </next>
             </block>
           </statement>
