@@ -307,7 +307,7 @@ Blockly.Arduino['SentryGetValue'] = function () {
 Blockly.Arduino['SentryGetQrValue'] = function () {
 
 
-    var code = `sentry.GetQrCodeValue()`;
+    var code = `String(sentry.GetQrCodeValue())`;
     return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
