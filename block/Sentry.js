@@ -127,6 +127,19 @@ var sentry2_vision_objs = [
   [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, "Sentry2::kVisionCustom"]
 ];
 
+var sentry2_vision_custom = [
+  [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, "Sentry2::kVisionCustom"],
+  [Blockly.Msg.SENTRY_VISION_VISIONBLOB, "Sentry2::kVisionBlob"],
+  [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, "Sentry2::kVisionColor"],
+  [Blockly.Msg.SENTRY_VISION_VISIONAPRILTAG, "Sentry2::kVisionAprilTag"],
+  [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry2::kVisionLine"],
+  [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, "Sentry2::kVisionLearning"],
+  [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry2::kVisionCard"],
+  [Blockly.Msg.SENTRY_VISION_VISIONFACE, "Sentry2::kVisionFace"],
+  [Blockly.Msg.SENTRY_VISION_VISION20CLASSES, "Sentry2::kVision20Classes"],
+  [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, "Sentry2::kVisionQrCode"],
+  [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT, "Sentry2::kVisionMotionDetect"]
+];
 
 var sentry2_vision_20class_objs = [
   [Blockly.Msg.SENTRY_CLASS20_AIRPLANE, "Sentry2::kAirplane"],
@@ -826,7 +839,7 @@ Blockly.Blocks['SentryVisionCustom'] = {
   init: function () {
     this.setColour(Blockly.Blocks.base.HUE);
     this.appendDummyInput("VisionValue")
-      .appendField(new Blockly.FieldDropdown(sentry2_vision_objs), 'vision_obj')
+      .appendField(new Blockly.FieldDropdown(sentry2_vision_custom), 'vision_obj')
       .appendField(new Blockly.FieldDropdown(vision_custom_objs), "vision_res_obj");
     this.setOutput(true, [Array]);
     this.setInputsInline(true);

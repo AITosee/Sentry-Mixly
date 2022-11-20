@@ -148,26 +148,26 @@ Blockly.Msg.SENTRY_COLOR_BLUE = '藍色';
 Blockly.Msg.SENTRY_COLOR_YELLOW = '黃色';
 
 // Sentry 20 Class Type
-Blockly.Msg.SENTRY_CLASS20_AIRPLANE = '✈️ 飛機';
-Blockly.Msg.SENTRY_CLASS20_BICYCLE = '🚲 自行車';
-Blockly.Msg.SENTRY_CLASS20_BIRD = '🐦 鳥';
-Blockly.Msg.SENTRY_CLASS20_BOAT = '🚤 船';
-Blockly.Msg.SENTRY_CLASS20_BOTTLE = '🍾 瓶子';
-Blockly.Msg.SENTRY_CLASS20_BUS = ' 🚌 公交車';
-Blockly.Msg.SENTRY_CLASS20_CAR = '🚗 小汽車';
-Blockly.Msg.SENTRY_CLASS20_CAT = ' 🐱 貓';
-Blockly.Msg.SENTRY_CLASS20_CHAIR = '🪑 椅子';
-Blockly.Msg.SENTRY_CLASS20_COW = '🐄 奶牛';
-Blockly.Msg.SENTRY_CLASS20_TABLE = '🔲 桌子';
-Blockly.Msg.SENTRY_CLASS20_DOG = '🐕 狗';
-Blockly.Msg.SENTRY_CLASS20_HORSE = '🐎 馬';
-Blockly.Msg.SENTRY_CLASS20_MOTORBIKE = '🏍️ 摩托車';
-Blockly.Msg.SENTRY_CLASS20_PERSON = '🤵 人';
-Blockly.Msg.SENTRY_CLASS20_PLANT = '🪴 植物';
-Blockly.Msg.SENTRY_CLASS20_SHEEP = '🐏 羊';
-Blockly.Msg.SENTRY_CLASS20_SOFA = '🛋 沙發';
-Blockly.Msg.SENTRY_CLASS20_TRAIN = '🚆 火車';
-Blockly.Msg.SENTRY_CLASS20_MONITOR = '🖥️ 顯示器';
+Blockly.Msg.SENTRY_CLASS20_AIRPLANE = '飛機';
+Blockly.Msg.SENTRY_CLASS20_BICYCLE = '自行車';
+Blockly.Msg.SENTRY_CLASS20_BIRD = '鳥';
+Blockly.Msg.SENTRY_CLASS20_BOAT = '船';
+Blockly.Msg.SENTRY_CLASS20_BOTTLE = '瓶子';
+Blockly.Msg.SENTRY_CLASS20_BUS = ' 公交車';
+Blockly.Msg.SENTRY_CLASS20_CAR = '小汽車';
+Blockly.Msg.SENTRY_CLASS20_CAT = ' 貓';
+Blockly.Msg.SENTRY_CLASS20_CHAIR = '椅子';
+Blockly.Msg.SENTRY_CLASS20_COW = '奶牛';
+Blockly.Msg.SENTRY_CLASS20_TABLE = '桌子';
+Blockly.Msg.SENTRY_CLASS20_DOG = '狗';
+Blockly.Msg.SENTRY_CLASS20_HORSE = '馬';
+Blockly.Msg.SENTRY_CLASS20_MOTORBIKE = '摩托車';
+Blockly.Msg.SENTRY_CLASS20_PERSON = '人';
+Blockly.Msg.SENTRY_CLASS20_PLANT = '植物';
+Blockly.Msg.SENTRY_CLASS20_SHEEP = '羊';
+Blockly.Msg.SENTRY_CLASS20_SOFA = '沙發';
+Blockly.Msg.SENTRY_CLASS20_TRAIN = '火車';
+Blockly.Msg.SENTRY_CLASS20_MONITOR = '顯示器';
 
 // Sentry Card Type
 Blockly.Msg.SENTRY_CARD_TRAFFIC = "交通卡片"

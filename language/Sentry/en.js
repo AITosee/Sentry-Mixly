@@ -148,26 +148,26 @@ Blockly.Msg.SENTRY_COLOR_BLUE = 'Blue';
 Blockly.Msg.SENTRY_COLOR_YELLOW = 'yellow';
 
 // Sentry 20 Class Type
-Blockly.Msg.SENTRY_CLASS20_AIRPLANE = ' ✈️  Aircraft ';
-Blockly.Msg.SENTRY_CLASS20_BICYCLE = ' 🚲  Bicycle ';
-Blockly.Msg.SENTRY_CLASS20_BIRD = ' 🐦  Bird ';
-Blockly.Msg.SENTRY_CLASS20_BOAT = ' 🚤  Ship ';
-Blockly.Msg.SENTRY_CLASS20_BOTTLE = ' 🍾  Bottle ';
-Blockly.Msg.SENTRY_CLASS20_BUS = '  🚌  bus';
-Blockly.Msg.SENTRY_CLASS20_CAR = ' 🚗  Car ';
-Blockly.Msg.SENTRY_CLASS20_CAT = '  🐱  Cat ';
-Blockly.Msg.SENTRY_CLASS20_CHAIR = ' 🪑  Chair ';
-Blockly.Msg.SENTRY_CLASS20_COW = ' 🐄  Cow ';
-Blockly.Msg.SENTRY_CLASS20_TABLE = ' 🔲  Table ';
-Blockly.Msg.SENTRY_CLASS20_DOG = ' 🐕  Dog ';
-Blockly.Msg.SENTRY_CLASS20_HORSE = ' 🐎  Horse ';
-Blockly.Msg.SENTRY_CLASS20_MOTORBIKE = ' 🏍️  Motorcycle ';
-Blockly.Msg.SENTRY_CLASS20_PERSON = ' 🤵  Person ';
-Blockly.Msg.SENTRY_CLASS20_PLANT = ' 🪴  Plant ';
-Blockly.Msg.SENTRY_CLASS20_SHEEP = ' 🐏  Sheep ';
-Blockly.Msg.SENTRY_CLASS20_SOFA = ' 🛋  Sofa ';
-Blockly.Msg.SENTRY_CLASS20_TRAIN = ' 🚆  Train ';
-Blockly.Msg.SENTRY_CLASS20_MONITOR = ' 🖥️  Display ';
+Blockly.Msg.SENTRY_CLASS20_AIRPLANE = ' Aircraft ';
+Blockly.Msg.SENTRY_CLASS20_BICYCLE = ' Bicycle ';
+Blockly.Msg.SENTRY_CLASS20_BIRD = ' Bird ';
+Blockly.Msg.SENTRY_CLASS20_BOAT = ' Ship ';
+Blockly.Msg.SENTRY_CLASS20_BOTTLE = ' Bottle ';
+Blockly.Msg.SENTRY_CLASS20_BUS = '  bus';
+Blockly.Msg.SENTRY_CLASS20_CAR = ' Car ';
+Blockly.Msg.SENTRY_CLASS20_CAT = '  Cat ';
+Blockly.Msg.SENTRY_CLASS20_CHAIR = ' Chair ';
+Blockly.Msg.SENTRY_CLASS20_COW = ' Cow ';
+Blockly.Msg.SENTRY_CLASS20_TABLE = ' Table ';
+Blockly.Msg.SENTRY_CLASS20_DOG = ' Dog ';
+Blockly.Msg.SENTRY_CLASS20_HORSE = ' Horse ';
+Blockly.Msg.SENTRY_CLASS20_MOTORBIKE = ' Motorcycle ';
+Blockly.Msg.SENTRY_CLASS20_PERSON = ' Person ';
+Blockly.Msg.SENTRY_CLASS20_PLANT = ' Plant ';
+Blockly.Msg.SENTRY_CLASS20_SHEEP = ' Sheep ';
+Blockly.Msg.SENTRY_CLASS20_SOFA = ' Sofa ';
+Blockly.Msg.SENTRY_CLASS20_TRAIN = ' Train ';
+Blockly.Msg.SENTRY_CLASS20_MONITOR = ' Display ';
 
 // Sentry Card Type
 Blockly.Msg.SENTRY_CARD_TRAFFIC = "traffic card"
