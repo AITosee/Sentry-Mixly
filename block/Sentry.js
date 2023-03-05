@@ -699,6 +699,8 @@ Blockly.Blocks['SentryVisionBlobSetParam'] = {
     .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), "h")
     .appendField(Blockly.Msg.SENTRY_STATE_VALUE_LABEL)
     .appendField(new Blockly.FieldDropdown(sentry2_vision_blod_objs), "lable")
+    .appendField(Blockly.Msg.SENTRY_INDEX)
+    .appendField(new Blockly.FieldNumber(1, 1, 25, 1), "index");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
