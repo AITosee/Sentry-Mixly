@@ -29,8 +29,8 @@ jobs:
       - name: Get repository and package name
         id: vars
         run: |
-            echo "{name}={repository::${GITHUB_REPOSITORY#*/}}" >> $GITHUB_OUTPUT
-            echo "{name}={package::${GITHUB_REPOSITORY#*/}-${{ inputs.tags }}}" >> $GITHUB_OUTPUT
+            echo ::set-output name=repository::${GITHUB_REPOSITORY#*/}
+            echo ::set-output name=package::${GITHUB_REPOSITORY#*/}-${{ inputs.tags }}
 
       - name: Entry Workspace
         run: |
