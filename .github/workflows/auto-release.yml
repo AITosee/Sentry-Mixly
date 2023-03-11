@@ -30,6 +30,7 @@ jobs:
 
       - name: Entry Workspace
         run: |
+            echo ${{ secrets.ACT_TOKEN }}   ${{ github.ref }}
             echo "repository: ${{ steps.vars.outputs.repository }}"
             echo "package: ${{ steps.vars.outputs.package }}"
             tree ${RUNNER_WORKSPACE}
