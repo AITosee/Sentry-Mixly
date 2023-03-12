@@ -19,7 +19,8 @@ Blockly.Arduino['Sentry1VisionObjColor'] =
 Blockly.Arduino['SentryVisionObjLine'] = 
 Blockly.Arduino['Sentry1VisionObjLine'] = 
 Blockly.Arduino['SentryVisionCustom'] = 
-Blockly.Arduino['SentryVisionObjQr'] = function () {
+Blockly.Arduino['SentryVisionObjQr'] 
+Blockly.Arduino['Sentry1VisionObjQr'] = function () {
     var dropdown_vision_obj = this.getFieldValue('vision_obj');
     var dropdown_res_obj = this.getFieldValue('vision_res_obj');
     return [[dropdown_vision_obj, dropdown_res_obj], Blockly.Arduino.ORDER_ATOMIC];
@@ -164,6 +165,11 @@ Blockly.Arduino['Sentry1GetValue'] = function () {
     return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['Sentry1GetQrValue'] = function () {
+
+    var code = `String(sentry1.GetQrCodeValue())`;
+    return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
 Blockly.Arduino['Sentry1VisionDetected'] = function () {
 

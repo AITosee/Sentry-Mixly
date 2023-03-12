@@ -19,6 +19,7 @@ Blockly.Msg.SENTRY_WARNING_SETUP_BASE = 'this module can only be placed in initi
 Blockly.Msg.SENTRY_WARNING_SETUP_ONLY = 'this module can only be placed in the setting module!';
 Blockly.Msg.SENTRY_WARNING_ON_INIT = 'do not use serial to connect sentry and the computer to print characters at the same time. This operation will cause confusion of printed characters or abnormal communication at the computer end'
 
+Blockly.Msg.SENTRY_VISION_ENTERPRISE = '(Enterprise Edition Exclusive)'
 //Set module text
 Blockly.Msg.SENTRY2_NAME  = 'Sentry2'
 Blockly.Msg.SENTRY1_NAME  = 'Sentry1'
