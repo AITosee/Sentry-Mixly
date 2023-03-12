@@ -19,7 +19,7 @@ Blockly.Msg.SENTRY_WARNING_SETUP_BASE = '该模块只能置于初始化模块中
 Blockly.Msg.SENTRY_WARNING_SETUP_ONLY = '该模块只能置于设置模块中！';
 Blockly.Msg.SENTRY_WARNING_ON_INIT = '请勿同时使用Serial连接Sentry与电脑打印字符，此操作会导致电脑端打印字符错乱或通信异常'
 
-Blockly.Msg.SENTRY_VISION_ENTERPRISE = '(企业版独有)'
+Blockly.Msg.SENTRY_VISION_ENTERPRISE = '(仅企业版)'
 
 // 设置模块文本
 Blockly.Msg.SENTRY2_NAME  = 'Sentry2'

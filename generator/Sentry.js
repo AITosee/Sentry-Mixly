@@ -19,7 +19,7 @@ Blockly.Arduino['Sentry1VisionObjColor'] =
 Blockly.Arduino['SentryVisionObjLine'] = 
 Blockly.Arduino['Sentry1VisionObjLine'] = 
 Blockly.Arduino['SentryVisionCustom'] = 
-Blockly.Arduino['SentryVisionObjQr'] 
+Blockly.Arduino['SentryVisionObjQr'] =
 Blockly.Arduino['Sentry1VisionObjQr'] = function () {
     var dropdown_vision_obj = this.getFieldValue('vision_obj');
     var dropdown_res_obj = this.getFieldValue('vision_res_obj');
