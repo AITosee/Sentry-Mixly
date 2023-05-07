@@ -8,7 +8,7 @@ Blockly.Msg.CATEGORY_SENTRY_RUN = '运行模块';
 // Help文本
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化视觉传感器，并选择相关的地址';
 Blockly.Msg.SENTRY_HELP_SET_DEFAULT = '传感器算法状态恢复默认';
-Blockly.Msg.SENTRY_HELP_SET_COORDINATE = '传感器输出坐标系设置';
+
 Blockly.Msg.SENTRY_HELP_ZOOM = '设置图像缩放等级，等级升高，识别距离越远，识别角度越小';
 Blockly.Msg.SENTRY_HELP_LED = '黑色为关闭LED显示，两种颜色相同时,LED状态为手动，不随着检测结果改变';
 Blockly.Msg.SENTRY_HELP_GET_VISION_VALUE = '获取算法对应结果'

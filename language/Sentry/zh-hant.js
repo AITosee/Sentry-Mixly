@@ -8,7 +8,7 @@ Blockly.Msg.CATEGORY_SENTRY_RUN = '運行模塊';
 // Help文本
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = '初始化視覺傳感器，並選擇相關的地址';
 Blockly.Msg.SENTRY_HELP_SET_DEFAULT = '傳感器算法狀態恢復默認';
-Blockly.Msg.SENTRY_HELP_SET_COORDINATE = '傳感器輸出坐標系設置';
+
 Blockly.Msg.SENTRY_HELP_ZOOM = '設置圖像縮放等級，等級升高，識別距離越遠，識別角度越小';
 Blockly.Msg.SENTRY_HELP_LED = '黑色為關閉LED顯示，兩種顏色相同時,LED狀態為手動，不隨著檢測結果改變';
 Blockly.Msg.SENTRY_HELP_GET_VISION_VALUE = '獲取算法對應結果'

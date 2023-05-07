@@ -8,7 +8,6 @@ Blockly.Msg.CATEGORY_SENTRY_RUN = 'running module';
 //Help text
 Blockly.Msg.SENTRY_HELP_INIT_TOOLTIP = 'initialize the vision sensor and select the relevant address';
 Blockly.Msg.SENTRY_HELP_SET_DEFAULT = 'sensor algorithm state returns to default';
-Blockly.Msg.SENTRY_HELP_SET_COORDINATE = 'sensor output coordinate system setting';
 Blockly.Msg.SENTRY_HELP_ZOOM = 'set the image zoom level. The higher the level, the farther the recognition distance, the smaller the recognition angle';
 Blockly.Msg.SENTRY_HELP_LED = 'black is the off LED display. When the two colors are the same, the LED status is manual and does not change with the test results';
 Blockly.Msg.SENTRY_HELP_GET_VISION_VALUE = 'get corresponding result of algorithm'

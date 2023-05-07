@@ -196,33 +196,7 @@ var sentry2_vision_card_objs = [
   [Blockly.Msg.SENTRY_CARD_7, "Sentry2::kCardSeven"],
   [Blockly.Msg.SENTRY_CARD_8, "Sentry2::kCardEight"],
   [Blockly.Msg.SENTRY_CARD_9, "Sentry2::kCardNine"],
-  [Blockly.Msg.SENTRY_CARD_0, "Sentry2::kCardZero"],
-  [Blockly.Msg.SENTRY_CARD_A, "Sentry2::kCardA"],
-  [Blockly.Msg.SENTRY_CARD_B, "Sentry2::kCardB"],
-  [Blockly.Msg.SENTRY_CARD_C, "Sentry2::kCardC"],
-  [Blockly.Msg.SENTRY_CARD_D, "Sentry2::kCardD"],
-  [Blockly.Msg.SENTRY_CARD_E, "Sentry2::kCardE"],
-  [Blockly.Msg.SENTRY_CARD_F, "Sentry2::kCardF"],
-  [Blockly.Msg.SENTRY_CARD_G, "Sentry2::kCardG"],
-  [Blockly.Msg.SENTRY_CARD_H, "Sentry2::kCardH"],
-  [Blockly.Msg.SENTRY_CARD_I, "Sentry2::kCardI"],
-  [Blockly.Msg.SENTRY_CARD_J, "Sentry2::kCardJ"],
-  [Blockly.Msg.SENTRY_CARD_K, "Sentry2::kCardK"],
-  [Blockly.Msg.SENTRY_CARD_L, "Sentry2::kCardL"],
-  [Blockly.Msg.SENTRY_CARD_M, "Sentry2::kCardM"],
-  [Blockly.Msg.SENTRY_CARD_N, "Sentry2::kCardN"],
-  [Blockly.Msg.SENTRY_CARD_O, "Sentry2::kCardO"],
-  [Blockly.Msg.SENTRY_CARD_P, "Sentry2::kCardP"],
-  [Blockly.Msg.SENTRY_CARD_Q, "Sentry2::kCardQ"],
-  [Blockly.Msg.SENTRY_CARD_R, "Sentry2::kCardR"],
-  [Blockly.Msg.SENTRY_CARD_S, "Sentry2::kCardS"],
-  [Blockly.Msg.SENTRY_CARD_T, "Sentry2::kCardT"],
-  [Blockly.Msg.SENTRY_CARD_U, "Sentry2::kCardU"],
-  [Blockly.Msg.SENTRY_CARD_V, "Sentry2::kCardV"],
-  [Blockly.Msg.SENTRY_CARD_W, "Sentry2::kCardW"],
-  [Blockly.Msg.SENTRY_CARD_X, "Sentry2::kCardX"],
-  [Blockly.Msg.SENTRY_CARD_Y, "Sentry2::kCardY"],
-  [Blockly.Msg.SENTRY_CARD_Z, "Sentry2::kCardZ"]
+  [Blockly.Msg.SENTRY_CARD_0, "Sentry2::kCardZero"]
 ];
 
 var vision_obj_card_dict = {
@@ -312,7 +286,6 @@ Blockly.Blocks["Sentry1VisionSetStatus"] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE);
   }
 };
 
@@ -658,7 +631,6 @@ Blockly.Blocks["SentryVisionSetStatus"] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(Blockly.Blocks.Sentry.SetupMode_Color);
-    this.setTooltip(Blockly.Msg.SENTRY_HELP_SET_COORDINATE);
   }
 };
 

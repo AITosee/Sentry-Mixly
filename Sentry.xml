@@ -23,7 +23,7 @@
       <block type="Sentry1VisionDetectedCount"></block>
       <block type="Sentry1GetValue">
         <value name="sentry_value_obj">
-          <block type="SentryVisionObj"></block>
+          <block type="Sentry1VisionObj"></block>
         </value>
         <value name="index">
           <shadow type="math_number">
@@ -1602,7 +1602,7 @@
       <block type="SentryVisionDetectedCount"></block>
       <block type="SentryGetValue">
         <value name="sentry_value_obj">
-          <block type="Sentry1VisionObj"></block>
+          <block type="SentryVisionObj"></block>
         </value>
         <value name="index">
           <shadow type="math_number">
