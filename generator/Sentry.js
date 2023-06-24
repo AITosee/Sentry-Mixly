@@ -26,11 +26,11 @@ Blockly.Arduino['Sentry1VisionObjQr'] = function () {
     return [[dropdown_vision_obj, dropdown_res_obj], Blockly.Arduino.ORDER_ATOMIC];
 };
 
-Blockly.Arduino['Sentry1VisionCardColor'] = 
+Blockly.Arduino['Sentry1VisionColor'] = 
 Blockly.Arduino['Sentry1VisionCardBlob'] = 
 Blockly.Arduino['Sentry1VisionCard'] = 
 Blockly.Arduino['Sentry1VisionBall'] = 
-Blockly.Arduino['SentryVisionCardColor'] = 
+Blockly.Arduino['SentryVisionColor'] = 
 Blockly.Arduino['SentryVisionCardBlob'] = 
 Blockly.Arduino['SentryVisionCard'] = 
 Blockly.Arduino['SentryVisionCard20Classes'] = function () {

@@ -19,7 +19,7 @@
       <block type="Sentry1VisionBlobSetParam"></block>
     </category>
     <category id="Sentry1_Run" name="运行模块" colour="#EAA20A">
-      <block type="Sentry1VisionGetStatus"></block>
+      <!-- <block type="Sentry1VisionGetStatus"></block> -->
       <block type="Sentry1VisionDetectedCount"></block>
       <block type="Sentry1GetValue">
         <value name="sentry_value_obj">

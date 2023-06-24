@@ -81,9 +81,8 @@ var sentry1_vision_objs = [
   [Blockly.Msg.SENTRY_VISION_VISIONLINE, "Sentry1::kVisionLine"],
   [Blockly.Msg.SENTRY_VISION_VISIONCARD, "Sentry1::kVisionCard"],
   [Blockly.Msg.SENTRY_VISION_VISIONBODY, "Sentry1::kVisionBody"],
-  [Blockly.Msg.SENTRY_VISION_VISIONQRCODE+Blockly.Msg.SENTRY_VISION_ENTERPRISE, "Sentry2::kVisionQrCode"],
-  [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT+Blockly.Msg.SENTRY_VISION_ENTERPRISE, "Sentry2::kVisionMotionDetect"],
-  [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, "Sentry1::kVisionCustom"]
+  [Blockly.Msg.SENTRY_VISION_VISIONQRCODE+Blockly.Msg.SENTRY_VISION_ENTERPRISE, "Sentry1::kVisionQrCode"],
+  [Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT+Blockly.Msg.SENTRY_VISION_ENTERPRISE, "Sentry1::kVisionMotionDetect"],
 ];
 
 
