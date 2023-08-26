@@ -1,5 +1,5 @@
 'use strict';
-goog. provide('Blockly.Msg.zh.hans');
+goog. provide('Blockly.Msg.en');
 goog. require('Blockly.Msg');
 
 Blockly.Msg.CATEGORY_SENTRY_Setup = 'setting module';
