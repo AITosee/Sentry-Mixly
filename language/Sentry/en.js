@@ -77,6 +77,7 @@ Blockly.Msg.SENTRY_VISION_VISIONBODY = 'body detection';
 Blockly.Msg.SENTRY_VISION_VISION20CLASSES = '20 classification and identification';
 Blockly.Msg.SENTRY_VISION_VISIONQRCODE = 'QR code identification';
 Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT = 'moving object detection';
+Blockly.Msg.SENTRY_VISION_VISIONCUSTOM = 'Custom';
 
 // Sentry Enable Disable
 Blockly.Msg.SENTRY_ENABLE = 'enable';

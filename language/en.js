@@ -80,6 +80,7 @@
     En.SENTRY_VISION_VISION20CLASSES = '20 classification and identification';
     En.SENTRY_VISION_VISIONQRCODE = 'QR code identification';
     En.SENTRY_VISION_VISIONMOTIONDETECT = 'moving object detection';
+    En.SENTRY_VISION_VISIONCUSTOM = 'Custom';
 
     // Sentry Enable Disable
     En.SENTRY_ENABLE = 'enable';
