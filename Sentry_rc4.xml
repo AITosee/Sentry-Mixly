@@ -3,7 +3,7 @@
 <script type="text/javascript" src="./language/zh-hant.js"></script>
 <script type="text/javascript" src="./language/en.js"></script>
 <script type="text/javascript" src="./block/Sentry.js"></script>
-<script type="text/javascript" src="./generator/Sentry.js"></script>
+<script type="text/javascript" src="./generator/Sentry_mixly_rc4.js"></script>
 <category id="mixly_Sentry" name="Sentry" colour="#EF5411">
   <category id="mixly_Sentry1" name="Sentry1" colour="#EF5411">
     <category id="Sentry1_Setup" name="设置模块" colour="#EF5411">
