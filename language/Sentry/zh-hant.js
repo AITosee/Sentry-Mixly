@@ -231,3 +231,29 @@ Blockly.Msg.SENTRY_CARD_W = 'W';
 Blockly.Msg.SENTRY_CARD_X = 'X';
 Blockly.Msg.SENTRY_CARD_Y = 'Y';
 Blockly.Msg.SENTRY_CARD_Z = 'Z';
+
+Blockly.Msg.Sentry1_Setup = '設置模塊';
+Blockly.Msg.Sentry1_Run = '運行模塊';
+Blockly.Msg.Sentry1_example = '算法示例'; 
+
+Blockly.Msg.Sentry1_example_Blod = '色塊檢測';
+Blockly.Msg.Sentry1_example_Color = '顏色識別';
+Blockly.Msg.Sentry1_example_ball = '球體檢測'; 
+Blockly.Msg.Sentry1_example_Line = '線段檢測';
+Blockly.Msg.Sentry1_example_Card = '卡片識別';
+Blockly.Msg.Sentry1_example_body = '人體檢測'; 
+
+Blockly.Msg.Sentry2_Setup = '設置模塊';
+Blockly.Msg.Sentry2_Run = '運行模塊';
+Blockly.Msg.Sentry2_example = '算法示例'; 
+
+Blockly.Msg.Sentry_example_Blod = '色塊檢測';
+Blockly.Msg.Sentry_example_Color = '顏色識別';
+Blockly.Msg.Sentry_example_AprilTag = 'AprilTag'; 
+Blockly.Msg.Sentry_example_Line = '線段檢測';
+Blockly.Msg.Sentry_example_Learning = '深度學習';
+Blockly.Msg.Sentry_example_Card = '卡片識別'; 
+Blockly.Msg.Sentry_example_Face = '人臉識別';
+Blockly.Msg.Sentry_example_20Class = '20分類識別';
+Blockly.Msg.Sentry_example_Qr = '二維碼識別'; 
+Blockly.Msg.Sentry_example_MotionDetect = '運動物體檢測';

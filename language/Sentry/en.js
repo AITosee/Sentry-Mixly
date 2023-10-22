@@ -230,3 +230,29 @@ Blockly.Msg.SENTRY_CARD_W = 'W';
 Blockly.Msg.SENTRY_CARD_X = 'X';
 Blockly.Msg.SENTRY_CARD_Y = 'Y';
 Blockly.Msg.SENTRY_CARD_Z = 'Z';
+
+Blockly.Msg.Sentry1_Setup = 'setting module';
+Blockly.Msg.Sentry1_Run = 'running module';
+Blockly.Msg.Sentry1_example = 'example'; 
+
+Blockly.Msg.Sentry1_example_Blod = 'color block detection';
+Blockly.Msg.Sentry1_example_Color = 'color recognition';
+Blockly.Msg.Sentry1_example_ball = 'ball detection'; 
+Blockly.Msg.Sentry1_example_Line = 'line segment detection';
+Blockly.Msg.Sentry1_example_Card = 'card identification';
+Blockly.Msg.Sentry1_example_body = 'body detection'; 
+
+Blockly.Msg.Sentry2_Setup = 'setting module';
+Blockly.Msg.Sentry2_Run = 'running module';
+Blockly.Msg.Sentry2_example = 'example'; 
+
+Blockly.Msg.Sentry_example_Blod = 'color block detection';
+Blockly.Msg.Sentry_example_Color = 'color recognition';
+Blockly.Msg.Sentry_example_AprilTag = 'AprilTag'; 
+Blockly.Msg.Sentry_example_Line = 'line segment detection';
+Blockly.Msg.Sentry_example_Learning = 'deep learning';
+Blockly.Msg.Sentry_example_Card = 'card identification'; 
+Blockly.Msg.Sentry_example_Face = 'face recognition';
+Blockly.Msg.Sentry_example_20Class = '20 classification and identification';
+Blockly.Msg.Sentry_example_Qr = 'QR code identification'; 
+Blockly.Msg.Sentry_example_MotionDetect = 'moving object detection';

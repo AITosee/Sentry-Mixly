@@ -234,4 +234,29 @@
     En.SENTRY_CARD_Y = 'Y';
     En.SENTRY_CARD_Z = 'Z';
 
+    En.MSG.Sentry1_Setup = 'setting module';
+    En.MSG.Sentry1_Run = 'running module';
+    En.MSG.Sentry1_example = 'example'; 
+
+    En.MSG.Sentry1_example_Blod = 'color block detection';
+    En.MSG.Sentry1_example_Color = 'color recognition';
+    En.MSG.Sentry1_example_ball = 'ball detection'; 
+    En.MSG.Sentry1_example_Line = 'line segment detection';
+    En.MSG.Sentry1_example_Card = 'card identification';
+    En.MSG.Sentry1_example_body = 'body detection'; 
+
+    En.MSG.Sentry2_Setup = 'setting module';
+    En.MSG.Sentry2_Run = 'running module';
+    En.MSG.Sentry2_example = 'example'; 
+    
+    En.MSG.Sentry_example_Blod = 'color block detection';
+    En.MSG.Sentry_example_Color = 'color recognition';
+    En.MSG.Sentry_example_AprilTag = 'AprilTag'; 
+    En.MSG.Sentry_example_Line = 'line segment detection';
+    En.MSG.Sentry_example_Learning = 'deep learning';
+    En.MSG.Sentry_example_Card = 'card identification'; 
+    En.MSG.Sentry_example_Face = 'face recognition';
+    En.MSG.Sentry_example_20Class = '20 classification and identification';
+    En.MSG.Sentry_example_Qr = 'QR code identification'; 
+    En.MSG.Sentry_example_MotionDetect = 'moving object detection';
 })();

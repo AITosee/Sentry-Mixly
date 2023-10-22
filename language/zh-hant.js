@@ -237,4 +237,29 @@
     ZhHant.SENTRY_CARD_Y = 'Y';
     ZhHant.SENTRY_CARD_Z = 'Z';
 
+    En.MSG.Sentry1_Setup = '設置模塊';
+    En.MSG.Sentry1_Run = '運行模塊';
+    En.MSG.Sentry1_example = '算法示例'; 
+
+    En.MSG.Sentry1_example_Blod = '色塊檢測';
+    En.MSG.Sentry1_example_Color = '顏色識別';
+    En.MSG.Sentry1_example_ball = '球體檢測'; 
+    En.MSG.Sentry1_example_Line = '線段檢測';
+    En.MSG.Sentry1_example_Card = '卡片識別';
+    En.MSG.Sentry1_example_body = '人體檢測'; 
+
+    En.MSG.Sentry2_Setup = '設置模塊';
+    En.MSG.Sentry2_Run = '運行模塊';
+    En.MSG.Sentry2_example = '算法示例'; 
+    
+    En.MSG.Sentry_example_Blod = '色塊檢測';
+    En.MSG.Sentry_example_Color = '顏色識別';
+    En.MSG.Sentry_example_AprilTag = 'AprilTag'; 
+    En.MSG.Sentry_example_Line = '線段檢測';
+    En.MSG.Sentry_example_Learning = '深度學習';
+    En.MSG.Sentry_example_Card = '卡片識別'; 
+    En.MSG.Sentry_example_Face = '人臉識別';
+    En.MSG.Sentry_example_20Class = '20分類識別';
+    En.MSG.Sentry_example_Qr = '二維碼識別'; 
+    En.MSG.Sentry_example_MotionDetect = '運動物體檢測';
 })();

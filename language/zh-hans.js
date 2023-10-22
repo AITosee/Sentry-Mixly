@@ -259,4 +259,29 @@
     ZhHans.SENTRY_CARD_Y = 'Y';
     ZhHans.SENTRY_CARD_Z = 'Z';
 
+    En.MSG.Sentry1_Setup = '设置模块';
+    En.MSG.Sentry1_Run = '运行模块';
+    En.MSG.Sentry1_example = '算法示例'; 
+
+    En.MSG.Sentry1_example_Blod = '色块检测';
+    En.MSG.Sentry1_example_Color = '颜色识别';
+    En.MSG.Sentry1_example_ball = '球体检测'; 
+    En.MSG.Sentry1_example_Line = '线段检测';
+    En.MSG.Sentry1_example_Card = '卡片识别';
+    En.MSG.Sentry1_example_body = '人体检测'; 
+
+    En.MSG.Sentry2_Setup = '设置模块';
+    En.MSG.Sentry2_Run = '运行模块';
+    En.MSG.Sentry2_example = '算法示例'; 
+    
+    En.MSG.Sentry_example_Blod = '色块检测';
+    En.MSG.Sentry_example_Color = '颜色识别';
+    En.MSG.Sentry_example_AprilTag = 'AprilTag'; 
+    En.MSG.Sentry_example_Line = '线段检测';
+    En.MSG.Sentry_example_Learning = '深度学习';
+    En.MSG.Sentry_example_Card = '卡片识别'; 
+    En.MSG.Sentry_example_Face = '人脸识别';
+    En.MSG.Sentry_example_20Class = '20分类识别';
+    En.MSG.Sentry_example_Qr = '二维码识别'; 
+    En.MSG.Sentry_example_MotionDetect = '运动物体检测';
 })();
