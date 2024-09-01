@@ -22,7 +22,7 @@ export const EnMsg = {
     SENTRY_PORT: 'port',
     SENTRY_ADDR: 'address',
     SENTRY_SET_DEFAULT: 'restore default params',
-    SENTRY_VISION_CN: '',
+    SENTRY_VISION_CN: '  ',
     SENTRY_VISION_EN: 'algo',
     SENTRY_STATUS: 'status',
     SENTRY_SET: 'Set',
