@@ -27,8 +27,8 @@ jobs:
           npm install
           npm run build:prod
           cd dist 
-          zip -r ${{ steps.vars.outputs.package }}.zips sentry-mixly
-          mv ${{ steps.vars.outputs.package }}.zip ${GITHUB_WORKSPACE}
+          zip -r ${{ steps.vars.outputs.package }}.zip sentry-mixly
+          cp -rv ${{ steps.vars.outputs.package }}.zip ${GITHUB_WORKSPACE}
 
           
       - name: Create Release and Upload Release Asset
