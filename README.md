@@ -1,102 +1,36 @@
-Sentry-Mixly-Arduino
-=======================
 
-Open source Mixly library for Sentry
+1.安装依赖
 
+```bash
+npm install
+```
 
+2.打包
 
-![sentry_set](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/sentry_set.png)
+- 针对开发环境打包
 
-![system_set](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/system_set.png)
+```bash
+npm run build:dev
+```
 
+- 针对生产环境打包
 
+```bash
+npm run build:prod
+```
 
-![sentry_set_up](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/sentry_set_up.png)
+### 使用方法
 
+* 1.打开mixly软件，点击"导入库/Import"。
+* 2.选中Sentry文件夹中的Sentry.xml文件，提示导入成功即可。
 
+### 版本更新
 
+----
+#### Date: 2024.09.1	Version: 2.0.0
+* 新增；
 
-
-![sentry_cood](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/sentry_cood.png)
-
-
-
-
-
-![sentry_led](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/sentry_led.png)
-
-
-
-
-
-
-
-![version_status](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_status.png)
-
-
-
-
-
-![version_res_count](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_res_count.png)
-
-
-
-
-
-![version_res_obj](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_res_obj.png)
-
-
-
-![version_res_obj1](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_res_obj1.png)
-
-
-
-
-
-
-
-![version_color_obj](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_color_obj.png)
-
-
-
-
-
-
-
-![version_qr_obj](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_qr_obj.png)
-
-
-
-
-
-![version_qr_str](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_qr_str.png)
-
-
-
-
-
-![version_blod_de](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_blod_de.png)
-
-
-
-
-
-![version_card_de](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_card_de.png)
-
-
-
-![version_class20_de](https://github.com/Uniquemf/Sentry-Mixly-Arduino/blob/main/media/image/version_class20_de.png)
-
-
-
-
-
-
-## What about other library for Sentry?
-
-* Arduino	[https://github.com/AITosee/Sentry-Arduino](https://github.com/AITosee/Sentry-Arduino)
-* Micro:Bit	[https://github.com/mu-opensource/pxt-Sentry](https://github.com/mu-opensource/pxt-Sentry)
-
-## For more information
-
-Check out the official site [https://tosee.readthedocs.io/zh/latest/index.html](https://tosee.readthedocs.io/zh/latest/index.html) for links to documentation, issues, and news
+##  联系方式
+![]()
+网址：
+email：

@@ -23,16 +23,22 @@ jobs:
             echo ::set-output name=repository::${GITHUB_REPOSITORY#*/}
             echo ::set-output name=package::${GITHUB_REPOSITORY#*/}-${GITHUB_REF/refs\/tags\//}
 
+      - name: Build package
+        run: |
+          cd ${RUNNER_WORKSPACE}
+          npm install
+          npm run build:prod
+
       - name: Generate deployment zip package
-        run: cd ${RUNNER_WORKSPACE} && zip -r ${{ steps.vars.outputs.package }}.zip ${{ steps.vars.outputs.repository }}  -x '*.git*'
+        run: cd ${RUNNER_WORKSPACE}/dist && zip -r ${{ steps.vars.outputs.package }}.zip ${{ steps.vars.outputs.repository }}  -x '*.git*'
 
       - name: Generate deployment tgz package
-        run: cd ${RUNNER_WORKSPACE} && tar -zcvf ${{ steps.vars.outputs.package }}.tar.gz --exclude=${{ steps.vars.outputs.repository }}/.github --exclude=${{ steps.vars.outputs.repository }}/.git  ${{ steps.vars.outputs.repository }}
+        run: cd ${RUNNER_WORKSPACE}/dist && tar -zcvf ${{ steps.vars.outputs.package }}.tar.gz --exclude=${{ steps.vars.outputs.repository }}/.github --exclude=${{ steps.vars.outputs.repository }}/.git  ${{ steps.vars.outputs.repository }}
 
       - name: Move package
         run: |
-          mv ${RUNNER_WORKSPACE}/${{ steps.vars.outputs.package }}.zip ${GITHUB_WORKSPACE}
-          mv ${RUNNER_WORKSPACE}/${{ steps.vars.outputs.package }}.tar.gz ${GITHUB_WORKSPACE}
+          mv ${RUNNER_WORKSPACE}/dist/${{ steps.vars.outputs.package }}.zip ${GITHUB_WORKSPACE}
+          mv ${RUNNER_WORKSPACE}/dist/${{ steps.vars.outputs.package }}.tar.gz ${GITHUB_WORKSPACE}
           
       - name: Create Release and Upload Release Asset
         uses: softprops/action-gh-release@v1
@@ -40,4 +46,3 @@ jobs:
           files: |
             ${{ steps.vars.outputs.package }}.zip
             ${{ steps.vars.outputs.package }}.tar.gz 
-
