@@ -49,7 +49,7 @@ export const EnMsg = {
     SENTRY_VISION_BLOCK: ' blob',
     SENTRY_VISION_DATA: 'returnValue',
     SENTRY_DETECTED_NUMBER: '  num of results',
-    SENTRY_GET_QRCODEVALUE: '  string decoding of result',
+    SENTRY_GET_QRCODEVALUE: '  string of decoding result',
 
     // Sentry Vision type
     SENTRY_VISION_VISIONCOLOR: 'Color',
@@ -103,7 +103,7 @@ export const EnMsg = {
     SENTRY_STATE_VALUE_G: 'green CH value',
     SENTRY_STATE_VALUE_B: 'blue CH value',
 
-    SENTRY_BALLTABLETENNIS: 'Table tennis',
+    SENTRY_BALLTABLETENNIS: 'Table Tennis',
     SENTRY_BALLTENNIS: 'Tennis',
 
     // Sentry Color Type
@@ -143,8 +143,8 @@ export const EnMsg = {
     SENTRY_CARD_RIGHT: 'Right',
     SENTRY_CARD_TURN_AROUND: 'Turn Around',
     SENTRY_CARD_PARK: 'Park',
-    SENTRY_CARD_GREEN_LIGHT: 'Green',
-    SENTRY_CARD_RED_LIGHT: 'Red',
+    SENTRY_CARD_GREEN_LIGHT: 'Green Light',
+    SENTRY_CARD_RED_LIGHT: 'Red Light',
     SENTRY_CARD_SPEED_40: 'Speed 40',
     SENTRY_CARD_SPEED_60: 'Speed 60',
     SENTRY_CARD_SPEED_80: 'Speed 80',

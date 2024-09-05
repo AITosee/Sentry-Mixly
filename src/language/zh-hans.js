@@ -100,8 +100,8 @@ export const ZhHansMsg = {
     SENTRY_STATE_LINE_A: '倾斜角度',
 
     SENTRY_STATE_VALUE_R: '红色分量值',
-    SENTRY_STATE_VALUE_G: '红色分量值',
-    SENTRY_STATE_VALUE_B: '红色分量值',
+    SENTRY_STATE_VALUE_G: '绿色分量值',
+    SENTRY_STATE_VALUE_B: '蓝色分量值',
 
     SENTRY_BALLTABLETENNIS: '乒乓球',
     SENTRY_BALLTENNIS: '网球',

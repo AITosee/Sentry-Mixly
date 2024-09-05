@@ -624,6 +624,7 @@ export const Sentry1VisionCardBlob = {
                 ),
                 'vision_card_obj'
             )
+            .appendField(Blockly.Msg.SENTRY_VISION_BLOCK)
         this.setOutput(true, [Array])
         this.setInputsInline(true)
         this.setColour('#EAA20A')
