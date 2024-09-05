@@ -1,4 +1,5 @@
-<%= htmlWebpackPlugin.tags.headTags.join('\n') %><category id="mixly_Sentry" name="Sentry视觉传感器" colour="#EF5411">
+<%= htmlWebpackPlugin.tags.headTags.join('\n') %>
+<category id="mixly_Sentry" name="Sentry视觉传感器" colour="#EF5411">
   <category id="mixly_Sentry1" name="Sentry1" colour="#EF5411">
     <category id="Sentry1_Setup" name="设置模块" colour="#EF5411">
       <block type="Sentry1Begin"></block>      <!-- 设置 SENTRY-->
@@ -13,7 +14,9 @@
       <block type="Sentry1VisionSetStatus"></block>      <!-- 设置 启用算法-->
       <block type="Sentry1VisionSetParamNum"></block>      <!-- 设置 算法参数-->
       <block type="Sentry1VisionColorSetParam"></block>
-      <block type="Sentry1VisionBlobSetParam"></block>
+      <block type="Sentry1VisionBlobSetParam">
+        <field name="lable">Sentry1::kColorRed</field>
+      </block>
     </category>
     <category id="Sentry1_Run" name="运行模块" colour="#EAA20A">
       <block type="Sentry1VisionDetectedCount"></block>
@@ -70,7 +73,10 @@
       </block>
       <block type="Sentry1VisionDetected">
         <value name="sentry_detected_obj">
-          <block type="Sentry1VisionCardBlob"></block>
+          <block type="Sentry1VisionCardBlob">
+            <field name="vision_obj">Sentry1::kVisionBlob</field>
+            <field name="vision_card_obj">Sentry1::kColorRed</field>
+          </block>
         </value>
         <value name="index">
           <shadow type="math_number">
@@ -100,6 +106,214 @@
       </block>
     </category>
     <category id="Sentry1_example" name="算法示例" colour="#EAA20A">
+      <category id="Sentry1_example_Color" name="颜色识别" colour="#EAA20A">
+        <block type="base_setup" id="RMc:iUOUCmgXMP^D^*hS" x="329" y="125">
+          <statement name="DO">
+            <block type="Sentry1Begin" id="uIuOd^FP?*0zG:o=4mLL">
+              <field name="mode_obj">Wire</field>
+              <field name="addr_obj">0x60</field>
+              <next>
+                <block type="Sentry1VisionSetStatus" id="Ul:{s8J9I8OsPTm,vUKu">
+                  <field name="VisionStatus">Begin</field>
+                  <field name="vision_obj">Sentry1::kVisionColor</field>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="variables_declare">
+          <field name="variables_type">local_variate</field>
+          <field name="VAR">count</field>
+          <field name="TYPE">int</field>
+          <value name="VALUE">
+            <block type="math_number">
+              <field name="NUM">1</field>
+            </block>
+          </value>
+          <next>
+            <block type="variables_set">
+              <field name="VAR">count</field>
+              <value name="VALUE">
+                <block type="Sentry1VisionDetectedCount">
+                  <field name="sentry_obj">1</field>
+                  <field name="vision_obj">Sentry1::kVisionColor</field>
+                </block>
+              </value>
+              <next>
+                <block type="controls_for">
+                  <field name="VAR">i</field>
+                  <value name="FROM">
+                    <shadow type="math_number">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                  <value name="TO">
+                    <shadow type="math_number">
+                      <field name="NUM">10</field>
+                    </shadow>
+                    <block type="variables_get">
+                      <field name="VAR">count</field>
+                    </block>
+                  </value>
+                  <value name="STEP">
+                    <shadow type="math_number">
+                      <field name="NUM">1</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="serial_print">
+                      <field name="serial_select">Serial</field>
+                      <field name="new_line">println</field>
+                      <value name="CONTENT">
+                        <block type="text_join">
+                          <value name="A">
+                            <shadow type="text">
+                              <field name="TEXT">r=</field>
+                            </shadow>
+                          </value>
+                          <value name="B">
+                            <shadow type="text">
+                              <field name="TEXT">Mixly</field>
+                            </shadow>
+                            <block type="Sentry1GetValue">
+                              <field name="sentry_obj">1</field>
+                              <value name="sentry_value_obj">
+                                <block type="Sentry1VisionObjColor">
+                                  <field name="vision_obj">Sentry1::kVisionColor</field>
+                                  <field name="vision_res_obj">kRValue</field>
+                                </block>
+                              </value>
+                              <value name="index">
+                                <shadow type="math_number">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                                <block type="variables_get">
+                                  <field name="VAR">i</field>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="serial_print">
+                          <field name="serial_select">Serial</field>
+                          <field name="new_line">println</field>
+                          <value name="CONTENT">
+                            <block type="text_join">
+                              <value name="A">
+                                <shadow type="text">
+                                  <field name="TEXT">g=</field>
+                                </shadow>
+                              </value>
+                              <value name="B">
+                                <shadow type="text">
+                                  <field name="TEXT">Mixly</field>
+                                </shadow>
+                                <block type="Sentry1GetValue">
+                                  <field name="sentry_obj">1</field>
+                                  <value name="sentry_value_obj">
+                                    <block type="Sentry1VisionObjColor">
+                                      <field name="vision_obj">Sentry1::kVisionColor</field>
+                                      <field name="vision_res_obj">kGValue</field>
+                                    </block>
+                                  </value>
+                                  <value name="index">
+                                    <shadow type="math_number">
+                                      <field name="NUM">1</field>
+                                    </shadow>
+                                    <block type="variables_get">
+                                      <field name="VAR">i</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="serial_print">
+                              <field name="serial_select">Serial</field>
+                              <field name="new_line">println</field>
+                              <value name="CONTENT">
+                                <block type="text_join">
+                                  <value name="A">
+                                    <shadow type="text">
+                                      <field name="TEXT">b=</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="B">
+                                    <shadow type="text">
+                                      <field name="TEXT">Mixly</field>
+                                    </shadow>
+                                    <block type="Sentry1GetValue">
+                                      <field name="sentry_obj">1</field>
+                                      <value name="sentry_value_obj">
+                                        <block type="Sentry1VisionObjColor">
+                                          <field name="vision_obj">Sentry1::kVisionColor</field>
+                                          <field name="vision_res_obj">kBValue</field>
+                                        </block>
+                                      </value>
+                                      <value name="index">
+                                        <shadow type="math_number">
+                                          <field name="NUM">1</field>
+                                        </shadow>
+                                        <block type="variables_get">
+                                          <field name="VAR">i</field>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="serial_print">
+                                  <field name="serial_select">Serial</field>
+                                  <field name="new_line">println</field>
+                                  <value name="CONTENT">
+                                    <block type="text_join">
+                                      <value name="A">
+                                        <shadow type="text">
+                                          <field name="TEXT">l=</field>
+                                        </shadow>
+                                      </value>
+                                      <value name="B">
+                                        <shadow type="text">
+                                          <field name="TEXT">Mixly</field>
+                                        </shadow>
+                                        <block type="Sentry1GetValue">
+                                          <field name="sentry_obj">1</field>
+                                          <value name="sentry_value_obj">
+                                            <block type="Sentry1VisionObjColor">
+                                              <field name="vision_obj">Sentry1::kVisionColor</field>
+                                              <field name="vision_res_obj">kLabel</field>
+                                            </block>
+                                          </value>
+                                          <value name="index">
+                                            <shadow type="math_number">
+                                              <field name="NUM">1</field>
+                                            </shadow>
+                                            <block type="variables_get">
+                                              <field name="VAR">i</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </category>
       <category id="Sentry1_example_Blod" name="色块检测" colour="#EAA20A">
         <block type="base_setup">
           <statement name="DO">
@@ -401,214 +615,6 @@
                                       </next>
                                     </block>
                                   </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </statement>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-      </category>
-      <category id="Sentry1_example_Color" name="颜色识别" colour="#EAA20A">
-        <block type="base_setup" id="RMc:iUOUCmgXMP^D^*hS" x="329" y="125">
-          <statement name="DO">
-            <block type="Sentry1Begin" id="uIuOd^FP?*0zG:o=4mLL">
-              <field name="mode_obj">Wire</field>
-              <field name="addr_obj">0x60</field>
-              <next>
-                <block type="Sentry1VisionSetStatus" id="Ul:{s8J9I8OsPTm,vUKu">
-                  <field name="VisionStatus">Begin</field>
-                  <field name="vision_obj">Sentry1::kVisionColor</field>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="variables_declare">
-          <field name="variables_type">local_variate</field>
-          <field name="VAR">count</field>
-          <field name="TYPE">int</field>
-          <value name="VALUE">
-            <block type="math_number">
-              <field name="NUM">1</field>
-            </block>
-          </value>
-          <next>
-            <block type="variables_set">
-              <field name="VAR">count</field>
-              <value name="VALUE">
-                <block type="Sentry1VisionDetectedCount">
-                  <field name="sentry_obj">1</field>
-                  <field name="vision_obj">Sentry1::kVisionColor</field>
-                </block>
-              </value>
-              <next>
-                <block type="controls_for">
-                  <field name="VAR">i</field>
-                  <value name="FROM">
-                    <shadow type="math_number">
-                      <field name="NUM">1</field>
-                    </shadow>
-                  </value>
-                  <value name="TO">
-                    <shadow type="math_number">
-                      <field name="NUM">10</field>
-                    </shadow>
-                    <block type="variables_get">
-                      <field name="VAR">count</field>
-                    </block>
-                  </value>
-                  <value name="STEP">
-                    <shadow type="math_number">
-                      <field name="NUM">1</field>
-                    </shadow>
-                  </value>
-                  <statement name="DO">
-                    <block type="serial_print">
-                      <field name="serial_select">Serial</field>
-                      <field name="new_line">println</field>
-                      <value name="CONTENT">
-                        <block type="text_join">
-                          <value name="A">
-                            <shadow type="text">
-                              <field name="TEXT">r=</field>
-                            </shadow>
-                          </value>
-                          <value name="B">
-                            <shadow type="text">
-                              <field name="TEXT">Mixly</field>
-                            </shadow>
-                            <block type="Sentry1GetValue">
-                              <field name="sentry_obj">1</field>
-                              <value name="sentry_value_obj">
-                                <block type="Sentry1VisionObjColor">
-                                  <field name="vision_obj">Sentry1::kVisionColor</field>
-                                  <field name="vision_res_obj">kRValue</field>
-                                </block>
-                              </value>
-                              <value name="index">
-                                <shadow type="math_number">
-                                  <field name="NUM">1</field>
-                                </shadow>
-                                <block type="variables_get">
-                                  <field name="VAR">i</field>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="serial_print">
-                          <field name="serial_select">Serial</field>
-                          <field name="new_line">println</field>
-                          <value name="CONTENT">
-                            <block type="text_join">
-                              <value name="A">
-                                <shadow type="text">
-                                  <field name="TEXT">g=</field>
-                                </shadow>
-                              </value>
-                              <value name="B">
-                                <shadow type="text">
-                                  <field name="TEXT">Mixly</field>
-                                </shadow>
-                                <block type="Sentry1GetValue">
-                                  <field name="sentry_obj">1</field>
-                                  <value name="sentry_value_obj">
-                                    <block type="Sentry1VisionObjColor">
-                                      <field name="vision_obj">Sentry1::kVisionColor</field>
-                                      <field name="vision_res_obj">kGValue</field>
-                                    </block>
-                                  </value>
-                                  <value name="index">
-                                    <shadow type="math_number">
-                                      <field name="NUM">1</field>
-                                    </shadow>
-                                    <block type="variables_get">
-                                      <field name="VAR">i</field>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                            </block>
-                          </value>
-                          <next>
-                            <block type="serial_print">
-                              <field name="serial_select">Serial</field>
-                              <field name="new_line">println</field>
-                              <value name="CONTENT">
-                                <block type="text_join">
-                                  <value name="A">
-                                    <shadow type="text">
-                                      <field name="TEXT">b=</field>
-                                    </shadow>
-                                  </value>
-                                  <value name="B">
-                                    <shadow type="text">
-                                      <field name="TEXT">Mixly</field>
-                                    </shadow>
-                                    <block type="Sentry1GetValue">
-                                      <field name="sentry_obj">1</field>
-                                      <value name="sentry_value_obj">
-                                        <block type="Sentry1VisionObjColor">
-                                          <field name="vision_obj">Sentry1::kVisionColor</field>
-                                          <field name="vision_res_obj">kBValue</field>
-                                        </block>
-                                      </value>
-                                      <value name="index">
-                                        <shadow type="math_number">
-                                          <field name="NUM">1</field>
-                                        </shadow>
-                                        <block type="variables_get">
-                                          <field name="VAR">i</field>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="serial_print">
-                                  <field name="serial_select">Serial</field>
-                                  <field name="new_line">println</field>
-                                  <value name="CONTENT">
-                                    <block type="text_join">
-                                      <value name="A">
-                                        <shadow type="text">
-                                          <field name="TEXT">l=</field>
-                                        </shadow>
-                                      </value>
-                                      <value name="B">
-                                        <shadow type="text">
-                                          <field name="TEXT">Mixly</field>
-                                        </shadow>
-                                        <block type="Sentry1GetValue">
-                                          <field name="sentry_obj">1</field>
-                                          <value name="sentry_value_obj">
-                                            <block type="Sentry1VisionObjColor">
-                                              <field name="vision_obj">Sentry1::kVisionColor</field>
-                                              <field name="vision_res_obj">kLabel</field>
-                                            </block>
-                                          </value>
-                                          <value name="index">
-                                            <shadow type="math_number">
-                                              <field name="NUM">1</field>
-                                            </shadow>
-                                            <block type="variables_get">
-                                              <field name="VAR">i</field>
-                                            </block>
-                                          </value>
-                                        </block>
-                                      </value>
-                                    </block>
-                                  </value>
                                 </block>
                               </next>
                             </block>

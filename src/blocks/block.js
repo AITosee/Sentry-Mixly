@@ -78,16 +78,6 @@ export const sentry1_vision_objs = function () {
         [Blockly.Msg.SENTRY_VISION_VISIONLINE, 'Sentry1::kVisionLine'],
         [Blockly.Msg.SENTRY_VISION_VISIONCARD, 'Sentry1::kVisionCard'],
         [Blockly.Msg.SENTRY_VISION_VISIONBODY, 'Sentry1::kVisionBody'],
-        [
-            Blockly.Msg.SENTRY_VISION_VISIONQRCODE +
-                Blockly.Msg.SENTRY_VISION_ENTERPRISE,
-            'Sentry1::kVisionQrCode',
-        ],
-        [
-            Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT +
-                Blockly.Msg.SENTRY_VISION_ENTERPRISE,
-            'Sentry1::kVisionMotionDetect',
-        ],
     ]
 }
 export const sentry1_vision_prama_support_objs = function () {
@@ -291,8 +281,11 @@ export const Sentry1LedSetColor = {
         color_undetected.setColours(led_color).setColumns(4)
 
         this.appendDummyInput()
-            .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY1_NAME)
-            .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR)
+            .appendField(
+                Blockly.Msg.SENTRY_SET +
+                    Blockly.Msg.SENTRY1_NAME +
+                    Blockly.Msg.SENTRY_LED_SET_COLOR
+            )
             .appendField(color_detected, 'led_color_obj1')
             .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR_NOT)
             .appendField(color_undetected, 'led_color_obj2')
@@ -353,7 +346,11 @@ export const Sentry1SetAWB = {
 export const Sentry1VisionSetParamNum = {
     init: function () {
         this.appendDummyInput()
-            .appendField(Blockly.Msg.SENTRY_SET + Blockly.Msg.SENTRY1_NAME)
+            .appendField(
+                Blockly.Msg.SENTRY_SET +
+                    Blockly.Msg.SENTRY1_NAME +
+                    Blockly.Msg.SENTRY_VISION_EN
+            )
             .appendField(
                 new Blockly.FieldDropdown(sentry1_vision_prama_support_objs()),
                 'vision_obj'
@@ -384,9 +381,13 @@ export const Sentry1VisionColorSetParam = {
                 'vision_obj'
             )
         this.appendDummyInput('VisionParam')
-            .appendField(Blockly.Msg.SENTRY_STATE_VALUE_X)
+            .appendField(
+                Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_X
+            )
             .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'x')
-            .appendField(Blockly.Msg.SENTRY_STATE_VALUE_Y)
+            .appendField(
+                Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_Y
+            )
             .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'y')
             .appendField(Blockly.Msg.SENTRY_STATE_VALUE_WIDTH)
             .appendField(new Blockly.FieldNumber(3, 0, 9999, 1), 'w')
@@ -434,7 +435,9 @@ export const Sentry1VisionBlobSetParam = {
 export const Sentry1VisionDetectedCount = {
     init: function () {
         this.appendDummyInput()
-            .appendField(Blockly.Msg.SENTRY1_NAME)
+            .appendField(
+                Blockly.Msg.SENTRY1_NAME + Blockly.Msg.SENTRY_VISION_EN
+            )
             .appendField(
                 new Blockly.FieldDropdown(sentry1_vision_objs()),
                 'vision_obj'
@@ -456,6 +459,7 @@ export const Sentry1VisionObj = {
         ]
 
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
             .appendField(Blockly.Msg.SENTRY_VISION_RETURN)
             .appendField(
@@ -477,6 +481,7 @@ export const Sentry1VisionObjColor = {
         ]
 
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
             .appendField(Blockly.Msg.SENTRY_VISION_RETURN)
             .appendField(
@@ -498,6 +503,7 @@ export const Sentry1VisionObjLine = {
         ]
 
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
             .appendField(Blockly.Msg.SENTRY_VISION_RETURN)
             .appendField(
@@ -523,6 +529,7 @@ export const Sentry1VisionObjQr = {
         ]
 
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
             .appendField(Blockly.Msg.SENTRY_VISION_RETURN)
             .appendField(
@@ -544,6 +551,7 @@ export const Sentry1GetValue = {
         this.appendValueInput('index')
             .setCheck([Number])
             .appendField(Blockly.Msg.SENTRY_VISION_RESULT)
+        this.appendDummyInput().appendField(Blockly.Msg.SENTRY_VISION_RESULT_2)
         this.setInputsInline(true)
         this.setOutput(true, Number)
         this.setColour('#EAA20A')
@@ -557,7 +565,9 @@ export const Sentry1GetQrValue = {
             [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, 'Sentry1::kVisionQrCode'],
         ]
         this.appendDummyInput()
-            .appendField(Blockly.Msg.SENTRY1_NAME)
+            .appendField(
+                Blockly.Msg.SENTRY1_NAME + Blockly.Msg.SENTRY_VISION_EN
+            )
             .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
             .appendField(Blockly.Msg.SENTRY_GET_QRCODEVALUE)
         this.setInputsInline(true)
@@ -569,6 +579,7 @@ export const Sentry1GetQrValue = {
 export const Sentry1VisionColor = {
     init: function () {
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(
                 new Blockly.FieldDropdown([
                     [
@@ -596,6 +607,7 @@ export const Sentry1VisionColor = {
 export const Sentry1VisionCardBlob = {
     init: function () {
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(
                 new Blockly.FieldDropdown([
                     [
@@ -623,6 +635,7 @@ export const Sentry1VisionCardBlob = {
 export const Sentry1VisionCard = {
     init: function () {
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(
                 new Blockly.FieldDropdown([
                     [
@@ -650,6 +663,7 @@ export const Sentry1VisionCard = {
 export const Sentry1VisionBall = {
     init: function () {
         this.appendDummyInput('VisionValue')
+            .appendField(Blockly.Msg.SENTRY_VISION_EN)
             .appendField(
                 new Blockly.FieldDropdown([
                     [
@@ -745,7 +759,7 @@ export const SentryVisionSetStatus = {
                 'VisionStatus'
             )
             .appendField(
-                Blockly.Msg.SENTRY_VISION_CN+Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY_VISION_CN + Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown(sentry2_vision_objs()),
@@ -815,9 +829,13 @@ export const SentryVisionColorSetParam = {
                 'vision_obj'
             )
         this.appendDummyInput('VisionParam')
-            .appendField(Blockly.Msg.SENTRY_STATE_VALUE_X)
+            .appendField(
+                Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_X
+            )
             .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'x')
-            .appendField(Blockly.Msg.SENTRY_STATE_VALUE_Y)
+            .appendField(
+                Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_Y
+            )
             .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'y')
             .appendField(Blockly.Msg.SENTRY_STATE_VALUE_WIDTH)
             .appendField(new Blockly.FieldNumber(3, 0, 9999, 1), 'w')
@@ -1048,6 +1066,7 @@ export const SentryGetValue = {
         this.appendValueInput('index')
             .setCheck([Number])
             .appendField(Blockly.Msg.SENTRY_VISION_RESULT)
+        this.appendDummyInput().appendField(Blockly.Msg.SENTRY_VISION_RESULT_2)
         this.setInputsInline(true)
         this.setOutput(true, Number)
         this.setColour('#EAA20A')
