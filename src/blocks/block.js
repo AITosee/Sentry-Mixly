@@ -197,6 +197,7 @@ export const sentry2_vision_card_objs = function () {
         [Blockly.Msg.SENTRY_CARD_MINUS, 'Sentry2::kCardMinus'],
         [Blockly.Msg.SENTRY_CARD_DIVIDE, 'Sentry2::kCardDivide'],
         [Blockly.Msg.SENTRY_CARD_EQUAL, 'Sentry2::kCardEqual'],
+        [Blockly.Msg.SENTRY_CARD_0, 'Sentry2::kCardZero'],
         [Blockly.Msg.SENTRY_CARD_1, 'Sentry2::kCardOne'],
         [Blockly.Msg.SENTRY_CARD_2, 'Sentry2::kCardTwo'],
         [Blockly.Msg.SENTRY_CARD_3, 'Sentry2::kCardThree'],
@@ -206,7 +207,6 @@ export const sentry2_vision_card_objs = function () {
         [Blockly.Msg.SENTRY_CARD_7, 'Sentry2::kCardSeven'],
         [Blockly.Msg.SENTRY_CARD_8, 'Sentry2::kCardEight'],
         [Blockly.Msg.SENTRY_CARD_9, 'Sentry2::kCardNine'],
-        [Blockly.Msg.SENTRY_CARD_0, 'Sentry2::kCardZero'],
     ]
 }
 

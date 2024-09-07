@@ -50,7 +50,7 @@
           </shadow>
         </value>
       </block>
-      <block type="Sentry1GetValue">
+      <!-- <block type="Sentry1GetValue">
         <value name="sentry_value_obj">
           <block type="Sentry1VisionObjQr"></block>
         </value>
@@ -59,8 +59,8 @@
             <field name="NUM">1</field>
           </shadow>
         </value>
-      </block>
-      <block type="Sentry1GetQrValue"></block>
+      </block> -->
+      <!-- <block type="Sentry1GetQrValue"></block> -->
       <block type="Sentry1VisionDetected">
         <value name="sentry_detected_obj">
           <block type="Sentry1VisionColor"></block>
