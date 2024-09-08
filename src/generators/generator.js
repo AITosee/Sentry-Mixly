@@ -67,14 +67,14 @@ export const Sentry1VisionSetStatus = function (_, generator) {
 
 export const Sentry1VisionSetParamNum = function (_, generator) {
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
-    var input_num = this.getFieldValue('num')
+    var input_num = this.getFieldValue('num') || 1
 
     return `sentry1.SetParamNum(${dropdown_vision_obj},${input_num});\n`
 }
 
 export const Sentry1VisionBlobSetParam = function (_, generator) {
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
-    var input_index = this.getFieldValue('index')
+    var input_index = this.getFieldValue('index') || 1
     var input_x = this.getFieldValue('x')
     var input_y = this.getFieldValue('y')
     var input_w = this.getFieldValue('w')
