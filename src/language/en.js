@@ -115,7 +115,7 @@ export const EnMsg = {
     SENTRY_COLOR_YELLOW: 'Yellow',
 
     // Sentry 20 Class Type
-    SENTRY_CLASS20_AIRPLANE: ' Aircraft ',
+    SENTRY_CLASS20_AIRPLANE: ' Airplane ',
     SENTRY_CLASS20_BICYCLE: ' Bicycle ',
     SENTRY_CLASS20_BIRD: ' Bird ',
     SENTRY_CLASS20_BOAT: ' Ship ',
