@@ -9,15 +9,15 @@ npm install
 
 - 针对开发环境打包
 
-```bash
-npm run build:dev
-```
+    * Mixly2.0 rc4及以上: `npm run build:dev`
+    * Mixly2.0 rc3: `npm run build:dev:2.0rc3`
+    * Mixly1.0: `npm run build:dev:1.0`
 
 - 针对生产环境打包
 
-```bash
-npm run build:prod
-```
+    * Mixly2.0 rc4及以上: `npm run build:prod`
+    * Mixly2.0 rc3: `npm run build:prod:2.0rc3`
+    * Mixly1.0: `npm run build:prod:1.0`
 
 ### 使用方法
 

@@ -1,7 +1,8 @@
-import { JSFuncs, Boards } from 'mixly'
+// import { JSFuncs, Boards } from 'mixly'
 import * as Blockly from 'blockly/core'
 
 export const SentryVisionObj = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
     var dropdown_res_obj = this.getFieldValue('vision_res_obj')
     return [[dropdown_vision_obj, dropdown_res_obj], generator.ORDER_ATOMIC]
@@ -17,6 +18,7 @@ export const SentryVisionObjQr = SentryVisionObj
 export const Sentry1VisionObjQr = SentryVisionObj
 
 export const SentryVisionCard20Classes = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
     var dropdown_lable_obj = this.getFieldValue('vision_card_obj')
     return [[dropdown_vision_obj, dropdown_lable_obj], generator.ORDER_ATOMIC]
@@ -31,6 +33,7 @@ export const SentryVisionCardBlob = SentryVisionCard20Classes
 export const SentryVisionCard = SentryVisionCard20Classes
 
 export const Sentry1Begin = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_mode_obj = this.getFieldValue('mode_obj')
     var dropdown_addr_obj = this.getFieldValue('addr_obj')
 
@@ -50,15 +53,18 @@ export const Sentry1Begin = function (_, generator) {
 }
 
 export const Sentry1SetDefault = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     return `sentry1.SensorSetDefault();\n`
 }
 
 export const Sentry1SetCoordinateType = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_coord_obj = this.getFieldValue('coord_obj')
     return `sentry1.SeneorSetCoordinateType(${dropdown_coord_obj});\n`
 }
 
 export const Sentry1VisionSetStatus = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_VisionStatus = this.getFieldValue('VisionStatus')
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
 
@@ -66,6 +72,7 @@ export const Sentry1VisionSetStatus = function (_, generator) {
 }
 
 export const Sentry1VisionSetParamNum = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
     var input_num = this.getFieldValue('num') || 1
 
@@ -73,6 +80,7 @@ export const Sentry1VisionSetParamNum = function (_, generator) {
 }
 
 export const Sentry1VisionBlobSetParam = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
     var input_index = this.getFieldValue('index') || 1
     var input_x = this.getFieldValue('x')
@@ -98,6 +106,7 @@ export const Sentry1VisionBlobSetParam = function (_, generator) {
 export const Sentry1VisionColorSetParam = Sentry1VisionBlobSetParam
 
 export const Sentry1LedSetColor = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var color_dic = {
         '#000000': 'kLedClose',
         '#ff0000': 'kLedRed',
@@ -121,18 +130,21 @@ export const Sentry1LedSetColor = function (_, generator) {
 }
 
 export const Sentry1SetZoom = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_zoom_obj = this.getFieldValue('zoom_obj')
 
     return `sentry1.CameraSetZoom(${dropdown_zoom_obj});\n`
 }
 
 export const Sentry1SetAWB = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_awb_obj = this.getFieldValue('awb_obj')
 
     return `sentry1.CameraSetAwb(${dropdown_awb_obj});\n`
 }
 
 export const Sentry1VisionGetStatus = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
 
     var code = `sentry1.VisionGetStatus(${dropdown_vision_obj})`
@@ -140,6 +152,7 @@ export const Sentry1VisionGetStatus = function (_, generator) {
 }
 
 export const Sentry1VisionDetectedCount = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
 
     var code = `sentry1.GetValue(${dropdown_vision_obj}, kStatus)`
@@ -147,6 +160,7 @@ export const Sentry1VisionDetectedCount = function (_, generator) {
 }
 
 export const Sentry1GetValue = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var sentry_value_obj = generator
         .valueToCode(this, 'sentry_value_obj', generator.ORDER_ATOMIC)
         .split(',')
@@ -158,11 +172,13 @@ export const Sentry1GetValue = function (_, generator) {
 }
 
 export const Sentry1GetQrValue = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var code = `String(sentry1.GetQrCodeValue())`
     return [code, generator.ORDER_ATOMIC]
 }
 
 export const Sentry1VisionDetected = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var sentry_detected_obj = generator
         .valueToCode(this, 'sentry_detected_obj', generator.ORDER_ATOMIC)
         .split(',')
@@ -175,6 +191,7 @@ export const Sentry1VisionDetected = function (_, generator) {
 
 // Sentry2
 export const SentryBegin = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_mode_obj = this.getFieldValue('mode_obj')
     var dropdown_addr_obj = this.getFieldValue('addr_obj')
 
@@ -194,15 +211,18 @@ export const SentryBegin = function (_, generator) {
 }
 
 export const SentrySetDefault = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     return `sentry.SensorSetDefault();\n`
 }
 
 export const SentrySetCoordinateType = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_coord_obj = this.getFieldValue('coord_obj')
     return `sentry.SeneorSetCoordinateType(${dropdown_coord_obj});\n`
 }
 
 export const SentryVisionSetStatus = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_VisionStatus = this.getFieldValue('VisionStatus')
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
 
@@ -210,6 +230,7 @@ export const SentryVisionSetStatus = function (_, generator) {
 }
 
 export const SentryVisionSetParamNum = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
     var input_num = this.getFieldValue('num')
 
@@ -217,6 +238,7 @@ export const SentryVisionSetParamNum = function (_, generator) {
 }
 
 export const SentryVisionSetParam = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
     var input_index = this.getFieldValue('index')
     var input_x = this.getFieldValue('x')
@@ -243,6 +265,7 @@ export const SentryVisionBlobSetParam = SentryVisionSetParam
 export const SentryVisionColorSetParam = SentryVisionSetParam
 
 export const SentryLedSetColor = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var color_dic = {
         '#000000': 'kLedClose',
         '#ff0000': 'kLedRed',
@@ -266,18 +289,21 @@ export const SentryLedSetColor = function (_, generator) {
 }
 
 export const SentrySetZoom = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_zoom_obj = this.getFieldValue('zoom_obj')
 
     return `sentry.CameraSetZoom(${dropdown_zoom_obj});\n`
 }
 
 export const SentrySetAWB = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_awb_obj = this.getFieldValue('awb_obj')
 
     return `sentry.CameraSetAwb(${dropdown_awb_obj});\n`
 }
 
 export const SentryVisionDetectedCount = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var dropdown_vision_obj = this.getFieldValue('vision_obj')
 
     var code = `sentry.GetValue(${dropdown_vision_obj}, kStatus)`
@@ -285,6 +311,7 @@ export const SentryVisionDetectedCount = function (_, generator) {
 }
 
 export const SentryGetValue = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var sentry_value_obj = generator
         .valueToCode(this, 'sentry_value_obj', generator.ORDER_ATOMIC)
         .split(',')
@@ -296,11 +323,13 @@ export const SentryGetValue = function (_, generator) {
 }
 
 export const SentryGetQrValue = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var code = `String(sentry.GetQrCodeValue())`
     return [code, generator.ORDER_ATOMIC]
 }
 
 export const SentryVisionDetected = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var sentry_detected_obj = generator
         .valueToCode(this, 'sentry_detected_obj', generator.ORDER_ATOMIC)
         .split(',')
@@ -312,11 +341,13 @@ export const SentryVisionDetected = function (_, generator) {
 }
 
 export const SentryRows = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var code = `sentry.rows()`
     return [code, generator.ORDER_ATOMIC]
 }
 
 export const SentryCols = function (_, generator) {
+    generator = generator ?? Blockly.Arduino
     var code = `sentry.cols()`
     return [code, generator.ORDER_ATOMIC]
 }

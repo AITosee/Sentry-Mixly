@@ -8,4 +8,8 @@ import './css/lib.css';
 Object.assign(Blockly.Blocks, blocks);
 
 // 载入图形化模块代码生成定义文件
-Object.assign(Blockly.Arduino.forBlock, generators);
+if (Blockly.Arduino.forBlock) {
+    Object.assign(Blockly.Arduino.forBlock, generators);
+} else {
+    Object.assign(Blockly.Arduino, generators);
+}

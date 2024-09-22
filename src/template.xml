@@ -1,3 +1,4 @@
+<!-- type="company"  block="block/sentry.js" generator="generator/sentry.js" lib="Sentry"  media="media/sentry"  language="language/sentry" -->
 <%= htmlWebpackPlugin.tags.headTags.join('\n') %>
 <category id="mixly_Sentry" name="Sentry视觉传感器" colour="#EF5411">
   <category id="mixly_Sentry1" name="Sentry1" colour="#EF5411">
