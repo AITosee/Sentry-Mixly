@@ -26,7 +26,7 @@ module.exports = merge(common, {
             new HtmlWebpackPlugin({
                 inject: false,
                 template: path.resolve(process.cwd(), 'src/template.xml'),
-                filename: 'sentry.xml',
+                filename: 'Sentry.xml',
                 minify: false,
                 publicPath: `../../`,
                 excludeChunks: [
