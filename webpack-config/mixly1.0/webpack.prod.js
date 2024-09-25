@@ -3,7 +3,16 @@ const common = require('./webpack.common');
 const { merge } = require('webpack-merge');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { name } = require('../../package.json');
+
+const libInfo = `<!--
+  type="company"
+  block="block/sentry.js"
+  generator="generator/sentry.js"
+  lib="Sentry"
+  media="media/sentry"
+  language="language/sentry"
+-->
+<script type="text/javascript" src="../../blocks/company/sentry.js"></script>`;
 
 
 module.exports = merge(common, {
@@ -19,14 +28,26 @@ module.exports = merge(common, {
                 template: path.resolve(process.cwd(), 'src/template.xml'),
                 filename: 'sentry.xml',
                 minify: false,
-                publicPath: `../../${name}/`,
+                publicPath: `../../`,
                 excludeChunks: [
                     'language/sentry/zh-hans',
                     'language/sentry/zh-hant',
                     'language/sentry/en',
                     'block/sentry',
                     'generator/sentry'
-                ]
+                ],
+                templateParameters: (compilation, assets, assetTags, options) => {
+                    assetTags.headTags.push(libInfo);
+                    return {
+                        compilation,
+                        webpackConfig: compilation.options,
+                        htmlWebpackPlugin: {
+                            tags: assetTags,
+                            files: assets,
+                            options
+                        }
+                    };
+                }
             })
         ]
     }

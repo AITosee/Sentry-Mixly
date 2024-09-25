@@ -10,7 +10,6 @@ module.exports = {
     cache: false,
     target: ['web', 'es5'],
     entry: {
-        'block/company/sentry': path.resolve(__dirname, 'block.js'),
         'block/sentry': path.resolve(ORI_DIR, 'src/index.js'),
         'generator/sentry': path.resolve(__dirname, 'generator.js'),
         'language/sentry/zh-hans': path.resolve(__dirname, 'language/zh-hans.js'),
