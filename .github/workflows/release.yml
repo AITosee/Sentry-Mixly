@@ -35,16 +35,16 @@ jobs:
           npm install
           npm run build:prod:2.0rc3
           cd dist 
-          zip -r ${{ steps.vars.outputs.package }}_2.0rc3.zip sentry-mixly
-          cp -rv ${{ steps.vars.outputs.package }}_2.0rc3.zip ${GITHUB_WORKSPACE}
+          zip -r ${{ steps.vars.outputs.package }}_mixly2.0rc3.zip sentry-mixly
+          cp -rv ${{ steps.vars.outputs.package }}_mixly2.0rc3.zip ${GITHUB_WORKSPACE}
 
       - name: Build 1.0 package
         run: |
           npm install
           npm run build:prod:1.0
           cd dist 
-          zip -r ${{ steps.vars.outputs.package }}_1.0.zip sentry-mixly
-          cp -rv ${{ steps.vars.outputs.package }}_1.0.zip ${GITHUB_WORKSPACE}
+          zip -r ${{ steps.vars.outputs.package }}_mixly1.0.zip sentry-mixly
+          cp -rv ${{ steps.vars.outputs.package }}_mixly1.0.zip ${GITHUB_WORKSPACE}
 
           
       - name: Create Release and Upload Release Asset
@@ -52,5 +52,5 @@ jobs:
         with:
           files: |
            ${{ steps.vars.outputs.package }}.zip
-           ${{ steps.vars.outputs.package }}_2.0rc3.zip
-           ${{ steps.vars.outputs.package }}_1.0.zip
+           ${{ steps.vars.outputs.package }}_mixly2.0rc3.zip
+           ${{ steps.vars.outputs.package }}_mixly1.0.zip
