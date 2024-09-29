@@ -4,7 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const { name } = require('../../package.json');
 
 const ORI_DIR = process.cwd();
-const DEST_DIR = path.resolve(ORI_DIR, 'dist', name);
+const DEST_DIR = path.resolve(ORI_DIR, 'dist', "mixly2.0-rc3");
 
 module.exports = {
     cache: false,

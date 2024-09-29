@@ -1,9 +1,9 @@
 export const ZhHantMsg = {
     // Help文本
     SENTRY_HELP_INIT_TOOLTIP: '初始化視覺傳感器，並選擇相關的地址',
-    SENTRY_HELP_SET_DEFAULT: '傳感器算法狀態恢複默認',
+    SENTRY_HELP_SET_DEFAULT: '傳感器算法狀態恢復默認',
     SENTRY_HELP_LED:
-        '黑色為關閉LED顯示，兩種顏色相同時,LED狀態為手動，不隨著檢測結果改變',
+        '黑色爲關閉LED顯示，兩種顏色相同時,LED狀態爲手動，不隨着檢測結果改變',
     SENTRY_HELP_GET_VISION_VALUE: '獲取算法對應結果',
     SENTRY_HELP_DETECTED_VISION_VALUE:
         '是否檢測到算法目標值，檢測到返回Ture，否則False',
@@ -20,7 +20,7 @@ export const ZhHantMsg = {
     SENTRY_BEGIN: '初始化',
     SENTRY_PORT: '端口',
     SENTRY_ADDR: '地址',
-    SENTRY_SET_DEFAULT: '恢複默認參數',
+    SENTRY_SET_DEFAULT: '恢復默認參數',
     SENTRY_VISION_CN: '算法',
     SENTRY_VISION_EN: '',
     SENTRY_STATUS: '狀態',
@@ -30,13 +30,13 @@ export const ZhHantMsg = {
     SENTRY_SET_PARAM_GROUP: '參數組',
     SENTRY_INDEX: '索引',
     SENTRY_CENTER: '中心',
-    SENTRY_X: '橫坐標',
-    SENTRY_Y: '縱坐標',
+    SENTRY_X: '橫座標',
+    SENTRY_Y: '縱座標',
     SENTRY_WEIGHT: '最小寬度',
     SENTRY_HEIGHT: '最小高度',
     SENTRY_COLOR: '顏色',
-    SENTRY_LABLE: '標簽',
-    SENTRY_LED_SET_COLOR: '檢測到目标时LED顯示',
+    SENTRY_LABLE: '標籤',
+    SENTRY_LED_SET_COLOR: '檢測到目標時LED顯示',
     SENTRY_LED_SET_COLOR_NOT: '否則',
     SENTRY_LED_SET_LEVEL: '亮度(1~15)',
     SENTRY_CAMERA_SET_AWB: '白平衡模式',
@@ -45,16 +45,17 @@ export const ZhHantMsg = {
     SENTRY_VISION_RETURN: '  返回值',
     SENTRY_VISION_RESULT: '結果',
     SENTRY_VISION_RESULT_1: '結果',
+    SENTRY_VISION_RESULT_2: '的',
     SENTRY_VISION_BLOCK: '塊',
     SENTRY_VISION_DATA: '數據',
-    SENTRY_DETECTED_NUMBER: '  結果的數量',
-    SENTRY_GET_QRCODEVALUE: '  返回的果字符串',
+    SENTRY_DETECTED_NUMBER: '  返回的結果數量',
+    SENTRY_GET_QRCODEVALUE: '  返回的結果字符串',
 
     // Sentry Vision type
     SENTRY_VISION_VISIONCOLOR: '顏色識別',
     SENTRY_VISION_VISIONBLOB: '色塊檢測',
     SENTRY_VISION_VISIONBALL: '球體識別',
-    SENTRY_VISION_VISIONAPRILTAG: '標簽識別',
+    SENTRY_VISION_VISIONAPRILTAG: '標籤識別',
     SENTRY_VISION_VISIONLINE: '線條檢測',
     SENTRY_VISION_VISIONLEARNING: '深度學習',
     SENTRY_VISION_VISIONCARD: '卡片識別',
@@ -66,7 +67,7 @@ export const ZhHantMsg = {
     SENTRY_VISION_VISIONCUSTOM: '自定義',
 
     // Sentry Enable Disable
-    SENTRY_ENABLE: '開啟',
+    SENTRY_ENABLE: '開啓',
     SENTRY_DISABLE: '關閉',
 
     // LED color type
@@ -86,16 +87,16 @@ export const ZhHantMsg = {
     SENTRY_YELLOW_LIGHT: '黃光',
 
     // Sentry State Value Type
-    SENTRY_STATE_VALUE_X: '橫坐標',
-    SENTRY_STATE_VALUE_Y: '縱坐標',
+    SENTRY_STATE_VALUE_X: '橫座標',
+    SENTRY_STATE_VALUE_Y: '縱座標',
     SENTRY_STATE_VALUE_WIDTH: '寬度',
     SENTRY_STATE_VALUE_HEIGHT: '高度',
-    SENTRY_STATE_VALUE_LABEL: '標簽',
+    SENTRY_STATE_VALUE_LABEL: '標籤',
 
-    SENTRY_STATE_LINE_EX: '終點橫坐標',
-    SENTRY_STATE_LINE_EY: '終點縱坐標',
-    SENTRY_STATE_LINE_SX: '起點橫坐標',
-    SENTRY_STATE_LINE_SY: '起點縱坐標',
+    SENTRY_STATE_LINE_EX: '終點橫座標',
+    SENTRY_STATE_LINE_EY: '終點縱座標',
+    SENTRY_STATE_LINE_SX: '起點橫座標',
+    SENTRY_STATE_LINE_SY: '起點縱座標',
     SENTRY_STATE_LINE_A: '傾斜角度',
 
     SENTRY_STATE_VALUE_R: '紅色分量值',
@@ -121,18 +122,18 @@ export const ZhHantMsg = {
     SENTRY_CLASS20_BUS: '公交車',
     SENTRY_CLASS20_CAR: '小汽車',
     SENTRY_CLASS20_CAT: '貓',
-    SENTRY_CLASS20_CHAIR: '椅子',
-    SENTRY_CLASS20_COW: '奶牛',
+    SENTRY_CLASS20_CHAIR: '餐桌',
+    SENTRY_CLASS20_COW: '牛',
     SENTRY_CLASS20_TABLE: '桌子',
     SENTRY_CLASS20_DOG: '狗',
     SENTRY_CLASS20_HORSE: '馬',
     SENTRY_CLASS20_MOTORBIKE: '摩托車',
     SENTRY_CLASS20_PERSON: '人',
-    SENTRY_CLASS20_PLANT: '植物',
+    SENTRY_CLASS20_PLANT: '盆栽植物',
     SENTRY_CLASS20_SHEEP: '羊',
     SENTRY_CLASS20_SOFA: '沙發',
     SENTRY_CLASS20_TRAIN: '火車',
-    SENTRY_CLASS20_MONITOR: '顯示器',
+    SENTRY_CLASS20_MONITOR: '電視',
 
     // Sentry Card Type
     SENTRY_CARD_TRAFFIC: '交通卡片',

@@ -163,16 +163,16 @@ export const sentry2_vision_20class_objs = function () {
         [Blockly.Msg.SENTRY_CLASS20_CAT, 'Sentry2::kCat'],
         [Blockly.Msg.SENTRY_CLASS20_CHAIR, 'Sentry2::kChair'],
         [Blockly.Msg.SENTRY_CLASS20_COW, 'Sentry2::kCow'],
-        [Blockly.Msg.SENTRY_CLASS20_TABLE, 'Sentry2::kTable'],
+        [Blockly.Msg.SENTRY_CLASS20_TABLE, 'Sentry2::kDiningTable'],
         [Blockly.Msg.SENTRY_CLASS20_DOG, 'Sentry2::kDog'],
         [Blockly.Msg.SENTRY_CLASS20_HORSE, 'Sentry2::kHorse'],
         [Blockly.Msg.SENTRY_CLASS20_MOTORBIKE, 'Sentry2::kMotorBike'],
         [Blockly.Msg.SENTRY_CLASS20_PERSON, 'Sentry2::kPerson'],
-        [Blockly.Msg.SENTRY_CLASS20_PLANT, 'Sentry2::kPlant'],
+        [Blockly.Msg.SENTRY_CLASS20_PLANT, 'Sentry2::kPottedPlant'],
         [Blockly.Msg.SENTRY_CLASS20_SHEEP, 'Sentry2::kSheep'],
         [Blockly.Msg.SENTRY_CLASS20_SOFA, 'Sentry2::kSofa'],
         [Blockly.Msg.SENTRY_CLASS20_TRAIN, 'Sentry2::kTrain'],
-        [Blockly.Msg.SENTRY_CLASS20_MONITOR, 'Sentry2::kMonitor'],
+        [Blockly.Msg.SENTRY_CLASS20_MONITOR, 'Sentry2::kTvMonitor'],
     ]
 }
 
