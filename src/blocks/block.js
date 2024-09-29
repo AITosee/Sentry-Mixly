@@ -223,14 +223,14 @@ export const vision_obj_card_dict = function () {
 
 export const Sentry1Begin = {
     init: function () {
-        var serial_HardwareSelect = Profile.default.serial_HardwareSelect?? Profile.default.serial_select
+        var serial_HardwareSelect = Profile.default.serial_HardwareSelect ?? Profile.default.serial_select
         var mode_objs = [['I2C', 'Wire']].concat(serial_HardwareSelect).concat(Profile.default.serial_select)
         mode_objs = Array.from(new Set(mode_objs.map(JSON.stringify))).map(JSON.parse);
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_BEGIN +
-                    Blockly.Msg.SENTRY1_NAME +
-                    Blockly.Msg.SENTRY_PORT
+                Blockly.Msg.SENTRY1_NAME +
+                Blockly.Msg.SENTRY_PORT
             )
             .appendField(new Blockly.FieldDropdown(mode_objs), 'mode_obj')
             .appendField(Blockly.Msg.SENTRY_ADDR)
@@ -285,8 +285,8 @@ export const Sentry1LedSetColor = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY1_NAME +
-                    Blockly.Msg.SENTRY_LED_SET_COLOR
+                Blockly.Msg.SENTRY1_NAME +
+                Blockly.Msg.SENTRY_LED_SET_COLOR
             )
             .appendField(color_detected, 'led_color_obj1')
             .appendField(Blockly.Msg.SENTRY_LED_SET_COLOR_NOT)
@@ -332,8 +332,8 @@ export const Sentry1SetAWB = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY1_NAME +
-                    Blockly.Msg.SENTRY_CAMERA_SET_AWB
+                Blockly.Msg.SENTRY1_NAME +
+                Blockly.Msg.SENTRY_CAMERA_SET_AWB
             )
             .appendField(
                 new Blockly.FieldDropdown(white_balance_objs()),
@@ -350,8 +350,8 @@ export const Sentry1VisionSetParamNum = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY1_NAME +
-                    Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY1_NAME +
+                Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown(sentry1_vision_prama_support_objs()),
@@ -370,8 +370,8 @@ export const Sentry1VisionColorSetParam = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY1_NAME +
-                    Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY1_NAME +
+                Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown([
@@ -406,8 +406,8 @@ export const Sentry1VisionBlobSetParam = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY1_NAME +
-                    Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY1_NAME +
+                Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown([
@@ -525,7 +525,7 @@ export const Sentry1VisionObjQr = {
         var _vision_objs = [
             [
                 Blockly.Msg.SENTRY_VISION_VISIONQRCODE +
-                    Blockly.Msg.SENTRY_VISION_ENTERPRISE,
+                Blockly.Msg.SENTRY_VISION_ENTERPRISE,
                 'Sentry1::kVisionQrCode',
             ],
         ]
@@ -709,16 +709,16 @@ export const Sentry1VisionDetected = {
 // Sentry2
 export const SentryBegin = {
     init: function () {
-        
-        var serial_HardwareSelect = Profile.default.serial_HardwareSelect?? Profile.default.serial_select
+
+        var serial_HardwareSelect = Profile.default.serial_HardwareSelect ?? Profile.default.serial_select
         var mode_objs = [['I2C', 'Wire']].concat(serial_HardwareSelect).concat(Profile.default.serial_select)
         mode_objs = Array.from(new Set(mode_objs.map(JSON.stringify))).map(JSON.parse);
-        
+
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_BEGIN +
-                    Blockly.Msg.SENTRY2_NAME +
-                    Blockly.Msg.SENTRY_PORT
+                Blockly.Msg.SENTRY2_NAME +
+                Blockly.Msg.SENTRY_PORT
             )
             .appendField(new Blockly.FieldDropdown(mode_objs), 'mode_obj')
             .appendField(Blockly.Msg.SENTRY_ADDR)
@@ -784,8 +784,8 @@ export const SentrySetAWB = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY2_NAME +
-                    Blockly.Msg.SENTRY_CAMERA_SET_AWB
+                Blockly.Msg.SENTRY2_NAME +
+                Blockly.Msg.SENTRY_CAMERA_SET_AWB
             )
             .appendField(
                 new Blockly.FieldDropdown(white_balance_objs()),
@@ -802,8 +802,8 @@ export const SentryVisionSetParamNum = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY2_NAME +
-                    Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY2_NAME +
+                Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown(sentry2_vision_param_objs()),
@@ -823,8 +823,8 @@ export const SentryVisionColorSetParam = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY2_NAME +
-                    Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY2_NAME +
+                Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown([
@@ -861,8 +861,8 @@ export const SentryVisionBlobSetParam = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY2_NAME +
-                    Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY2_NAME +
+                Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown([
@@ -896,8 +896,8 @@ export const SentryVisionSetParam = {
         this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_SET +
-                    Blockly.Msg.SENTRY2_NAME +
-                    Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY2_NAME +
+                Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown(sentry2_vision_custom()),
