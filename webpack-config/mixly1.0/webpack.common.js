@@ -81,8 +81,8 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(ORI_DIR, 'origin'),
-                    to: DEST_DIR,
+                    from: path.resolve(ORI_DIR, 'origin/libraries/Sentry-Arduino'),
+                    to: path.resolve(DEST_DIR, 'Sentry'),
                     noErrorOnMissing: true
                 }
             ],
