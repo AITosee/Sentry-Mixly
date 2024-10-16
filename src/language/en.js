@@ -118,7 +118,7 @@ export const EnMsg = {
     SENTRY_CLASS20_AIRPLANE: ' Airplane ',
     SENTRY_CLASS20_BICYCLE: ' Bicycle ',
     SENTRY_CLASS20_BIRD: ' Bird ',
-    SENTRY_CLASS20_BOAT: ' Ship ',
+    SENTRY_CLASS20_BOAT: ' Boat ',
     SENTRY_CLASS20_BOTTLE: ' Bottle ',
     SENTRY_CLASS20_BUS: '  Bus',
     SENTRY_CLASS20_CAR: ' Car ',
