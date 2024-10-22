@@ -122,9 +122,9 @@ export const ZhHansMsg = {
     SENTRY_CLASS20_BUS: '公交车',
     SENTRY_CLASS20_CAR: '小汽车',
     SENTRY_CLASS20_CAT: '猫',
-    SENTRY_CLASS20_CHAIR: '餐桌',
+    SENTRY_CLASS20_CHAIR: '椅子',
     SENTRY_CLASS20_COW: '牛',
-    SENTRY_CLASS20_TABLE: '桌子',
+    SENTRY_CLASS20_TABLE: '餐桌',
     SENTRY_CLASS20_DOG: '狗',
     SENTRY_CLASS20_HORSE: '马',
     SENTRY_CLASS20_MOTORBIKE: '摩托车',
@@ -133,7 +133,7 @@ export const ZhHansMsg = {
     SENTRY_CLASS20_SHEEP: '羊',
     SENTRY_CLASS20_SOFA: '沙发',
     SENTRY_CLASS20_TRAIN: '火车',
-    SENTRY_CLASS20_MONITOR: '显示器',
+    SENTRY_CLASS20_MONITOR: '电视',
 
     // Sentry Card Type
     SENTRY_CARD_TRAFFIC: '交通卡片',
