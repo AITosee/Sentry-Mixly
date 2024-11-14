@@ -148,9 +148,7 @@ export const sentry2_vision_custom = function () {
     return [
         [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, 'Sentry2::kVisionCustom'],
         [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, 'Sentry2::kVisionColor'],
-        [Blockly.Msg.SENTRY_VISION_VISIONBLOB, 'Sentry2::kVisionBlob'],
-        [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, 'Sentry2::kVisionLearning'],
-        [Blockly.Msg.SENTRY_VISION_VISIONFACE, 'Sentry2::kVisionFace'],
+        [Blockly.Msg.SENTRY_VISION_VISIONBLOB, 'Sentry2::kVisionBlob']
     ]
 }
 export const sentry2_vision_20class_objs = function () {
