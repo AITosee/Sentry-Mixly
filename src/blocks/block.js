@@ -127,11 +127,11 @@ export const sentry2_vision_objs = function () {
             'Sentry2::kVision20Classes',
         ],
         [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, 'Sentry2::kVisionQrCode'],
+        [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, 'Sentry2::kVisionCustom'],
         [
             Blockly.Msg.SENTRY_VISION_VISIONMOTIONDETECT,
             'Sentry2::kVisionMotionDetect',
         ],
-        [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, 'Sentry2::kVisionCustom'],
     ]
 }
 
