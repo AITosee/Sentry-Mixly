@@ -1,5 +1,4 @@
-<%= htmlWebpackPlugin.tags.headTags.join('\n') %>
-<category id="mixly_Sentry" name="Sentry视觉传感器" colour="#EF5411">
+<%= htmlWebpackPlugin.tags.headTags.join('\n') %><category id="mixly_Sentry" name="Sentry视觉传感器" colour="#EF5411">
   <category id="mixly_Sentry1" name="Sentry1" colour="#EF5411">
     <category id="Sentry1_Setup" name="设置模块" colour="#EF5411">
       <block type="Sentry1Begin"></block>      <!-- 设置 SENTRY-->
@@ -12,9 +11,46 @@
       </block>
       <block type="Sentry1SetAWB"></block>      <!-- 设置 白平衡-->
       <block type="Sentry1VisionSetStatus"></block>      <!-- 设置 启用算法-->
-      <block type="Sentry1VisionSetParamNum"></block>      <!-- 设置 算法参数-->
-      <block type="Sentry1VisionColorSetParam"></block>
+      <block type="Sentry1VisionSetParamNum">
+        <value name="num">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>      <!-- 设置 算法参数-->
+      <block type="Sentry1VisionColorSetParam">
+        <value name="x">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="y">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">3</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+      </block>
       <block type="Sentry1VisionBlobSetParam">
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">3</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
         <field name="lable">Sentry1::kColorRed</field>
       </block>
     </category>
@@ -49,18 +85,7 @@
             <field name="NUM">1</field>
           </shadow>
         </value>
-      </block>
-      <!-- <block type="Sentry1GetValue">
-        <value name="sentry_value_obj">
-          <block type="Sentry1VisionObjQr"></block>
-        </value>
-        <value name="index">
-          <shadow type="math_number">
-            <field name="NUM">1</field>
-          </shadow>
-        </value>
-      </block> -->
-      <!-- <block type="Sentry1GetQrValue"></block> -->
+      </block>      <!-- <block type="Sentry1GetValue"><value name="sentry_value_obj"><block type="Sentry1VisionObjQr"></block></value><value name="index"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block> -->      <!-- <block type="Sentry1GetQrValue"></block> -->
       <block type="Sentry1VisionDetected">
         <value name="sentry_detected_obj">
           <block type="Sentry1VisionColor"></block>
@@ -339,14 +364,25 @@
                           <next>
                             <block type="Sentry1VisionSetParamNum">
                               <field name="vision_obj">Sentry1::kVisionBlob</field>
-                              <field name="num">1</field>
+                              <value name="num">
+                                <shadow type="math_number">
+                                  <field name="NUM">1</field>
+                                </shadow>
+                              </value>
                               <next>
                                 <block type="Sentry1VisionBlobSetParam">
                                   <field name="vision_obj">Sentry1::kVisionBlob</field>
-                                  <field name="w">20</field>
-                                  <field name="h">20</field>
+                                  <value name="w">
+                                    <shadow type="math_number">
+                                      <field name="NUM">3</field>
+                                    </shadow>
+                                  </value>
+                                  <value name="h">
+                                    <shadow type="math_number">
+                                      <field name="NUM">4</field>
+                                    </shadow>
+                                  </value>
                                   <field name="lable">Sentry1::kColorGreen</field>
-                                  <field name="index">1</field>
                                 </block>
                               </next>
                             </block>
@@ -1594,12 +1630,95 @@
       <block type="SentryBegin"></block>      <!-- 设置 SENTRY-->
       <block type="SentrySetAWB"></block>      <!-- 设置 白平衡-->
       <block type="SentryVisionSetStatus"></block>      <!-- 设置 启用算法-->
-      <block type="SentryVisionSetParamNum"></block>      <!-- 设置 算法参数-->
-      <block type="SentryVisionColorSetParam"></block>
-      <block type="SentryVisionBlobSetParam">
-        <field name="lable">Sentry2::kColorRed</field>
+      <block type="SentryVisionSetParamNum">
+        <value name="num">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>      <!-- 设置 算法参数-->
+      <block type="SentryVisionColorSetParam">
+        <value name="x">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="y">
+          <shadow type="math_number">
+            <field name="NUM">50</field>
+          </shadow>
+        </value>
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">3</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <value name="index">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
       </block>
-      <block type="SentryVisionSetParam"></block>
+      <block type="SentryVisionBlobSetParam">
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">3</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">4</field>
+          </shadow>
+        </value>
+        <field name="lable">Sentry2::kColorRed</field>
+        <value name="index">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
+      <value name="index">
+        <shadow type="math_number">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <block type="SentryVisionSetParam">
+        <value name="x">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="y">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="w">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="h">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="lable">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+        <value name="index">
+          <shadow type="math_number">
+            <field name="NUM">1</field>
+          </shadow>
+        </value>
+      </block>
     </category>
     <category id="Sentry2_Run" name="运行模块" colour="#EAA20A">
       <block type="SentryVisionDetectedCount"></block>

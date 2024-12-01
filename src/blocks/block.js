@@ -359,9 +359,11 @@ export const Sentry1VisionSetParamNum = {
                 new Blockly.FieldDropdown(sentry1_vision_prama_support_objs()),
                 'vision_obj'
             )
-            .appendField(new Blockly.FieldNumber(1, 1, 25, 1), 'num')
-            .appendField(Blockly.Msg.SENTRY_SET_PARAMNUM)
+        this.appendValueInput('num').setCheck([Number])
+            .appendField("  ")
+        this.appendDummyInput().appendField(Blockly.Msg.SENTRY_SET_PARAMNUM)
         this.setPreviousStatement(true, null)
+        this.setInputsInline(true)
         this.setNextStatement(true, null)
         this.setColour('#EF5411')
     },
@@ -384,20 +386,24 @@ export const Sentry1VisionColorSetParam = {
                 ]),
                 'vision_obj'
             )
-        this.appendDummyInput('VisionParam')
+        this.appendDummyInput()
             .appendField(
-                Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_X
+                "  " + Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_X
             )
-            .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'x')
+        this.appendValueInput('x').setCheck([Number])
+        this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_Y
             )
-            .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'y')
+        this.appendValueInput('y').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_STATE_VALUE_WIDTH)
-            .appendField(new Blockly.FieldNumber(3, 0, 9999, 1), 'w')
+        this.appendValueInput('w').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT)
-            .appendField(new Blockly.FieldNumber(4, 0, 9999, 1), 'h')
+        this.appendValueInput('h').setCheck([Number])
         this.setPreviousStatement(true, null)
+        this.setInputsInline(true)
         this.setNextStatement(true, null)
         this.setColour('#EF5411')
     },
@@ -420,17 +426,20 @@ export const Sentry1VisionBlobSetParam = {
                 ]),
                 'vision_obj'
             )
-        this.appendDummyInput('VisionParam')
-            .appendField(Blockly.Msg.SENTRY_WEIGHT)
-            .appendField(new Blockly.FieldNumber(3, 0, 9999, 1), 'w')
+        this.appendDummyInput()
+            .appendField("  " + Blockly.Msg.SENTRY_WEIGHT)
+        this.appendValueInput('w').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_HEIGHT)
-            .appendField(new Blockly.FieldNumber(4, 0, 9999, 1), 'h')
+        this.appendValueInput('h').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_COLOR)
             .appendField(
                 new Blockly.FieldDropdown(sentry1_vision_blod_objs()),
                 'lable'
             )
         this.setPreviousStatement(true, null)
+        this.setInputsInline(true)
         this.setNextStatement(true, null)
         this.setColour('#EF5411')
     },
@@ -811,8 +820,9 @@ export const SentryVisionSetParamNum = {
                 new Blockly.FieldDropdown(sentry2_vision_param_objs()),
                 'vision_obj'
             )
-            .appendField(' ')
-            .appendField(new Blockly.FieldNumber(1, 1, 25, 1), 'num')
+        this.appendValueInput('num').setCheck([Number])
+            .appendField("  ")
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAMNUM)
         this.setPreviousStatement(true, null)
         this.setNextStatement(true, null)
@@ -837,22 +847,26 @@ export const SentryVisionColorSetParam = {
                 ]),
                 'vision_obj'
             )
-        this.appendDummyInput('VisionParam')
+        this.appendDummyInput()
             .appendField(
-                Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_X
+                "  " + Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_X
             )
-            .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'x')
+        this.appendValueInput('x').setCheck([Number])
+        this.appendDummyInput()
             .appendField(
                 Blockly.Msg.SENTRY_CENTER + Blockly.Msg.SENTRY_STATE_VALUE_Y
             )
-            .appendField(new Blockly.FieldNumber(50, 0, 9999, 1), 'y')
+        this.appendValueInput('y').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_STATE_VALUE_WIDTH)
-            .appendField(new Blockly.FieldNumber(3, 0, 9999, 1), 'w')
+        this.appendValueInput('w').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_STATE_VALUE_HEIGHT)
-            .appendField(new Blockly.FieldNumber(4, 0, 9999, 1), 'h')
+        this.appendValueInput('h').setCheck([Number])
+        this.appendValueInput('index').setCheck([Number])
             .appendField(Blockly.Msg.SENTRY_SET_PARAM_GROUP)
-            .appendField(new Blockly.FieldNumber(1, 1, 25, 1), 'index')
         this.setPreviousStatement(true, null)
+        this.setInputsInline(true)
         this.setNextStatement(true, null)
         this.setColour('#EF5411')
     },
@@ -875,19 +889,22 @@ export const SentryVisionBlobSetParam = {
                 ]),
                 'vision_obj'
             )
-        this.appendDummyInput('VisionParam')
-            .appendField(Blockly.Msg.SENTRY_WEIGHT)
-            .appendField(new Blockly.FieldNumber(3, 0, 9999, 1), 'w')
+        this.appendDummyInput()
+            .appendField("  " + Blockly.Msg.SENTRY_WEIGHT)
+        this.appendValueInput('w').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_HEIGHT)
-            .appendField(new Blockly.FieldNumber(4, 0, 9999, 1), 'h')
+        this.appendValueInput('h').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_COLOR)
             .appendField(
-                new Blockly.FieldDropdown(sentry2_vision_blod_objs()),
+                new Blockly.FieldDropdown(sentry1_vision_blod_objs()),
                 'lable'
             )
+        this.appendValueInput('index').setCheck([Number])
             .appendField(Blockly.Msg.SENTRY_SET_PARAM_GROUP)
-            .appendField(new Blockly.FieldNumber(1, 1, 25, 1), 'index')
         this.setPreviousStatement(true, null)
+        this.setInputsInline(true)
         this.setNextStatement(true, null)
         this.setColour('#EF5411')
     },
@@ -905,20 +922,26 @@ export const SentryVisionSetParam = {
                 new Blockly.FieldDropdown(sentry2_vision_custom()),
                 'vision_obj'
             )
-        this.appendDummyInput('VisionParam')
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAM + '1')
-            .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), 'x')
+        this.appendValueInput('x').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAM + '2')
-            .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), 'y')
+        this.appendValueInput('y').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAM + '3')
-            .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), 'w')
+        this.appendValueInput('w').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAM + '4')
-            .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), 'h')
+        this.appendValueInput('h').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAM + '5')
-            .appendField(new Blockly.FieldNumber(0, 0, 9999, 1), 'lable')
+        this.appendValueInput('lable').setCheck([Number])
+        this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAM_GROUP)
-            .appendField(new Blockly.FieldNumber(1, 1, 25, 1), 'index')
+        this.appendValueInput('index').setCheck([Number])
         this.setPreviousStatement(true, null)
+        this.setInputsInline(true)
         this.setNextStatement(true, null)
         this.setColour('#EF5411')
     },
