@@ -898,7 +898,7 @@ export const SentryVisionBlobSetParam = {
         this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_COLOR)
             .appendField(
-                new Blockly.FieldDropdown(sentry1_vision_blod_objs()),
+                new Blockly.FieldDropdown(sentry2_vision_blod_objs()),
                 'lable'
             )
         this.appendValueInput('index').setCheck([Number])
