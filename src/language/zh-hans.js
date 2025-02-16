@@ -133,7 +133,7 @@ export const ZhHansMsg = {
     SENTRY_CLASS20_SHEEP: '羊',
     SENTRY_CLASS20_SOFA: '沙发',
     SENTRY_CLASS20_TRAIN: '火车',
-    SENTRY_CLASS20_MONITOR: '监视器',
+    SENTRY_CLASS20_MONITOR: '显示器',
 
     // Sentry Card Type
     SENTRY_CARD_TRAFFIC: '交通卡片',
