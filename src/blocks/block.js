@@ -139,8 +139,6 @@ export const sentry2_vision_param_objs = function () {
     return [
         [Blockly.Msg.SENTRY_VISION_VISIONCOLOR, 'Sentry2::kVisionColor'],
         [Blockly.Msg.SENTRY_VISION_VISIONBLOB, 'Sentry2::kVisionBlob'],
-        [Blockly.Msg.SENTRY_VISION_VISIONLEARNING, 'Sentry2::kVisionLearning'],
-        [Blockly.Msg.SENTRY_VISION_VISIONFACE, 'Sentry2::kVisionFace'],
         [Blockly.Msg.SENTRY_VISION_VISIONCUSTOM, 'Sentry2::kVisionCustom'],
     ]
 }
@@ -153,6 +151,8 @@ export const sentry2_vision_custom = function () {
         [Blockly.Msg.SENTRY_VISION_VISIONFACE, 'Sentry2::kVisionFace'],
     ]
 }
+
+
 export const sentry2_vision_20class_objs = function () {
     return [
         [Blockly.Msg.SENTRY_CLASS20_AIRPLANE, 'Sentry2::kAirplane'],
@@ -923,7 +923,7 @@ export const SentryVisionSetParam = {
                 'vision_obj'
             )
         this.appendDummyInput()
-            .appendField(Blockly.Msg.SENTRY_SET_PARAM + '1')
+            .appendField("  " + Blockly.Msg.SENTRY_SET_PARAM + '1')
         this.appendValueInput('x').setCheck([Number])
         this.appendDummyInput()
             .appendField(Blockly.Msg.SENTRY_SET_PARAM + '2')
@@ -951,7 +951,7 @@ export const SentryVisionDetectedCount = {
     init: function () {
         this.appendDummyInput()
             .appendField(
-                Blockly.Msg.SENTRY2_NAME + Blockly.Msg.SENTRY_VISION_EN
+                Blockly.Msg.SENTRY2_NAME + "  " +Blockly.Msg.SENTRY_VISION_EN
             )
             .appendField(
                 new Blockly.FieldDropdown(sentry2_vision_objs()),
@@ -1112,8 +1112,9 @@ export const SentryGetQrValue = {
             [Blockly.Msg.SENTRY_VISION_VISIONQRCODE, 'Sentry2::kVisionQrCode'],
         ]
         this.appendDummyInput()
-            .appendField(Blockly.Msg.SENTRY2_NAME)
-            .appendField(Blockly.Msg.SENTRY_VISION_EN)
+            .appendField(
+                Blockly.Msg.SENTRY2_NAME + "  " +Blockly.Msg.SENTRY_VISION_EN
+            )
             .appendField(new Blockly.FieldDropdown(_vision_objs), 'vision_obj')
             .appendField(Blockly.Msg.SENTRY_GET_QRCODEVALUE)
         this.setInputsInline(true)
